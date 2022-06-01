@@ -1,0 +1,9 @@
+
+$accent: #FF4015;
+
+@mixin flex-center($direction){
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: $direction;
+}

@@ -1,0 +1,36 @@
+.hero-container {
+  // @include flex-center(column);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  .light-background {
+    background: url("https://media.gettyimages.com/photos/smiling-customer-service-representative-using-computer-at-desk-picture-id867405374?k=20&m=867405374&s=612x612&w=0&h=ZZ8DrWgad_ALYfgPT0sh_UBVvux8ijMISetaWrIlKa8=");
+    background-size: cover;
+    background-position: center;
+  }
+  .home-flex-container {
+    margin: 0 7%;
+    > * {
+      margin-bottom: 30px;
+    }
+  }
+  h1 {
+    font-weight: bold;
+    font-size: 44px;
+  }
+  h2 {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+  }
+  p {
+    font-weight: 300;
+    font-size: 17px;
+    line-height: 20px;
+  }
+}
+
+
+

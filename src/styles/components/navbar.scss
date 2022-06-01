@@ -5,3 +5,32 @@
   width: 100%;
   z-index: 2;
 }
+
+.dropdown-options-container {
+  height: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  
+  .options {
+    font-size: 24px;
+  }
+}
+.dropdown-heading {
+  font-weight: bold;
+  font-size: 40px;
+  align-self: flex-start;
+}
+
+
+#chakra-modal-\:r3\:, #chakra-modal-\:r1\:{
+  background-color: $accent;
+  color: white;
+  // @include flex-center(column);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  
+  }
