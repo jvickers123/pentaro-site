@@ -1,1 +1,15 @@
 @import './variables.scss';
+
+// COMPONENTS
+@import './components//navbar.scss';
+@import './components/footer.scss';
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+section {
+  min-height: 100vh;
+}
