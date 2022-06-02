@@ -35,7 +35,7 @@ const SiteNavBar = () => {
         <DrawerOverlay />
         <DrawerContent>
           <DrawerCloseButton />
-          <DrawerHeader><h2 className='dropdown-heading'>Pentaro</h2></DrawerHeader>
+            <DrawerHeader><h2 className='dropdown-heading'>Pentaro</h2></DrawerHeader>
 
             <div className="dropdown-options-container">
               

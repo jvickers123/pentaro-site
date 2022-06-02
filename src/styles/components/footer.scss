@@ -4,4 +4,11 @@
   padding: 15px 0;
   width: 100%;
   z-index: 2;
+  background-color: $accent;
+  color: #fff;
+  @include flex-center(row);
+  button {
+    background-color: #fff;
+    color: $accent;
+  }
 }
