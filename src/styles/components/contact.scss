@@ -1,28 +1,40 @@
-  .contact-form {
-  @include flex-center(column);
-  button {
-    background-color: $accent;
-    color: white;
+  .contact-section {
+    h1 {
+      color: $accent;
+      font-weight: 700;
+      font-size: 10px;
+      line-height: 12px;
+      margin-bottom: 20px;
+    }
+    .contact-form {
+      @include flex-center(column);
+      button {
+        background-color: $accent;
+        color: white;
+      }
+      .form-field {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        margin: 10px 0;
+        label {
+          font-size: 12px;
+          display: inline-block;
+          width: 115px;
+          margin-right: 10px;
+        }
+        input, textarea {
+          width: 100%;
+          padding: 6px;
+          border-radius: 0;
+          border: 1px solid rgba(0,0,0,0.15);
+        }
+        .red {
+          color: red;
+        }
+      }
+    }
   }
-  .form-field {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    width: 100%;
-    label {
-      font-size: 12px;
-      display: inline-block;
-      width: 115px;
-      margin-right: 10px;
-    }
-    input, textarea {
-      width: 100%;
-      padding: 6px;
-      border-radius: 0;
-      border: 1px solid rgba(0,0,0,0.15);
-    }
-    .red {
-      color: red;
-    }
-  }
-}
+  
+  

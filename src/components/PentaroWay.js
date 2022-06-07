@@ -3,7 +3,7 @@ import React from 'react'
 const PentaroWay = () => {
   return (
     <section>
-      <h1>PentaroWay</h1>
+      <h1>THE PENTARO WAY</h1>
     </section>
   )
 }

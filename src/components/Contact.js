@@ -25,13 +25,13 @@ const Contact = () => {
     setFormData(newObj)
   }
   return (
-    <section>
+    <section className='contact-section'>
       <h1>CONTACT US</h1>
 
       <hr></hr>
 
       <h2>GET IN TOUCH</h2>
-      <p>Have a project you need help with? Send us a message and we'll reply within X days.</p>
+      <p>Have a project you need help with? Send us a message and someone will be in touch soon.</p>
       <form onSubmit={handleSubmit} className='contact-form'>
 
         <div className='form-field'>
