@@ -4,6 +4,8 @@
   padding: 15px 0;
   width: 100%;
   z-index: 2;
+  @include flex-center(row);
+  justify-content: space-between;
 }
 
 .dropdown-options-container {
@@ -24,7 +26,7 @@
   align-self: flex-start;
 }
 
-
+// options drawer
 #chakra-modal-\:r3\:, #chakra-modal-\:r1\:{
   background-color: $accent;
   color: white;
