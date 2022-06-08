@@ -16,23 +16,21 @@ const app = express(); //alias
 
 app.use(cors()); //Blocks browser from restricting any data
 
+app.use(express.json())
+
 //Welcome Page for the Server 
 app.get('/', (req, res) => {
     res.send('Welcome to the Express Server')
 })
 
 //Twilio 
-app.get('/send-text', (_req, res) => {
+app.post('/send-text', (req, res) => {
     //Welcome Message
     res.send('Hello to the Twilio Server')
-
-    //_GET Variables
-    // const {textmessage } = req.query;
-
-
+    const {message} = req.body
     //Send Text
     client.messages.create({
-        body: 'whatsup',
+        body: message,
         to: 'whatsapp:+447954549514',  // Text this number
         from: `whatsapp:${process.env.TWILIO_PHONE_NUMBER}` // From a valid Twilio number
     }).then(message => console.log(message))
