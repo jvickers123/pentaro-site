@@ -1,8 +1,8 @@
-import 'dotenv/config'
+const config = require('dotenv/config')
 
-import express from 'express'
-import cors from 'cors'
-import twilio from 'twilio'
+const express = require('express')
+const cors = require('cors')
+const twilio = require('twilio')
 
 
 

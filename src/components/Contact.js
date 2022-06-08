@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import axios from 'axios'
 
 // CHAKRA STYLING
 import { Button } from '@chakra-ui/react'
@@ -15,9 +16,22 @@ const Contact = () => {
     message: '',
   })
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
-    console.log(formData)
+    try {
+      const {full_name, company_name, email, phone_number, message} = formData
+      const { data } = await axios.post('/send-text', 
+      {message: 
+        `New Message from ${full_name} from ${company_name}: 
+        ${message} 
+        on Date.
+        reply to 
+        ${email}, ${phone_number}`})
+      console.log(data)
+    } catch (error) {
+      console.log(error)
+    }
+
   }
 
   const handleChange = (e) => {
