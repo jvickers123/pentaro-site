@@ -26,7 +26,7 @@ const Contact = () => {
         ${message} 
         on Date.
         reply to 
-        ${email}, ${phone_number}`})
+        ${email} or ${phone_number}`})
       console.log(data)
     } catch (error) {
       console.log(error)
