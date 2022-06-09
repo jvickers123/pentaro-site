@@ -1,6 +1,9 @@
 
 $accent: #FF4015;
 $lightgrey: #EAEAEA;
+$darkbackground: #151C22;
+$darkbgline: #515151;
+$greybg: #e5e5e5;
 
 @mixin flex-center($direction){
   display: flex;

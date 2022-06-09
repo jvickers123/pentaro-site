@@ -13,9 +13,9 @@ it("renders without crashing", () => {
   shallow.render(<App />)
 });
 
-it("contains title", () => {
-  render(<App />)
-  // expect(screen.getByText('PENTARO')).toBeInTheDocument()
-})
+// it("contains title", () => {
+//   render(<App />)
+//   // expect(screen.getByText('PENTARO')).toBeInTheDocument()
+// })
 
 
