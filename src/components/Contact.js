@@ -40,11 +40,10 @@ const Contact = () => {
   }
   return (
     <section className='contact-section'>
-      <h1>CONTACT US</h1>
+      <h1>GET IN TOUCH</h1>
 
       <hr></hr>
 
-      <h2>GET IN TOUCH</h2>
       <p>Have a project you need help with? Send us a message and someone will be in touch soon.</p>
       <form onSubmit={handleSubmit} className='contact-form'>
 

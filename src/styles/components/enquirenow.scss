@@ -29,6 +29,20 @@
     }
     .footer-desktop {
       display: flex;
+      width: 100%;
+      form {
+        width: 100%;
+        @include flex-center(row);
+        justify-content: space-around;
+        .form-field {
+          label {
+            margin: 0 10px;
+          }
+          input {
+            color: black;
+          }
+        }
+      }
     }
   }
 }

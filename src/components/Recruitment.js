@@ -3,7 +3,10 @@ import React from 'react'
 const Recruitment = () => {
   return (
     <section>
-      <h1>RECRUITMENT</h1>
+      <div className='hero-container'>
+        <h1 className='accent'>RECRUITMENT</h1>
+
+      </div>
     </section>
   )
 }

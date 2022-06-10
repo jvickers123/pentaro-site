@@ -11,7 +11,7 @@ import Telemarketing from './components/Telemarketing'
 import Recruitment from './components/Recruitment'
 import PentaroWay from './components/PentaroWay'
 import Contact from './components/Contact'
-import Footer from './components/Footer'
+import EnquireNow from './components/EnquireNow'
 
 function App() {
   return (
@@ -25,7 +25,7 @@ function App() {
           <Route path='/pentaroway' element={<PentaroWay/>}/>
           <Route path='/getintouch' element={<Contact />}/>
         </Routes>
-        <Footer />
+        <EnquireNow />
       </BrowserRouter>
     </ChakraProvider>
     
