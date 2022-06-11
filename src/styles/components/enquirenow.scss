@@ -4,12 +4,18 @@
   padding: 15px 0;
   width: 100%;
   z-index: 2;
-  background-color: $accent;
   color: #fff;
   @include flex-center(row);
+  .footer-mobile {
+    width: 100%;
+    text-align: right;
+  }
   button {
-    background-color: #fff;
+    background: white;
+    border: 1px solid $accent;
     color: $accent;
+    margin-right: 20px;
+    @extend %box-shadow;
   }
   .footer-desktop {
     display: none;
@@ -24,6 +30,8 @@
 
 @media screen and (min-width: 600px) {
   .footer-main {
+    background-color: $accent;
+
     .footer-mobile {
       display: none;
     }

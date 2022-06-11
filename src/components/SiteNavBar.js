@@ -21,7 +21,7 @@ const SiteNavBar = () => {
 
   return (
     <div className='nav-bar-main'>
-      <Link to='/'><TbPentagon /></Link>
+      <Link to='/'><TbPentagon className='accent'/></Link>
 
       <button onClick={onOpen}>
       <GiHamburgerMenu className='accent'/>
@@ -35,7 +35,7 @@ const SiteNavBar = () => {
         <DrawerOverlay />
         <DrawerContent>
           <DrawerCloseButton />
-            <DrawerHeader><h2 className='dropdown-heading'>Pentaro</h2></DrawerHeader>
+            <DrawerHeader><Link to='/' onClick={onClose}><h2 className='dropdown-heading'>Pentaro</h2></Link></DrawerHeader>
 
             <div className="dropdown-options-container">
               

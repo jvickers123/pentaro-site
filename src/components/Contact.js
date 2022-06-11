@@ -88,12 +88,14 @@ const Contact = () => {
 
       <hr></hr>
 
-      <p>Have a project you need help with? Send us a message and someone will be in touch soon.</p>
+      <h3>Have a project you need help with?</h3>
+      <p>Send us a message and one of out team will be in touch as soon as possible.</p>
+      
       <form onSubmit={handleSubmit} className='contact-form'>
 
         <div className='form-field'>
-          <label  htmlFor='full_name'>Full Name <span className='red'>*</span></label>
-          <input required type='text' name='full_name' placeholder='Full Name' value={formData.full_name} onChange={handleChange}/>
+          <label  htmlFor='full_name'>Name <span className='red'>*</span></label>
+          <input required type='text' name='full_name' placeholder='John' value={formData.full_name} onChange={handleChange}/>
         </div>
 
 

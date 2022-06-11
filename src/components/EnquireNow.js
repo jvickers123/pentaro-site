@@ -89,7 +89,7 @@ const EnquireNow = () => {
 
     <div className={hideFooter ? 'footer-hiddent' : 'footer-main'}>
       <div className='footer-mobile'>
-        <Button onClick={() => navigate('getintouch')} className='enquire-now-button'>Enquire now</Button>
+        <Button onClick={() => navigate('getintouch')} className='enquire-now-button'>Send us a message</Button>
       </div>
 
       <div className='footer-desktop'>
@@ -111,7 +111,7 @@ const EnquireNow = () => {
             <input required type='tel' name='phone_number' placeholder='0123456789' value={formData.phone_number} onChange={handleChange}/>
           </div>
 
-          <Button className='light-btn' onClick={handleSubmit}>Enquire Now</Button>
+          <Button className='light-btn' onClick={handleSubmit}>Enquire now</Button>
 
         </form>
       </div>

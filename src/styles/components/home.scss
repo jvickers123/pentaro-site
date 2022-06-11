@@ -35,10 +35,13 @@
   }
 }
 
-.text-link {
-  display: flex;
-  justify-content: space-between;
-  
+.home-links-container {
+  margin-top: 30px;
+  .text-link {
+    display: flex;
+    justify-content: space-between;
+  }
 }
+
 
 

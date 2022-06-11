@@ -1,6 +1,11 @@
   .contact-section {
     padding: 50px 20px;
-
+    background-color: $greybg;
+    hr {
+      height: 1px;
+      background-color: $greybgline;
+      border: none;
+    }
     h1 {
       color: $accent;
       font-weight: 700;
@@ -11,6 +16,7 @@
     .contact-form {
       @include flex-center(column);
       button {
+        margin-top: 20px;
         background-color: $accent;
         color: white;
       }

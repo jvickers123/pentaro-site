@@ -6,6 +6,7 @@
   z-index: 2;
   @include flex-center(row);
   justify-content: space-between;
+  // background-color: #fff;
 }
 
 .dropdown-options-container {

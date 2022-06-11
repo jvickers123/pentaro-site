@@ -28,17 +28,20 @@ const Home = () => {
         <h3>Pentaro aims to capitalise on synergies to enhance the profitability and growth potential of its partners.</h3>
         <p>We are a modern, data-driven, results-focused business development agency, ready to help your business boost its bottom line.</p>
 
-        <hr></hr>
-        <Link className='text-link' to='/recruitment'>
-          <p>Pentaro Recruitment</p>
-          <p className='accent'>&gt;&gt;</p>
-        </Link>
-        <hr></hr>
-        <Link className='text-link' to='/telemarketing'>
-          <p>Pentaro Telemarketing</p>
-          <p className='accent'>&gt;&gt;</p>
-        </Link>
-        <hr></hr>
+        <div className='home-links-container'>
+          <hr></hr>
+          <Link className='text-link' to='/recruitment'>
+            <p>Pentaro Recruitment</p>
+            <p className='accent'>&gt;&gt;</p>
+          </Link>
+          <hr></hr>
+          <Link className='text-link' to='/telemarketing'>
+            <p>Pentaro Telemarketing</p>
+            <p className='accent'>&gt;&gt;</p>
+          </Link>
+          <hr></hr>
+        </div>
+        
 
         <img 
           src='https://image.shutterstock.com/image-photo/corporate-business-team-manager-meeting-600w-682694722.jpg'
