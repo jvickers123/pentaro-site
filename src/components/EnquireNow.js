@@ -19,13 +19,21 @@ const EnquireNow = () => {
   const handleSubmit = async (e) => {
     e.preventDefault()
     try {
+      const {data: emailData} = await axios.post('/send-enquiry', formData)
+      const date = new Date()
+      const dateString = date.toString()
       const {full_name, email, phone_number} = formData
-      const { data } = await axios.post('/send-text', 
+      const { data: whatsappData } = await axios.post('/send-text', 
       {message: 
-        `New Enquiry from ${full_name}: 
-        reply to 
-        ${email} or ${phone_number}`})
-      console.log(data)
+        `Quick enquiry from ${full_name}:
+        
+      on ${dateString}
+        
+      reply to 
+      ${email} 
+      
+      or ${phone_number}`})
+      console.log(whatsappData, emailData)
     } catch (error) {
       console.log(error)
     }

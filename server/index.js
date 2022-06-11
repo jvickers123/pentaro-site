@@ -92,4 +92,33 @@ app.post('/send-email', (req, res) => {
 
 })
 
+app.post('/send-enquiry', (req, res) => {
+  //Welcome Message
+  res.send('Hello to the Twilio Server')
+  const {full_name, email, phone_number} = req.body
+  const msg = {
+    to: 'jonathanbvickers@gmail.com', // Change to your recipient
+    from: email, // Change to your verified sender
+    subject: `Quick Enqiry From ${full_name}`,
+    text: 'message',
+    html: `<p>Quick Enquiry from ${full_name}<p>
+    <br>
+    <p>Email:<p>
+    <a href = "mailto: ${email}">${email}</a>
+    <br>
+    <p>Phone Number:<p>
+    <p>${phone_number}</p>
+    `,
+  }
+  sgMail
+    .send(msg)
+    .then(() => {
+      console.log('Email sent')
+    })
+    .catch((error) => {
+      console.error(error)
+    })
+
+})
+
 app.listen(process.env.PORT, () => console.log(`Running on Port ${process.env.PORT}`))
