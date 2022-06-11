@@ -3,11 +3,14 @@ import { useNavigate } from 'react-router-dom'
 import axios from 'axios'
 
 // STYLING
-import { Button } from '@chakra-ui/react'
+import { Button, useToast } from '@chakra-ui/react'
+
+
 const EnquireNow = () => {
   
   const navigate = useNavigate()
-  
+  const toast = useToast()
+
   // STATE
   const [hideFooter, setHideFooter] = useState(false)
   const [formData, setFormData] = useState({
@@ -16,13 +19,24 @@ const EnquireNow = () => {
     phone_number: '',
   })
 
+
   const handleSubmit = async (e) => {
     e.preventDefault()
+
+
+
+
     try {
       const {data: emailData} = await axios.post('/send-enquiry', formData)
       const date = new Date()
       const dateString = date.toString()
       const {full_name, email, phone_number} = formData
+
+      if (!full_name) throw 'Please provide a name'
+      if (!email) throw 'Please provide a contact email'
+      if (!phone_number) throw 'Please provide a phone number'
+
+
       const { data: whatsappData } = await axios.post('/send-text', 
       {message: 
         `Quick enquiry from ${full_name}:
@@ -34,8 +48,27 @@ const EnquireNow = () => {
       
       or ${phone_number}`})
       console.log(whatsappData, emailData)
+      toast({
+        title: 'Enquiry Sent.',
+        description: "Thank you for your enquiry. We will be in touch as soon as possible",
+        status: 'success',
+        duration: 9000,
+        isClosable: true,
+      })
+      setFormData({
+        full_name: '',
+        email: '',
+        phone_number: '',
+      })
     } catch (error) {
       console.log(error)
+      toast({
+        title: 'Enquiry failed to sent.',
+        description: `Please try again. ${error}`,
+        status: 'error',
+        duration: 9000,
+        isClosable: true,
+      })
     }
 
   }

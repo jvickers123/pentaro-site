@@ -2,10 +2,11 @@ import React, { useState } from 'react'
 import axios from 'axios'
 
 // CHAKRA STYLING
-import { Button } from '@chakra-ui/react'
+import { Button, useToast } from '@chakra-ui/react'
 
 const Contact = () => {
 
+  const toast = useToast()
   
   // STATE
   const [formData, setFormData] = useState({
@@ -20,11 +21,18 @@ const Contact = () => {
     e.preventDefault()
     try {
 
-      const {data: emailData} = await axios.post('/send-email', formData)
-
       const date = new Date()
       const dateString = date.toString()
       const {full_name, company_name, email, phone_number, message} = formData
+
+      if (!full_name) throw 'Please provide a name'
+      if (!email) throw 'Please provide a contact email'
+      if (!phone_number) throw 'Please provide a phone number'
+      if (!company_name) throw 'Please provide a company name'
+      if (!message) throw 'Looks like you forgot to fill in the message.'
+
+      const {data: emailData} = await axios.post('/send-email', formData)
+
       const { data: whatsappData } = await axios.post('/send-text', 
       {message: 
         `New Message from 
@@ -43,8 +51,29 @@ const Contact = () => {
       ${phone_number}.`})
 
       console.log(whatsappData, emailData)
+      toast({
+        title: 'Message Sent.',
+        description: "Thank you for your message. We will be in touch as soon as possible",
+        status: 'success',
+        duration: 9000,
+        isClosable: true,
+      })
+      setFormData({
+        full_name: '',
+        email: '',
+        company_name: '',
+        phone_number: '',
+        message: '',
+      })
     } catch (error) {
       console.log(error)
+      toast({
+        title: 'Message failed to sent.',
+        description: `Please try again. ${error}`,
+        status: 'error',
+        duration: 9000,
+        isClosable: true,
+      })
     }
 
   }
