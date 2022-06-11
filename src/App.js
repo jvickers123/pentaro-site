@@ -12,6 +12,7 @@ import Recruitment from './components/Recruitment'
 import PentaroWay from './components/PentaroWay'
 import Contact from './components/Contact'
 import EnquireNow from './components/EnquireNow'
+import Footer from './components/Footer'
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
           <Route path='/getintouch' element={<Contact />}/>
         </Routes>
         <EnquireNow />
+        <Footer />
       </BrowserRouter>
     </ChakraProvider>
     
