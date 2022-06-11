@@ -19,15 +19,30 @@ const Contact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault()
     try {
+
+      const {data: emailData} = await axios.post('/send-email', formData)
+
+      const date = new Date()
+      const dateString = date.toString()
       const {full_name, company_name, email, phone_number, message} = formData
-      const { data } = await axios.post('/send-text', 
+      const { data: whatsappData } = await axios.post('/send-text', 
       {message: 
-        `New Message from ${full_name} from ${company_name}: 
+        `New Message from 
+        
+      ${full_name}
+        
+      Company: ${company_name}
+
         ${message} 
-        on Date.
-        reply to 
-        ${email} or ${phone_number}`})
-      console.log(data)
+
+      on ${dateString}
+
+      reply to: 
+      ${email} 
+    or 
+      ${phone_number}.`})
+
+      console.log(whatsappData, emailData)
     } catch (error) {
       console.log(error)
     }

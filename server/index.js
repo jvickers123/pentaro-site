@@ -44,22 +44,51 @@ app.post('/send-text', (req, res) => {
       console.log(err);
       res.send(JSON.stringify({ success: false }));
     });
-    const msg = {
-      to: 'jonathanbvickers@gmail.com', // Change to your recipient
-      from: 'jonathanbvickers@gmail.com', // Change to your verified sender
-      subject: 'Sending with SendGrid is Fun',
-      text: message,
-      html: `<strong>${message}</strong>`,
-    }
-    sgMail
-      .send(msg)
-      .then(() => {
-        console.log('Email sent')
-      })
-      .catch((error) => {
-        console.error(error)
-      })
+    // const msg = {
+    //   to: 'jonathanbvickers@gmail.com', // Change to your recipient
+    //   from: 'jonathanbvickers@gmail.com', // Change to your verified sender
+    //   subject: 'Sending with SendGrid is Fun',
+    //   text: message,
+    //   html: `<strong>${message}</strong>`,
+    // }
+    // sgMail
+    //   .send(msg)
+    //   .then(() => {
+    //     console.log('Email sent')
+    //   })
+    //   .catch((error) => {
+    //     console.error(error)
+    //   })
+  }
+)
 
+app.post('/send-email', (req, res) => {
+  //Welcome Message
+  res.send('Hello to the Twilio Server')
+  const {full_name, email, company_name, message, phone_number} = req.body
+  const msg = {
+    to: 'jonathanbvickers@gmail.com', // Change to your recipient
+    from: email, // Change to your verified sender
+    subject: `New Enqiry From ${full_name}, ${company_name}`,
+    text: message,
+    html: `<p>New Enquiry from ${full_name}, ${company_name}<p>
+    <br>
+    <p>${message}</p>
+    <br>
+    <p>Reply To:<p>
+    <a href = "mailto: ${email}">${email}</a>
+    <p>or call<p>
+    <p>${phone_number}</p>
+    `,
+  }
+  sgMail
+    .send(msg)
+    .then(() => {
+      console.log('Email sent')
+    })
+    .catch((error) => {
+      console.error(error)
+    })
 
 })
 
