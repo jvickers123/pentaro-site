@@ -29,6 +29,34 @@
 
 
 @media screen and (min-width: 600px) {
+  // .footer-main {
+  //   .footer-mobile {
+  //     display: none;
+  //   }
+  //   .footer-desktop {
+  //     @include flex-center(column);
+  //     position: fixed;
+  //     background-color: white;
+  //     border: 1px solid $accent;
+  //     right: 20px;
+  //     bottom: 20px;
+  //     color: black;
+  //     border-radius: 5px;
+  //     padding: 10px;
+  //     box-shadow: 0 2px 12px 0 rgba(0,0,0,0.26);
+  //     button {
+  //       box-shadow: none;
+  //     }
+
+  //     form {
+  //       @include flex-center(column);
+  //       .form-field {
+
+  //       }
+  //     }
+  //   }
+  // }
+  
   .footer-main {
     background-color: $accent;
 
@@ -54,3 +82,4 @@
     }
   }
 }
+// }
