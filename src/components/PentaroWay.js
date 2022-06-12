@@ -19,7 +19,9 @@ const PentaroWay = () => {
           <h2 className='accent'>THE PENTARO WAY</h2>
           <hr></hr>
           <h3>Changing perceptions.</h3>
-          <p>As the economy changes, businesses are constantly presented with fresh opportunities and challenges. At Pentaro, we follow 5 core values to ensure we can help you to react and adapt in the best way possible.</p>
+          <p>As the economy changes, businesses are constantly presented with fresh opportunities and challenges.</p>
+            
+          <p>At Pentaro, we follow 5 core values to ensure we can help you to react and adapt in the best way possible.</p>
           
         </div>
         

@@ -23,33 +23,44 @@ const SiteNavBar = () => {
     <div className='nav-bar-main'>
       <Link to='/'><TbPentagon className='accent'/></Link>
 
-      <button onClick={onOpen}>
-      <GiHamburgerMenu className='accent'/>
-      </button>
-      <Drawer
-        isOpen={isOpen}
-        placement='top'
-        onClose={onClose}
-        size='full'
-      >
-        <DrawerOverlay />
-        <DrawerContent>
-          <DrawerCloseButton />
-            <DrawerHeader><Link to='/' onClick={onClose}><h2 className='dropdown-heading'>Pentaro</h2></Link></DrawerHeader>
+      <div className='mobile-navbar'>
 
-            <div className="dropdown-options-container">
+        <button onClick={onOpen}>
+        <GiHamburgerMenu className='accent'/>
+        </button>
+        <Drawer
+          isOpen={isOpen}
+          placement='top'
+          onClose={onClose}
+          size='full'
+        >
+          <DrawerOverlay />
+          <DrawerContent>
+            <DrawerCloseButton />
+              <DrawerHeader><Link to='/' onClick={onClose}><h2 className='dropdown-heading'>Pentaro</h2></Link></DrawerHeader>
+
+              <div className="dropdown-options-container">
+                
+
+                <Link className='options' onClick={onClose} to='/recruitment'>Recruitment</Link>
+                <Link className='options' onClick={onClose} to='/telemarketing'>Telemarketing</Link>
+                <Link className='options' onClick={onClose} to='/pentaroway'>The Pentaro Way</Link>
+                <Link className='options' onClick={onClose} to='/getintouch'>Get In Touch</Link>
+              </div>
+
               
 
-              <Link className='options' onClick={onClose} to='/recruitment'>Recruitment</Link>
-              <Link className='options' onClick={onClose} to='/telemarketing'>Telemarketing</Link>
-              <Link className='options' onClick={onClose} to='/pentaroway'>The Pentaro Way</Link>
-              <Link className='options' onClick={onClose} to='/getintouch'>Get In Touch</Link>
-            </div>
+          </DrawerContent>
+        </Drawer>
+      </div>
 
-            
+      <div className='desktop-navbar'>
+                <Link className='options' to='/recruitment'>Recruitment</Link>
+                <Link className='options' to='/telemarketing'>Telemarketing</Link>
+                <Link className='options' to='/pentaroway'>The Pentaro Way</Link>
+                <Link className='options' to='/getintouch'>Get In Touch</Link>
+      </div>
 
-        </DrawerContent>
-      </Drawer>
     </div>
   )
 }
