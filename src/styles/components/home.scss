@@ -43,5 +43,17 @@
   }
 }
 
-
+@media screen and (min-width: 600px) {
+  .hero-container {
+    align-items: flex-start;
+    .home-flex-container {
+      max-width: 350px;
+    }
+    .home-background {
+      width: 70%;
+      right: 0px;
+      top: 50px;
+    }
+  }
+}
 

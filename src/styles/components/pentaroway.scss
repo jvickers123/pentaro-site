@@ -26,7 +26,7 @@
   color: white;
   width: 100vw;
   background-size: cover;
-  padding: 50px 20px 0 20px;
+  padding: 50px 40px 0 40px;
   
   hr {
     height: 1px;
@@ -39,7 +39,7 @@
   background-color: $greybg;
   width: 100vw;
   background-size: cover;
-  padding: 50px 20px;
+  padding: 50px 40px;
   hr {
     height: 1px;
     background-color: $greybgline;
@@ -59,4 +59,71 @@
     font-size: 14px;
     margin-bottom: 20px;
   }
+}
+
+
+@media screen and (min-width: 600px) {
+
+  .light-background.pent-way-background {
+    width: 85%;
+    top: 50px;
+    left: 7.5%;
+  }
+  .section-flex-container {
+    margin: 0 7%;
+    @include flex-center(column);
+    align-items: flex-start;
+    h1, h2 {
+      width: 400px;
+    }
+  }
+
+  .dark-section-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .content-container {
+      width: 40vw;
+      align-self: flex-start;
+      padding-right: 50px;
+      > * {
+        margin: 30px 0;
+      }
+    }
+    .image-container {
+      width: 40vw;
+      img {
+        display: 100%;
+        height: 90vh;
+        width: 50vw;
+        transform: none;
+        object-fit: cover;
+        margin: 0;
+      }
+    }
+  }
+
+  .grey-section-container {
+    .values-container {
+      margin-top: 50px;
+      margin-bottom: 30px;
+      display: flex;
+      justify-content: space-between;
+      .values-number-container {
+        width: 20vw;
+        display: flex;
+        align-items: baseline;
+        p {
+          font-size: 24px;
+        }
+        h3 {
+          margin-left: 60px;
+        }
+      }
+      .values-description {
+        width: 400px;
+      }
+    }
+  }
+
 }

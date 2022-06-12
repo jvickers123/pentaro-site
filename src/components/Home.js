@@ -23,30 +23,39 @@ const Home = () => {
 
       <div className='dark-section-container'>
 
-        <h2 className='accent'>OUR MISSION</h2>
-        <hr></hr>
-        <h3>Pentaro aims to capitalise on synergies to enhance the profitability and growth potential of its partners.</h3>
-        <p>We are a modern, data-driven, results-focused business development agency, ready to help your business boost its bottom line.</p>
+        <div className='content-container'>
+          
+          <h2 className='accent'>OUR MISSION</h2>
+          <hr></hr>
+          <h3>Pentaro aims to capitalise on synergies to enhance the profitability and growth potential of its partners.</h3>
+          <p>We are a modern, data-driven, results-focused business development agency, ready to help your business boost its bottom line.</p>
 
-        <div className='home-links-container'>
-          <hr></hr>
-          <Link className='text-link' to='/recruitment'>
-            <p>Pentaro Recruitment</p>
-            <p className='accent'>&gt;&gt;</p>
-          </Link>
-          <hr></hr>
-          <Link className='text-link' to='/telemarketing'>
-            <p>Pentaro Telemarketing</p>
-            <p className='accent'>&gt;&gt;</p>
-          </Link>
-          <hr></hr>
+          <p>Find out more about the services on offer.</p>
+          <div className='home-links-container'>
+            <hr></hr>
+            <Link className='text-link' to='/recruitment'>
+              <p>Pentaro Recruitment</p>
+              <p className='accent'>&gt;&gt;</p>
+            </Link>
+            <hr></hr>
+            <Link className='text-link' to='/telemarketing'>
+              <p>Pentaro Telemarketing</p>
+              <p className='accent'>&gt;&gt;</p>
+            </Link>
+            <hr></hr>
+          </div>
+
         </div>
-        
 
-        <img 
-          src='https://image.shutterstock.com/image-photo/corporate-business-team-manager-meeting-600w-682694722.jpg'
-          alt='business meeting'
-          />
+        
+        <div className='image-container'>
+          <img 
+            src='https://image.shutterstock.com/image-photo/corporate-business-team-manager-meeting-600w-682694722.jpg'
+            alt='business meeting'
+            />
+        </div>
+
+      
       </div>
 
     </section>

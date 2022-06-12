@@ -96,8 +96,8 @@ const EnquireNow = () => {
         <form onSubmit={handleSubmit}>
 
           <div className='form-field'>
-            <label  htmlFor='full_name'>Full Name</label>
-            <input required type='text' name='full_name' placeholder='Full Name' value={formData.full_name} onChange={handleChange}/>
+            <label  htmlFor='full_name'>Name</label>
+            <input required type='text' name='full_name' placeholder='John' value={formData.full_name} onChange={handleChange}/>
           </div>
 
 
@@ -107,7 +107,7 @@ const EnquireNow = () => {
           </div>
 
           <div className='form-field'>
-            <label htmlFor='phone_number'>Phone Number</label>
+            <label htmlFor='phone_number'>Phone No.</label>
             <input required type='tel' name='phone_number' placeholder='0123456789' value={formData.phone_number} onChange={handleChange}/>
           </div>
 

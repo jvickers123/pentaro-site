@@ -1,7 +1,6 @@
 .footer-main {
   position: fixed;
   bottom: 0px;
-  padding: 15px 0;
   width: 100%;
   z-index: 2;
   color: #fff;
@@ -15,6 +14,7 @@
     border: 1px solid $accent;
     color: $accent;
     margin-right: 20px;
+    margin-bottom: 20px;
     @extend %box-shadow;
   }
   .footer-desktop {
@@ -29,37 +29,12 @@
 
 
 @media screen and (min-width: 600px) {
-  // .footer-main {
-  //   .footer-mobile {
-  //     display: none;
-  //   }
-  //   .footer-desktop {
-  //     @include flex-center(column);
-  //     position: fixed;
-  //     background-color: white;
-  //     border: 1px solid $accent;
-  //     right: 20px;
-  //     bottom: 20px;
-  //     color: black;
-  //     border-radius: 5px;
-  //     padding: 10px;
-  //     box-shadow: 0 2px 12px 0 rgba(0,0,0,0.26);
-  //     button {
-  //       box-shadow: none;
-  //     }
-
-  //     form {
-  //       @include flex-center(column);
-  //       .form-field {
-
-  //       }
-  //     }
-  //   }
-  // }
   
   .footer-main {
-    background-color: $accent;
-
+    background-color: #fff;
+    padding: 5px;
+    color: #000;
+    border-top: 0.5px solid $accent;
     .footer-mobile {
       display: none;
     }
@@ -70,12 +45,20 @@
         width: 100%;
         @include flex-center(row);
         justify-content: space-around;
+        button {
+          box-shadow: none;
+          border-width: 0.5px;
+          margin-bottom: 0;
+        }
         .form-field {
           label {
             margin: 0 10px;
           }
           input {
             color: black;
+            border: 1px solid $lightgrey;
+            border-radius: 5px;
+            padding: 2px 5px;
           }
         }
       }
