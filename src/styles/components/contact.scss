@@ -1,5 +1,5 @@
   .contact-section {
-    padding: 50px 40px;
+    padding: 70px 40px;
     background-color: $greybg;
     hr {
       height: 1px;
@@ -44,5 +44,30 @@
       }
     }
   }
+
+  .dark-section-container.contact-details {
+    padding-bottom: 50px;
+    a, .phone-num {
+      color: #a19b9b;
+    }
+  }
   
+  @media screen and (min-width: 600px) {
+    .contact-main-container {
+      padding-top: 50px;
+      @include flex-center(row);
+      .contact-section{
+        width: 50vw;
+      }
+      .dark-section-container.contact-details {
+        padding: 70px 40px;
+        display: block;
+        height: inherit;
+        width: 50vw;
+        align-self: stretch;
+      }
+    }
+    
+
+  }
   

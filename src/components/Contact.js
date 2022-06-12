@@ -4,6 +4,7 @@ import axios from 'axios'
 // CHAKRA STYLING
 import { Button, useToast } from '@chakra-ui/react'
 
+
 const Contact = () => {
 
   const toast = useToast()
@@ -83,45 +84,65 @@ const Contact = () => {
     setFormData(newObj)
   }
   return (
-    <section className='contact-section'>
-      <h1>GET IN TOUCH</h1>
+    <section className='contact-main-container'>
+      <div className='contact-section'>
+        <h1>GET IN TOUCH</h1>
 
-      <hr></hr>
+        <hr></hr>
 
-      <h3>Have a project you need help with?</h3>
-      <p>Send us a message and one of out team will be in touch as soon as possible.</p>
+        <h3>Have a project you need help with?</h3>
+        <p>Send us a message and one of our team will be in touch as soon as possible.</p>
+
+        <form onSubmit={handleSubmit} className='contact-form'>
+
+          <div className='form-field'>
+            <label  htmlFor='full_name'>Name <span className='red'>*</span></label>
+            <input required type='text' name='full_name' placeholder='John' value={formData.full_name} onChange={handleChange}/>
+          </div>
+
+
+          <div className='form-field'>
+            <label htmlFor='email'>Email <span className='red'>*</span></label>
+            <input required type='email' name='email' placeholder='email@email.com' value={formData.email} onChange={handleChange}/>
+          </div>
+
+          <div className='form-field'>
+            <label htmlFor='company_name'>Company Name <span className='red'>*</span></label>
+            <input required type='text' name='company_name' placeholder='Compnay Name Ltd.' value={formData.company_name} onChange={handleChange}/>
+          </div>
+
+          <div className='form-field'>
+            <label htmlFor='phone_number'>Phone Number <span className='red'>*</span></label>
+            <input required type='tel' name='phone_number' placeholder='0123456789' value={formData.phone_number} onChange={handleChange}/>
+          </div>
+
+          <div className='form-field message-area'>
+            <label htmlFor='message'>Message <span className='red'>*</span></label>
+            <textarea rows='6' required name='message' placeholder='Your message here...' value={formData.message} onChange={handleChange}/>
+          </div>
+
+          <Button className='light-btn' onClick={handleSubmit}>Send message</Button>
+
+        </form>
+      </div>
+
+      <div className='dark-section-container contact-details'>
+      <h2 className='accent'>CONTACT INFO</h2>
+          <hr></hr>
+
+          <p>Or contact us directly.</p>
+          <h3>Email</h3>
+
+          <a href='mailto:example@email.com'>example@email.com</a>
+            
+          <h3>Phone Number</h3>
+
+          <p className='phone-num'>+44 1234 567 567</p>
+          
+
+
+      </div>
       
-      <form onSubmit={handleSubmit} className='contact-form'>
-
-        <div className='form-field'>
-          <label  htmlFor='full_name'>Name <span className='red'>*</span></label>
-          <input required type='text' name='full_name' placeholder='John' value={formData.full_name} onChange={handleChange}/>
-        </div>
-
-
-        <div className='form-field'>
-          <label htmlFor='email'>Email <span className='red'>*</span></label>
-          <input required type='email' name='email' placeholder='email@email.com' value={formData.email} onChange={handleChange}/>
-        </div>
-
-        <div className='form-field'>
-          <label htmlFor='company_name'>Company Name <span className='red'>*</span></label>
-          <input required type='text' name='company_name' placeholder='Compnay Name Ltd.' value={formData.company_name} onChange={handleChange}/>
-        </div>
-
-        <div className='form-field'>
-          <label htmlFor='phone_number'>Phone Number <span className='red'>*</span></label>
-          <input required type='tel' name='phone_number' placeholder='0123456789' value={formData.phone_number} onChange={handleChange}/>
-        </div>
-
-        <div className='form-field message-area'>
-          <label htmlFor='message'>Message <span className='red'>*</span></label>
-          <textarea rows='6' required name='message' placeholder='Your message here...' value={formData.message} onChange={handleChange}/>
-        </div>
-
-        <Button className='light-btn' onClick={handleSubmit}>Send message</Button>
-
-      </form>
     </section>
   )
 }
