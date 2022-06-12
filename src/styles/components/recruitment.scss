@@ -1,0 +1,12 @@
+.recruitment-background {
+  background-image: url("../../assets/meeting.jpg");
+}
+
+@media screen and (min-width: 600px) {
+
+  .light-background.recruitment-background {
+    width: 85%;
+    top: 50px;
+    left: 7.5%;
+  }
+}

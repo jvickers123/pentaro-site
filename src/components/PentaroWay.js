@@ -1,5 +1,8 @@
 import React from 'react'
 
+// IMAGES
+import meeting from '../assets/happy-meeting.jpg'
+
 const PentaroWay = () => {
   return (
     <section>
@@ -27,7 +30,7 @@ const PentaroWay = () => {
         
         <div className='image-container'>
           <img 
-            src='https://image.shutterstock.com/image-photo/multiethnic-business-people-smiling-during-600w-1956492793.jpg'
+            src={meeting}
             alt='business meeting'
             />
 

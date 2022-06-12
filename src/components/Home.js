@@ -1,6 +1,9 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
+// IMAGES
+import handshake from '../assets/happy-handshake.jpg'
+
 const Home = () => {
 
   
@@ -50,7 +53,7 @@ const Home = () => {
         
         <div className='image-container'>
           <img 
-            src='https://image.shutterstock.com/image-photo/corporate-business-team-manager-meeting-600w-682694722.jpg'
+            src={handshake}
             alt='business meeting'
             />
         </div>

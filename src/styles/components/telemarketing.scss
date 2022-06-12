@@ -1,0 +1,12 @@
+.telemarketing-background {
+  background-image: url("../../assets/telemarketing-team.jpg");
+}
+
+@media screen and (min-width: 600px) {
+
+  .light-background.telemarketing-background {
+    width: 85%;
+    top: 50px;
+    left: 7.5%;
+  }
+}
