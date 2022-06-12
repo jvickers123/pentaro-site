@@ -54,7 +54,7 @@ const Home = () => {
         <div className='image-container'>
           <img 
             src={handshake}
-            alt='business meeting'
+            alt='Two people shaking hands'
             />
         </div>
 

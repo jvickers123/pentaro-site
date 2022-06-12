@@ -31,7 +31,7 @@ const Recruitment = () => {
         <div className='image-container'>
           <img 
             src={handshake}
-            alt='business meeting'
+            alt='People shaking hands at meeting'
             />
 
         </div>

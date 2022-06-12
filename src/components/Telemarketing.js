@@ -31,6 +31,7 @@ const Telemarketing = () => {
         <div className='image-container'>
           <img 
             src={individual}
+            alt='Man calling customers'
             />
 
         </div>
