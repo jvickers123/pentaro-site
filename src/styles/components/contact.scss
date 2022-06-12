@@ -46,9 +46,17 @@
   }
 
   .dark-section-container.contact-details {
-    padding-bottom: 50px;
     a, .phone-num {
       color: #a19b9b;
+    }
+    .socials {
+      display: flex;
+      a {
+        margin: 0 10px;
+        &:hover {
+          color: #e4dada;
+        }
+      }
     }
   }
   
@@ -60,11 +68,15 @@
         width: 50vw;
       }
       .dark-section-container.contact-details {
-        padding: 70px 40px;
+        padding-top: 70px;
         display: block;
         height: inherit;
         width: 50vw;
         align-self: stretch;
+        img {
+          height: 405px;
+          bottom: 0;
+        }
       }
     }
     

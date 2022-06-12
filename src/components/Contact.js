@@ -4,6 +4,12 @@ import axios from 'axios'
 // CHAKRA STYLING
 import { Button, useToast } from '@chakra-ui/react'
 
+// IMAGES
+import outside from '../assets/outside.jpg'
+
+// ICONS
+import { FiInstagram, FiTwitter, FiFacebook } from 'react-icons/fi'
+
 
 const Contact = () => {
 
@@ -139,7 +145,19 @@ const Contact = () => {
 
           <p className='phone-num'>+44 1234 567 567</p>
           
+          <h3>Social Media</h3>
 
+          <div className='socials'>
+            <a href='www.instagram.co.uk' target='_blank'><FiInstagram /></a>
+            <a href='www.facebook.co.uk' target='_blank'><FiFacebook /></a>
+            <a href='www.twitter.co.uk' target='_blank'><FiTwitter /></a>
+
+          </div>
+
+          <img
+            src={outside}
+            alt='people outside an office'
+          />
 
       </div>
       
