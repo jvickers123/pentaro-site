@@ -7,18 +7,21 @@ See the License for the specific language governing permissions and limitations 
 */
 
 
-
+/* Amplify Params - DO NOT EDIT
+	ENV
+	REGION
+	TWILIO_ACCOUNT_SID
+	TWILIO_AUTH_TOKEN
+	TWILIO_PHONE_NUMBER
+	SENDGRID_API_KEY
+Amplify Params - DO NOT EDIT */
 
 const express = require('express')
 const bodyParser = require('body-parser')
 const awsServerlessExpressMiddleware = require('aws-serverless-express/middleware')
-
-require('dotenv/config')
-
 const twilio = require('twilio')
 const sgMail = require('@sendgrid/mail')
 
-//twilio requirements -- Texting API 
 const accountSid = process.env.TWILIO_ACCOUNT_SID;
 const authToken = process.envTWILIO_AUTH_TOKEN; 
 const client = new twilio(accountSid, authToken);
@@ -36,32 +39,27 @@ app.use(function(req, res, next) {
   next()
 });
 
+
+/**********************
+ * Example get method *
+ **********************/
+
+app.get('/send-message', function(req, res) {
+  // Add your code here
+  res.json({success: 'get call succeed!', url: req.url});
+});
+
+app.get('/send-message/*', function(req, res) {
+  // Add your code here
+  res.json({success: 'get call succeed!', url: req.url});
+});
+
 /****************************
 * Example post method *
 ****************************/
 
-app.post('/send-text', function(req, res) {
+app.post('/send-message/send-email', async (req, res) => {
   // Add your code here
-  //Welcome Message
-  res.send('Hello to the Twilio Server')
-  const {message} = req.body
-  //Send Text
-  client.messages.create({
-      body: message,
-      to: 'whatsapp:+447954549514',  // Text this number
-      from: `whatsapp:${process.env.TWILIO_PHONE_NUMBER}` // From a valid Twilio number
-  }).then(message => console.log(message))
-  .catch(err => {
-    console.log(err);
-    res.send(JSON.stringify({ success: false }));
-  });
-  res.json({success: 'post call succeed!', url: req.url, body: req.body})
-});
-
-app.post('/send-email', function(req, res) {
-  // Add your code here
-  //Welcome Message
-  res.send('Hello to the Twilio Server')
   const {full_name, email, company_name, message, phone_number} = req.body
   const msg = {
     to: 'jonathanbvickers@gmail.com', // Change to your recipient
@@ -78,21 +76,34 @@ app.post('/send-email', function(req, res) {
     <p>${phone_number}</p>
     `,
   }
-  sgMail
-    .send(msg)
-    .then(() => {
-      console.log('Email sent')
-    })
-    .catch((error) => {
-      console.error(error)
-    })
-  res.json({success: 'post call succeed!', url: req.url, body: req.body})
+  try {
+  await sgMail.send(msg)
+  res.json({success: 'post call succeed!', url: req.url, body: req.body, info: msg})
+  }
+  catch (error) {
+    res.json({failed: 'message failed to send', err: error})
+  }
 });
 
-app.post('/send-enquiry', function(req, res) {
+app.post('/send-message/send-text', async (req, res) => {
   // Add your code here
-  //Welcome Message
-  res.send('Hello to the Twilio Server')
+  const {message} = req.body
+  try {
+    await client.messages.create({
+      body: message,
+      to: 'whatsapp:+447954549514',  // Text this number
+      from: `whatsapp:${process.env.TWILIO_PHONE_NUMBER}` // From a valid Twilio number
+  })
+    res.json({success: 'post call succeed!', url: req.url, body: req.body})
+    
+  } catch (error) {
+    res.json({failed: 'message failed to send', err: error})
+  }
+
+});
+
+app.post('/send-message/send-enquiry', async (req, res) => {
+  // Add your code here
   const {full_name, email, phone_number} = req.body
   const msg = {
     to: 'jonathanbvickers@gmail.com', // Change to your recipient
@@ -106,19 +117,45 @@ app.post('/send-enquiry', function(req, res) {
     <br>
     <p>Phone Number:<p>
     <p>${phone_number}</p>
-    `,
+    `
   }
-  sgMail
-    .send(msg)
-    .then(() => {
-      console.log('Email sent')
-    })
-    .catch((error) => {
-      console.error(error)
-    })
-  res.json({success: 'post call succeed!', url: req.url, body: req.body})
+  try {
+    await sgMail.send(msg)
+    res.json({success: 'post call succeed!', url: req.url, body: req.body})
+    
+  } catch (error) {
+    res.json({failed: 'message failed to send', err: error})
+  }
+
 });
 
+/****************************
+* Example put method *
+****************************/
+
+app.put('/send-message', function(req, res) {
+  // Add your code here
+  res.json({success: 'put call succeed!', url: req.url, body: req.body})
+});
+
+app.put('/send-message/*', function(req, res) {
+  // Add your code here
+  res.json({success: 'put call succeed!', url: req.url, body: req.body})
+});
+
+/****************************
+* Example delete method *
+****************************/
+
+app.delete('/send-message', function(req, res) {
+  // Add your code here
+  res.json({success: 'delete call succeed!', url: req.url});
+});
+
+app.delete('/send-message/*', function(req, res) {
+  // Add your code here
+  res.json({success: 'delete call succeed!', url: req.url});
+});
 
 app.listen(3000, function() {
     console.log("App started")

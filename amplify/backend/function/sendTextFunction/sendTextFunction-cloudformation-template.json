@@ -15,6 +15,18 @@
     },
     "s3Key": {
       "Type": "String"
+    },
+    "twilioAccountSid": {
+      "Type": "String"
+    },
+    "twilioAuthToken": {
+      "Type": "String"
+    },
+    "twilioPhoneNumber": {
+      "Type": "String"
+    },
+    "sendgridApiKey": {
+      "Type": "String"
     }
   },
   "Conditions": {
@@ -47,12 +59,12 @@
         "FunctionName": {
           "Fn::If": [
             "ShouldNotCreateEnvResources",
-            "sendtext",
+            "sendTextFunction",
             {
               "Fn::Join": [
                 "",
                 [
-                  "sendtext",
+                  "sendTextFunction",
                   "-",
                   {
                     "Ref": "env"
@@ -69,6 +81,18 @@
             },
             "REGION": {
               "Ref": "AWS::Region"
+            },
+            "TWILIO_ACCOUNT_SID": {
+              "Ref": "twilioAccountSid"
+            },
+            "TWILIO_AUTH_TOKEN": {
+              "Ref": "twilioAuthToken"
+            },
+            "TWILIO_PHONE_NUMBER": {
+              "Ref": "twilioPhoneNumber"
+            },
+            "SENDGRID_API_KEY": {
+              "Ref": "sendgridApiKey"
             }
           }
         },
@@ -89,12 +113,12 @@
         "RoleName": {
           "Fn::If": [
             "ShouldNotCreateEnvResources",
-            "pentarositeLambdaRole6bebd071",
+            "pentarositeLambdaRole6d460581",
             {
               "Fn::Join": [
                 "",
                 [
-                  "pentarositeLambdaRole6bebd071",
+                  "pentarositeLambdaRole6d460581",
                   "-",
                   {
                     "Ref": "env"
