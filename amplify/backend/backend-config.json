@@ -1,0 +1,9 @@
+{
+  "function": {
+    "sendtext": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    }
+  }
+}
