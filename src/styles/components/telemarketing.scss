@@ -6,18 +6,36 @@
 .pentagon-clip-path-attempt-container {
   position: relative;
   display: flex;
+
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  width: 100%;
-  height: 100vh;
+  width: 500px;
+  height: 100%;
+  p {
+    z-index: 2;
+    color: white;
+  }
+  .left-text {
+    margin: 25% 5% 20% 20%;
+  }
+  .right-text {
+    margin: 25% 20% 20% 5%;
+  }
+  .bot-text {
+    margin: 10% 20%;
+  }
+  .bot-mid-text {
+    margin: 10% 10% 10% 10%;
+  }
 
   .triangle-container {
     position: absolute;
     background-image: url('../../assets/happy-meeting.jpg');
     background-size: cover;
-    width: 200px;
-    height: 200px;
+    background-color: rgba(164, 225, 249, 0.838);
+    width: 500px;
+    height: 500px;
     &:hover {
       background: red;
     }
@@ -32,7 +50,7 @@
       clip-path: polygon(0% 39%, 49% 51%, 17% 100%);
     }
     &.base-tri {
-      clip-path: polygon(81% 100%, 50% 51%, 19% 100%);
+      clip-path: polygon(81% 100%, 50% 52%, 19% 100%);
     }
     &.bot-right-tri {
       clip-path: polygon(83% 100%, 51% 51%, 100% 39%);

@@ -22,26 +22,18 @@ const Telemarketing = () => {
       <div className='grey-section-container'>
 
         <div className='pentagon-clip-path-attempt-container'>
+
+          <p className='left-text'>text</p>
+          <p className='right-text'>text</p>
+          <p className='bot-text'>text</p>
+          <p className='bot-mid-text'>text</p>
+          <p className='bot-text'>text</p>
           
-        <div className='triangle-container left-tri'>
-            <p>Text</p>
-          </div>
-
-          <div className='triangle-container right-tri'>
-            <p>Text</p>
-          </div>
-
-          <div className='triangle-container bot-left-tri'>
-            <p>Text</p>
-          </div>
-
-          <div className='triangle-container base-tri'>
-            <p>Text</p>
-          </div>
-
-          <div className='triangle-container bot-right-tri'>
-            <p>Text</p>
-          </div>
+          <div className='triangle-container left-tri'></div>
+          <div className='triangle-container right-tri'></div>
+          <div className='triangle-container bot-left-tri'></div>
+          <div className='triangle-container base-tri'></div>
+          <div className='triangle-container bot-right-tri'></div>
 
 
         </div>
