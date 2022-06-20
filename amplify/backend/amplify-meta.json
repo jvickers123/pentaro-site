@@ -1,0 +1,70 @@
+{
+  "providers": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-amplify1084cbba9a5e4-staging-142751-authRole",
+      "UnauthRoleArn": "arn:aws:iam::997762567101:role/amplify-amplify1084cbba9a5e4-staging-142751-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::997762567101:role/amplify-amplify1084cbba9a5e4-staging-142751-authRole",
+      "Region": "eu-west-2",
+      "DeploymentBucketName": "amplify-amplify1084cbba9a5e4-staging-142751-deployment",
+      "UnauthRoleName": "amplify-amplify1084cbba9a5e4-staging-142751-unauthRole",
+      "StackName": "amplify-amplify1084cbba9a5e4-staging-142751",
+      "StackId": "arn:aws:cloudformation:eu-west-2:997762567101:stack/amplify-amplify1084cbba9a5e4-staging-142751/01c41df0-eb25-11ec-ab08-067cb177d0ee",
+      "AmplifyAppId": "d193cu0w385873"
+    }
+  },
+  "function": {
+    "sendTextFunction": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda",
+      "dependsOn": [],
+      "lastBuildTimeStamp": "2022-06-13T15:01:26.909Z",
+      "lastBuildType": "PROD",
+      "lastPackageTimeStamp": "2022-06-13T15:01:33.486Z",
+      "distZipFilename": "sendTextFunction-68486a516a397948724d-build.zip",
+      "s3Bucket": {
+        "deploymentBucketName": "amplify-amplify1084cbba9a5e4-staging-142751-deployment",
+        "s3Key": "amplify-builds/sendTextFunction-68486a516a397948724d-build.zip"
+      },
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-amplify1084cbba9a5e4-staging-142751-deployment/amplify-cfn-templates/function/sendTextFunction-cloudformation-template.json",
+        "logicalId": "functionsendTextFunction"
+      },
+      "lastPushTimeStamp": "2022-06-13T15:02:39.689Z",
+      "output": {
+        "Region": "eu-west-2",
+        "Arn": "arn:aws:lambda:eu-west-2:997762567101:function:sendTextFunction-staging",
+        "Name": "sendTextFunction-staging",
+        "LambdaExecutionRole": "pentarositeLambdaRole6d460581-staging"
+      },
+      "lastPushDirHash": "BYxARu22OtK5z0d2KimVSDrByOg="
+    }
+  },
+  "api": {
+    "sendmessageAPI": {
+      "service": "API Gateway",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [
+        {
+          "category": "function",
+          "resourceName": "sendTextFunction",
+          "attributes": [
+            "Name",
+            "Arn"
+          ]
+        }
+      ],
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-amplify1084cbba9a5e4-staging-142751-deployment/amplify-cfn-templates/api/sendmessageAPI-cloudformation-template.json",
+        "logicalId": "apisendmessageAPI"
+      },
+      "lastPushTimeStamp": "2022-06-13T15:02:39.592Z",
+      "output": {
+        "ApiName": "sendmessageAPI",
+        "RootUrl": "https://5021147o54.execute-api.eu-west-2.amazonaws.com/staging",
+        "ApiId": "5021147o54"
+      },
+      "lastPushDirHash": "ta0v7NavZ4AlyuZQqWa+DLpxti8="
+    }
+  }
+}

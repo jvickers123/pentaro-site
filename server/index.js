@@ -67,8 +67,8 @@ app.post('/send-email', (req, res) => {
   res.send('Hello to the Twilio Server')
   const {full_name, email, company_name, message, phone_number} = req.body
   const msg = {
-    to: 'jonathanbvickers@gmail.com', // Change to your recipient
-    from: email, // Change to your verified sender
+    to: 'enquiries@pentaro.co.uk', // Change to your recipient
+    from: 'em4462.pentaro.co.uk', // Change to your verified sender
     subject: `New Enqiry From ${full_name}, ${company_name}`,
     text: message,
     html: `<p>New Enquiry from ${full_name}, ${company_name}<p>
