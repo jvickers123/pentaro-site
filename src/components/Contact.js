@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 
 // CHAKRA STYLING
@@ -12,6 +12,10 @@ import { FiInstagram, FiTwitter, FiFacebook } from 'react-icons/fi'
 
 
 const Contact = () => {
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
 
   const toast = useToast()
   
