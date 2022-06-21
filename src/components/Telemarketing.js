@@ -30,6 +30,10 @@ const Telemarketing = () => {
         <hr></hr>
 
         <p>Here at Pentaro, we offer five distinct telemarketing services</p>
+        
+        <br />
+        <p>Proin fringilla augue at sapien imperdiet mollis. Vivamus ut quam ut tellus ullamcorper elementum non non turpis.</p>
+        
         <br />
         <p>Click to find out more below.</p>
 
