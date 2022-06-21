@@ -21,22 +21,35 @@ const Telemarketing = () => {
 
       <div className='grey-section-container'>
 
-        <div className='pentagon-clip-path-attempt-container'>
+        <h2 className='accent'>THE POWER OF 5</h2>
 
-          <p className='left-text'>text</p>
-          <p className='right-text'>text</p>
-          <p className='bot-text'>text</p>
-          <p className='bot-mid-text'>text</p>
-          <p className='bot-text'>text</p>
-          
-          <div className='triangle-container left-tri'></div>
-          <div className='triangle-container right-tri'></div>
-          <div className='triangle-container bot-left-tri'></div>
-          <div className='triangle-container base-tri'></div>
-          <div className='triangle-container bot-right-tri'></div>
+        <hr></hr>
+
+        <p>Here at Pentaro, we offer five distinct telemarketing services</p>
+        <br />
+        <p>Click to find out more below.</p>
+
+        <br />
+        
+        <div className='pentagon-flex-container'>
+          <div className='pentagon-clip-path-container'>
+
+            <h3 className='left-text'>TEXT</h3>
+            <h3 className='right-text'>TEXT</h3>
+            <h3 className='bot-left-text'>TEXT</h3>
+            <h3 className='bot-right-text'>TEXT</h3>
+            <h3 className='bot-text'>TEXT</h3>
+
+            <div className='triangle-container left-tri'><div className='blue-background'></div></div>
+            <div className='triangle-container right-tri'><div className='blue-background'></div></div>
+            <div className='triangle-container bot-left-tri'><div className='blue-background'></div></div>
+            <div className='triangle-container base-tri'><div className='blue-background'></div></div>
+            <div className='triangle-container bot-right-tri'><div className='blue-background'></div></div>
 
 
+          </div>
         </div>
+        
           
       </div>
 
