@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react'
+import React, {useEffect, useRef} from 'react'
 
 // IMAGES
 import individual from '../assets/telemarketing-individual.jpg'
@@ -6,9 +6,23 @@ import individual from '../assets/telemarketing-individual.jpg'
 
 const Telemarketing = () => {
 
+  // RENDER AT TOP OF PAGE
   useEffect(() => {
     window.scrollTo(0, 0)
   }, [])
+
+  // REF
+  const pentRef = useRef(null)
+  const oneRef = useRef(null)
+  const twoRef = useRef(null)
+  const threeRef = useRef(null)
+  const fourRef = useRef(null)
+  const fiveRef = useRef(null)
+
+  // SCROLL TO COMPONENT
+  const scrollTo = (ref) => {
+    ref.current.scrollIntoView({ behavior: 'smooth'})
+  }
 
 
   return (
@@ -23,7 +37,7 @@ const Telemarketing = () => {
         </div>
       </div>
 
-      <div className='grey-section-container'>
+      <div className='grey-section-container' ref={pentRef}>
 
         <h2 className='accent'>THE POWER OF 5</h2>
 
@@ -42,17 +56,17 @@ const Telemarketing = () => {
         <div className='pentagon-flex-container'>
           <div className='pentagon-clip-path-container'>
 
-            <h3 className='left-text'>TEXT</h3>
-            <h3 className='right-text'>TEXT</h3>
-            <h3 className='bot-left-text'>TEXT</h3>
-            <h3 className='bot-right-text'>TEXT</h3>
-            <h3 className='bot-text'>TEXT</h3>
+            <h3 className='left-text' onClick={() => scrollTo(oneRef)}>ONE</h3>
+            <h3 className='right-text' onClick={() => scrollTo(twoRef)}>TWO</h3>
+            <h3 className='bot-left-text' onClick={() => scrollTo(threeRef)}>THREE</h3>
+            <h3 className='bot-right-text' onClick={() => scrollTo(fourRef)} >FOUR</h3>
+            <h3 className='bot-text' onClick={() => scrollTo(fiveRef)}>FIVE</h3>
 
-            <div className='triangle-container left-tri'><div className='blue-background'></div></div>
-            <div className='triangle-container right-tri'><div className='blue-background'></div></div>
-            <div className='triangle-container bot-left-tri'><div className='blue-background'></div></div>
-            <div className='triangle-container base-tri'><div className='blue-background'></div></div>
-            <div className='triangle-container bot-right-tri'><div className='blue-background'></div></div>
+            <div onClick={() => scrollTo(oneRef)} className='triangle-container left-tri'><div className='blue-background'></div></div>
+            <div onClick={() => scrollTo(twoRef)} className='triangle-container right-tri'><div className='blue-background'></div></div>
+            <div onClick={() => scrollTo(threeRef)} className='triangle-container bot-left-tri'><div className='blue-background'></div></div>
+            <div onClick={() => scrollTo(fourRef)} className='triangle-container base-tri'><div className='blue-background'></div></div>
+            <div onClick={() => scrollTo(fiveRef)} className='triangle-container bot-right-tri'><div className='blue-background'></div></div>
 
 
           </div>
@@ -61,10 +75,10 @@ const Telemarketing = () => {
           
       </div>
 
-      <div className='dark-section-container'>
+      <div className='dark-section-container' ref={oneRef}>
 
         <div className='content-container'>
-          <h2 className='accent'>TELEMARKETING</h2>
+          <h2 className='accent'>SERVICE ONE</h2>
           <hr></hr>
           <h3>Proin fringilla augue at sapien</h3>
           <p>Proin fringilla augue at sapien imperdiet mollis. Vivamus ut quam ut tellus ullamcorper elementum non non turpis.</p>
@@ -72,6 +86,108 @@ const Telemarketing = () => {
           <p>Aenean sed sem at ante aliquam consequat. Ut rhoncus ex et orci feugiat, nec finibus neque rhoncus.</p>
           
         </div>
+
+        <button onClick={() => scrollTo(pentRef)}>Back to top</button>
+        
+        <div className='image-container'>
+          <img 
+            src={individual}
+            alt='Man calling customers'
+            />
+
+        </div>
+        
+      </div>
+
+      <div className='dark-section-container' ref={twoRef}>
+
+        <div className='content-container'>
+          <h2 className='accent'>SERVICE TWO</h2>
+          <hr></hr>
+          <h3>Proin fringilla augue at sapien</h3>
+          <p>Proin fringilla augue at sapien imperdiet mollis. Vivamus ut quam ut tellus ullamcorper elementum non non turpis.</p>
+            
+          <p>Aenean sed sem at ante aliquam consequat. Ut rhoncus ex et orci feugiat, nec finibus neque rhoncus.</p>
+          
+        </div>
+        
+        <button onClick={() => scrollTo(pentRef)}>Back to top</button>
+
+
+        <div className='image-container'>
+          <img 
+            src={individual}
+            alt='Man calling customers'
+            />
+
+        </div>
+        
+      </div>
+
+      <div className='dark-section-container' ref={threeRef}>
+
+        <div className='content-container'>
+          <h2 className='accent'>SERVICE 3</h2>
+          <hr></hr>
+          <h3>Proin fringilla augue at sapien</h3>
+          <p>Proin fringilla augue at sapien imperdiet mollis. Vivamus ut quam ut tellus ullamcorper elementum non non turpis.</p>
+            
+          <p>Aenean sed sem at ante aliquam consequat. Ut rhoncus ex et orci feugiat, nec finibus neque rhoncus.</p>
+          
+        </div>
+
+        <button onClick={() => scrollTo(pentRef)}>Back to top</button>
+
+        
+        <div className='image-container'>
+          <img 
+            src={individual}
+            alt='Man calling customers'
+            />
+
+        </div>
+        
+      </div>
+
+      <div className='dark-section-container' ref={fourRef}>
+
+        <div className='content-container'>
+          <h2 className='accent'>SERVICE 4</h2>
+          <hr></hr>
+          <h3>Proin fringilla augue at sapien</h3>
+          <p>Proin fringilla augue at sapien imperdiet mollis. Vivamus ut quam ut tellus ullamcorper elementum non non turpis.</p>
+            
+          <p>Aenean sed sem at ante aliquam consequat. Ut rhoncus ex et orci feugiat, nec finibus neque rhoncus.</p>
+          
+        </div>
+
+        <button onClick={() => scrollTo(pentRef)}>Back to top</button>
+
+        
+        <div className='image-container'>
+          <img 
+            src={individual}
+            alt='Man calling customers'
+            />
+
+        </div>
+        
+      </div>
+
+      <div className='dark-section-container' ref={fiveRef}>
+
+        <div className='content-container'>
+          <h2 className='accent'>SERVICE 5</h2>
+          <hr></hr>
+          <h3>Proin fringilla augue at sapien</h3>
+          <p>Proin fringilla augue at sapien imperdiet mollis. Vivamus ut quam ut tellus ullamcorper elementum non non turpis.</p>
+            
+          <p>Aenean sed sem at ante aliquam consequat. Ut rhoncus ex et orci feugiat, nec finibus neque rhoncus.</p>
+          
+        </div>
+
+        <button onClick={() => scrollTo(pentRef)}>Back to top</button>
+
         
         <div className='image-container'>
           <img 
