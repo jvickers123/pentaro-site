@@ -14,6 +14,16 @@
   }
 }
 
+.white-section-container {
+  padding: 50px 40px;
+  background-color: #fff;
+  hr {
+    height: 1px;
+    background-color: $greybgline;
+    border: none;
+  }
+}
+
   
 
 .pentagon-flex-container {
@@ -25,7 +35,7 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    width: 350px;
+    width: 300px;
     height: 100%;
     h3 {
       z-index: 2;
@@ -33,16 +43,16 @@
       font-weight: 700;
     }
     .left-text {
-      margin: 25% 10% 20% 25%;
+      margin: 20% 5% 10% 15%;
     }
     .right-text {
-      margin: 25% 25% 20% 10%;
+      margin: 20% 15% 10% 5%;
     }
     .bot-left-text {
-      margin: 10% 20% 10% 10%;
+      margin: 15% 15% 5% 10%;
     }
     .bot-right-text {
-      margin: 10% 10% 10% 20%;
+      margin: 15% 10% 5% 15%;
     }
     .bot-text {
       margin: 10% 30%;
@@ -53,8 +63,8 @@
       background-image: url('https://image.shutterstock.com/shutterstock/photos/2109008363/display_1500/stock-photo-professional-investment-traders-talking-into-headset-working-on-computer-with-screen-showing-2109008363.jpg');
       background-size: cover;
       background-color: rgba(164, 225, 249, 0.838);
-      width: 350px;
-      height: 350px;
+      width: 300px;
+      height: 300px;
       .blue-background {
         background-size: cover;
         opacity: 0.8;
@@ -102,7 +112,7 @@
   }
   .pentagon-screen-split-container {
     @include flex-center(row);
-    .grey-section-container {
+    .white-section-container {
       width: 50vw;
       position: sticky;
       align-self: flex-start;
@@ -113,6 +123,7 @@
       width: 50vw;
       .service-option {
         width: 50vw;
+        padding-top: 100px;
         img {
           width: 50vw;
         }

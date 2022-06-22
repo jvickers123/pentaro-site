@@ -39,7 +39,7 @@ const Telemarketing = () => {
 
       <div className='pentagon-screen-split-container'>
 
-        <div className='grey-section-container' ref={pentRef}>
+        <div className='white-section-container' ref={pentRef}>
 
           <h2 className='accent'>THE POWER OF 5</h2>
 
@@ -63,8 +63,8 @@ const Telemarketing = () => {
               <div onClick={() => scrollTo(oneRef)} className='triangle-container left-tri'><div className='blue-background'></div></div>
               <div onClick={() => scrollTo(twoRef)} className='triangle-container right-tri'><div className='blue-background'></div></div>
               <div onClick={() => scrollTo(threeRef)} className='triangle-container bot-left-tri'><div className='blue-background'></div></div>
-              <div onClick={() => scrollTo(fourRef)} className='triangle-container base-tri'><div className='blue-background'></div></div>
-              <div onClick={() => scrollTo(fiveRef)} className='triangle-container bot-right-tri'><div className='blue-background'></div></div>
+              <div onClick={() => scrollTo(fiveRef)} className='triangle-container base-tri'><div className='blue-background'></div></div>
+              <div onClick={() => scrollTo(fourRef)} className='triangle-container bot-right-tri'><div className='blue-background'></div></div>
 
 
             </div>
