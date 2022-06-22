@@ -1,6 +1,20 @@
 .telemarketing-background {
   background-image: url("../../assets/telemarketing-team.jpg");
 }
+.service-option {
+  background-color: $darkbackground;
+  color: white;
+  width: 100vw;
+  background-size: cover;
+  padding: 50px 40px 0 40px;
+  hr {
+    height: 1px;
+    background-color: $darkbgline;
+    border: none;
+  }
+}
+
+  
 
 .pentagon-flex-container {
   @include flex-center(column);
@@ -85,5 +99,24 @@
     width: 85%;
     top: 50px;
     left: 7.5%;
+  }
+  .pentagon-screen-split-container {
+    @include flex-center(row);
+    .grey-section-container {
+      width: 50vw;
+      position: sticky;
+      align-self: flex-start;
+      top: 50px;
+      left: 0;
+    }
+    .service-options-container {
+      width: 50vw;
+      .service-option {
+        width: 50vw;
+        img {
+          width: 50vw;
+        }
+      }
+    }
   }
 }
