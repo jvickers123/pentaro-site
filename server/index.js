@@ -44,23 +44,26 @@ app.post('/send-text', (req, res) => {
       console.log(err);
       res.send(JSON.stringify({ success: false }));
     });
-    // const msg = {
-    //   to: 'jonathanbvickers@gmail.com', // Change to your recipient
-    //   from: 'jonathanbvickers@gmail.com', // Change to your verified sender
-    //   subject: 'Sending with SendGrid is Fun',
-    //   text: message,
-    //   html: `<strong>${message}</strong>`,
-    // }
-    // sgMail
-    //   .send(msg)
-    //   .then(() => {
-    //     console.log('Email sent')
-    //   })
-    //   .catch((error) => {
-    //     console.error(error)
-    //   })
   }
 )
+
+app.post('/send-sms', (req, res) => {
+  //Welcome Message
+  res.send('Hello to the Twilio Server')
+  const {message} = req.body
+  //Send Text
+  client.messages.create({
+      body: message,
+      to: '+447954549514',  // Text this number
+      messagingServiceSid: 'MGcc8b099a58150efd0d85c844ece28df5' // From a valid Twilio number
+  }).then(message => console.log(message))
+  .catch(err => {
+    console.log(err);
+    res.send(JSON.stringify({ success: false }));
+  });
+}
+)
+
 
 app.post('/send-email', (req, res) => {
   //Welcome Message

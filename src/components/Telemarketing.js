@@ -1,4 +1,4 @@
-import React, {useEffect, useRef} from 'react'
+import React, {useEffect, useRef, useState} from 'react'
 
 // IMAGES
 import individual from '../assets/telemarketing-individual.jpg'
@@ -10,6 +10,9 @@ const Telemarketing = () => {
   useEffect(() => {
     window.scrollTo(0, 0)
   }, [])
+
+  // STATE
+  const [hovered, setHovered] = useState(false)
 
   // REF
   const pentRef = useRef(null)
@@ -60,7 +63,7 @@ const Telemarketing = () => {
               <h3 className='bot-right-text' onClick={() => scrollTo(fourRef)} >FOUR</h3>
               <h3 className='bot-text' onClick={() => scrollTo(fiveRef)}>FIVE</h3>
 
-              <div onClick={() => scrollTo(oneRef)} className='triangle-container left-tri'><div className='blue-background'></div></div>
+              <div onClick={() => scrollTo(oneRef)} className={hovered ? 'triangle-container left-tri hovered' : 'triangle-container left-tri'} onMouseEnter={() => setHovered(true)} onMouseLeave={() => setHovered(false)}><div className='blue-background'></div></div>
               <div onClick={() => scrollTo(twoRef)} className='triangle-container right-tri'><div className='blue-background'></div></div>
               <div onClick={() => scrollTo(threeRef)} className='triangle-container bot-left-tri'><div className='blue-background'></div></div>
               <div onClick={() => scrollTo(fiveRef)} className='triangle-container base-tri'><div className='blue-background'></div></div>
