@@ -1,9 +1,13 @@
 
 $accent: #3ebca4;
 $lightgrey: #EAEAEA;
-$darkbackground: #151C22;
-$darkbgline: #515151;
+// $darkbackground: #151C22;
+$darkbackground: #21242f;
+// $darkbgline: #515151;
+$darkbgline: #5e6964;
+// $greybg: #5e6964;
 $greybg: #e5e5e5;
+$greygrey: #8A8A8A;
 $greybgline: #d6d6d6;
 
 @mixin flex-center($direction){

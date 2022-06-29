@@ -2,7 +2,7 @@ import React, {useEffect, useRef, useState} from 'react'
 
 // IMAGES
 import individual from '../assets/telemarketing-individual.jpg'
-
+import logo from '../assets/whatsapp.jpeg'
 
 const Telemarketing = () => {
 
@@ -42,9 +42,9 @@ const Telemarketing = () => {
 
       <div className='pentagon-screen-split-container'>
 
-        <div className='white-section-container' ref={pentRef}>
+        <div className='green-section-container' ref={pentRef}>
 
-          <h2 className='accent'>THE POWER OF 5</h2>
+          <h2 >THE POWER OF 5</h2>
 
           <hr></hr>
 
@@ -53,8 +53,19 @@ const Telemarketing = () => {
           {/* <p>Click to find out more below.</p> */}
 
           <br />
+          <div className='logo-wheel-container'>
 
-          <div className='pentagon-flex-container'>
+            <img src={logo} alt='pentaro logo' />
+
+            <div className='wheel-option top-left'><h3 onClick={() => scrollTo(oneRef)}>TELEMARKETING</h3></div>
+            <div className='wheel-option top-right'><h3 onClick={() => scrollTo(twoRef)}>CUSTOMER <br /> SERVICE</h3></div>
+            <div className='wheel-option left'><h3 onClick={() => scrollTo(threeRef)}>MARKET <br /> RESEARCH <br /> & DATA <br /> CLEANSING</h3></div>
+            <div className='wheel-option right'><h3 onClick={() => scrollTo(fourRef)}>LEAD <br /> GENERATION</h3></div>
+            <div className='wheel-option bottom'><h3 onClick={() => scrollTo(fiveRef)}>APPOINTMENT <br /> SETTING</h3></div>
+
+          </div>
+
+          {/* <div className='pentagon-flex-container'>
             <div className='pentagon-clip-path-container'>
 
               <h3 className='left-text' onClick={() => scrollTo(oneRef)}>ONE</h3>
@@ -71,7 +82,7 @@ const Telemarketing = () => {
 
 
             </div>
-          </div>
+          </div> */}
 
             
           </div>
