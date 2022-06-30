@@ -47,6 +47,24 @@ app.post('/send-text', (req, res) => {
   }
 )
 
+app.post('/send-www', (req, res) => {
+  //Welcome Message
+  res.send('Hello to the Twilio Server')
+  const {message} = req.body
+  //Send Text
+  client.messages.create({
+      body: message,
+      to: 'whatsapp:+447954549514',  // Text this number
+      from: `whatsapp:${process.env.TWILIO_PHONE_NUMBER}`,
+      messagingServiceSid: 'MGcc8b099a58150efd0d85c844ece28df5' // From a valid Twilio number
+  }).then(message => console.log(message))
+  .catch(err => {
+    console.log(err);
+    res.send(JSON.stringify({ success: false }));
+  });
+}
+)
+
 app.post('/send-sms', (req, res) => {
   //Welcome Message
   res.send('Hello to the Twilio Server')
