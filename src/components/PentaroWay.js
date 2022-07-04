@@ -7,7 +7,7 @@ const PentaroWay = () => {
   return (
     <section>
       <div className='hero-container'>
-        <div className='light-background pent-way-background'></div>
+        <div className='hero pent-way-background'><div className='blue-background'></div></div>
 
         <div className='section-flex-container'>
           <h1 className='accent'>THE PENTARO WAY</h1>
@@ -16,11 +16,13 @@ const PentaroWay = () => {
 
       </div>
 
-      <div className='dark-section-container'>
+      <div className='plain-section-container off-left'>
 
-        <div className='content-container'>
+        <div className='content-container left'>
+
+          <div className='dotted-line offset-left-top'></div>
           <h2 className='accent'>THE PENTARO WAY</h2>
-          <hr></hr>
+          {/* <hr></hr> */}
           <h3>Changing perceptions.</h3>
           <p>As the economy changes, businesses are constantly presented with fresh opportunities and challenges.</p>
             
@@ -39,7 +41,7 @@ const PentaroWay = () => {
       </div>
 
       <div className='grey-section-container'>
-        <h2>OUR VALUES</h2>
+        <h2 className='accent'>OUR VALUES</h2>
 
         <hr></hr>
 

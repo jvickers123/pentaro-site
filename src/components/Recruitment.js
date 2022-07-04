@@ -7,7 +7,7 @@ const Recruitment = () => {
   return (
     <section>
       <div className='hero-container'>
-        <div className='light-background recruitment-background'></div>
+        <div className='hero recruitment-background'><div className='blue-background'></div></div>
 
         <div className='section-flex-container'>
 
@@ -16,11 +16,14 @@ const Recruitment = () => {
         </div>
       </div>
 
-      <div className='dark-section-container'>
+      <div className='plain-section-container off-left'>
 
-        <div className='content-container'>
+        <div className='content-container left'>
+
+          <div className='dotted-line offset-left-top'></div>
+          
           <h2 className='accent'>RECRUITMENT</h2>
-          <hr></hr>
+          {/* <hr></hr> */}
           <h3>Proin fringilla augue at sapien</h3>
           <p>Proin fringilla augue at sapien imperdiet mollis. Vivamus ut quam ut tellus ullamcorper elementum non non turpis.</p>
             

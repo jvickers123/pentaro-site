@@ -31,7 +31,7 @@ const Telemarketing = () => {
   return (
     <section> 
       <div className='hero-container'>
-        <div className='light-background telemarketing-background'></div>
+        <div className='hero telemarketing-background'><div className='blue-background'></div></div>
 
         <div className='section-flex-container'>
 
