@@ -6,8 +6,11 @@
   justify-content: center;
   height: 100vh;
   padding: 50px 20px;
+  color: #fff;
   .home-background {
     background: url("../../assets/home-background.jpg");
+    background-size: cover;
+    background-position: center;
   }
   .light-background {
     background-size: cover;
@@ -22,6 +25,7 @@
   .home-heading {
     font-weight: bold;
     font-size: 44px;
+    margin-bottom: 60px;
   }
   .home-h2 {
     font-weight: 600;

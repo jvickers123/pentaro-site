@@ -21,7 +21,7 @@ const SiteNavBar = () => {
 
   return (
     <div className='nav-bar-main'>
-      <Link to='/'><TbPentagon className='accent'/></Link>
+      <Link to='/' className='accent'>Pentaro</Link>
 
       <div className='mobile-navbar'>
 

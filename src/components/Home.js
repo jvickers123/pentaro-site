@@ -11,12 +11,12 @@ const Home = () => {
     <section>
 
       <div className='hero-container'>
-        <div className='light-background home-background'></div>
+        <div className='hero home-background'><div className='blue-background'></div></div>
 
         <div className='home-flex-container'>
           <h1 className='accent home-heading'>PENTARO</h1>
-          <h2 className='home-h2'>ANOTHER SLOGAN HERE</h2>
-          <p className='home-p'>Bespoke telemarketing and recruitment solutions for your business</p>
+          {/* <h2 className='home-h2'>ANOTHER SLOGAN HERE</h2> */}
+          <h2 className='home-h2'>Bespoke telemarketing and recruitment solutions for your business</h2>
           <Link to='/getintouch' >
             Get in touch <span className="accent">&gt;&gt;</span>
           </Link>
@@ -24,17 +24,18 @@ const Home = () => {
         
       </div>
 
-      <div className='dark-section-container'>
+      <div className='plain-section-container off-left'>
 
-        <div className='content-container'>
+        <div className='content-container left'>
+
+          <div className='dotted-line offset-left-top'></div>
           
           <h2 className='accent'>OUR MISSION</h2>
-          <hr></hr>
           <h3>Pentaro aims to capitalise on synergies to enhance the profitability and growth potential of its partners.</h3>
           <p>We are a modern, data-driven, results-focused business development agency, ready to help your business boost its bottom line.</p>
 
-          <p>Find out more about the services on offer.</p>
-          <div className='home-links-container'>
+          {/* <p>Find out more about the services on offer.</p> */}
+          {/* <div className='home-links-container'>
             <hr></hr>
             <Link className='text-link' to='/recruitment'>
               <p>Pentaro Recruitment</p>
@@ -46,11 +47,21 @@ const Home = () => {
               <p className='accent'>&gt;&gt;</p>
             </Link>
             <hr></hr>
-          </div>
+          </div> */}
+
+          <Link to='/pentaroway'>The Pentaro Way <span className='accent'>&gt;&gt;</span></Link>
 
         </div>
 
         
+        
+        
+
+      
+      </div>
+
+      <div className='plain-section-container middle'>
+
         <div className='image-container'>
           <img 
             src={handshake}
@@ -58,7 +69,39 @@ const Home = () => {
             />
         </div>
 
-      
+        <div className='content-container middle'>
+          
+          <div className='dotted-line offset-left-top'></div>
+          
+          <h2 className='accent'>TELEMARKETING</h2>
+          <h3>Telemarketing at pentaro priorities quality, clarity, and consistency, producing direct connections and opportunities with your target audience.</h3>
+          <p>Our strategic approach and emphasis on analysis delivers a service that sets us apart from our competitors.</p>
+
+          <Link to='/telemarketing'>View our services <span className='accent'>&gt;&gt;</span></Link>
+        </div>
+
+      </div>
+
+      <div className='plain-section-container offset-right'>
+
+      <div className='content-container right'>
+          
+          <div className='dotted-line offset-left-top'></div>
+          
+          <h2 className='accent'>RECRUITMENT</h2>
+          <h3>Proin fringilla augue at sapien imperdiet mollis. Vivamus ut quam ut tellus ullamcorper elementum non non turpis.</h3>
+          <p>Aenean sed sem at ante aliquam consequat. Ut rhoncus ex et orci feugiat, nec finibus neque rhoncus.</p>
+
+          <Link to='/recruitment'>View our services <span className='accent'>&gt;&gt;</span></Link>
+        </div>
+
+        <div className='image-container'>
+          <img 
+            src={handshake}
+            alt='Two people shaking hands'
+            />
+        </div>
+
       </div>
 
     </section>

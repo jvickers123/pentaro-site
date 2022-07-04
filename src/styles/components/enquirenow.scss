@@ -16,6 +16,7 @@
     margin-right: 20px;
     margin-bottom: 20px;
     @extend %box-shadow;
+    border-radius: 0;
   }
   .footer-desktop {
     display: none;
