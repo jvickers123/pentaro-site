@@ -34,21 +34,6 @@ const Home = () => {
           <h3>Pentaro aims to capitalise on synergies to enhance the profitability and growth potential of its partners.</h3>
           <p>We are a modern, data-driven, results-focused business development agency, ready to help your business boost its bottom line.</p>
 
-          {/* <p>Find out more about the services on offer.</p> */}
-          {/* <div className='home-links-container'>
-            <hr></hr>
-            <Link className='text-link' to='/recruitment'>
-              <p>Pentaro Recruitment</p>
-              <p className='accent'>&gt;&gt;</p>
-            </Link>
-            <hr></hr>
-            <Link className='text-link' to='/telemarketing'>
-              <p>Pentaro Telemarketing</p>
-              <p className='accent'>&gt;&gt;</p>
-            </Link>
-            <hr></hr>
-          </div> */}
-
           <Link to='/pentaroway'>The Pentaro Way <span className='accent'>&gt;&gt;</span></Link>
 
         </div>
@@ -62,11 +47,13 @@ const Home = () => {
 
       <div className='plain-section-container middle'>
 
-        <div className='image-container'>
-          <img 
-            src={handshake}
-            alt='Two people shaking hands'
-            />
+        <div className='left-content-container'>
+          <div className='image-container'>
+            <img 
+              src={handshake}
+              alt='Two people shaking hands'
+              />
+          </div>
         </div>
 
         <div className='content-container middle'>
