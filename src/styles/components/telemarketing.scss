@@ -3,37 +3,56 @@
   background-size: cover;
   background-position: center;
 }
-.service-option {
-  // background-color: $darkbackground;
-  // color: white;
-  width: 100vw;
-  background-size: cover;
-  .content-container {
-    padding: 50px 40px 0 40px;
 
-  }
-  hr {
-    height: 1px;
-    background-color: $darkbgline;
-    border: none;
-  }
-  &.dark-container {
-    color: #fff;
-    // background-color: $darkbackground;
-    height: 100vh;
-    hr {
-      height: 1px;
-      background-color: $darkbgline;
-      border: none;
+.plain-section-container {
+  &.service-option-container {
+    padding: 5%;
+    .content-container {
+      padding: 60px 10%;
     }
-    &.customer-service {
-      background:linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-        url("../../assets/telemarketing-individual.jpg");
-      background-size: cover;
-
+    .image-container {
+      margin: -5% 10%;
+    }
+  }
+  &.wheel {
+    @include flex-center(column);
+    padding: 5%;
+    .content-container {
+      padding: 60px 10%;
     }
   }
 }
+// .service-option {
+//   // background-color: $darkbackground;
+//   // color: white;
+//   width: 100vw;
+//   background-size: cover;
+//   .content-container {
+//     padding: 50px 40px 0 40px;
+
+//   }
+//   hr {
+//     height: 1px;
+//     background-color: $darkbgline;
+//     border: none;
+//   }
+//   &.dark-container {
+//     color: #fff;
+//     // background-color: $darkbackground;
+//     height: 100vh;
+//     hr {
+//       height: 1px;
+//       background-color: $darkbgline;
+//       border: none;
+//     }
+//     &.customer-service {
+//       background:linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+//         url("../../assets/telemarketing-individual.jpg");
+//       background-size: cover;
+
+//     }
+//   }
+// }
 
 .white-section-container {
   padding: 50px 40px;
@@ -60,51 +79,52 @@
 .logo-wheel-container {
   @include flex-center(column);
   img {
-    margin: 50px;
     transform: none;
-    height: 300px;
+    width: 300px;
   }
   .wheel-option {
     h3 {
       font-weight: 600;
-      font-size: 10px;
+      font-size: 8px;
       line-height: 17px;
     }
-    border: 0.5px solid $accent;
+    // border: 3px solid #fff;
     // @extend %box-shadow;
-    box-shadow: inset 0 0 5px $accent;
+    // box-shadow: inset 0 0 5px $accent;
     position: absolute;
     @include flex-center(row);
     text-align: center;
-    height: 100px;
-    width: 100px;
+    height: 65px;
+    width: 65px;
     // color: $accent;
-    color: #000;
-    background-color: #fff;
+    color: #fff;
+    // background-color: $accent;
     border-radius: 50%;
     &:hover {
       // color: $accent;
-      box-shadow: inset 0 0 10px $accent;
+      // border: 0.3px solid $greybgline;
+      @extend %box-shadow;
+      background-color: $accent;
       cursor: pointer;
       h3 {
-        font-size: 10.5px;
+        font-size: 9px;
       }
     }
   }
   .top-left {
-    transform: translate(-30px, -140px);
+    transform: translate(-70px, -107px);
   }
   .top-right {
-    transform: translate(120px, -90px);
+    transform: translate(70px, -108px);
   }
   .right {
-    transform: translate(120px, 90px);
+    transform: translate(115px, 26px);
   }
   .bottom {
-    transform: translate(-55px, 140px);
+    transform: translate(3px, 109px);
   }
   .left {
-    transform: translate(-140px, -20px);
+    transform: translate(-113px, 27px);
   }
 }
 
@@ -113,28 +133,31 @@
 
 @media screen and (min-width: 600px) {
 
-  .light-background.telemarketing-background {
-    width: 85%;
-    top: 50px;
-    left: 7.5%;
-  }
   .pentagon-screen-split-container {
+
     @include flex-center(row);
-    .green-section-container {
-      width: 50vw;
+    .wheel {
+      flex-grow: 1;
       position: sticky;
       align-self: flex-start;
-      top: 50px;
-      left: 0;
+      top: 0;
+      padding-top: 50px;
+    }
+    .plain-section-container.service-option-container {
+      flex-grow: 1;
+      margin-right: 0;
+      .content-container {
+        padding-top: 100px;
+        .dotted-line.offset-left-top {
+          width: 200px;
+          left: auto;
+          right: 0;
+        }
+      }
     }
     .service-options-container {
-      width: 50vw;
       .service-option {
-        width: 50vw;
         padding-top: 50px;
-        img {
-          width: 50vw;
-        }
         button {
           display: none;
         }
