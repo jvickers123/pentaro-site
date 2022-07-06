@@ -37,7 +37,7 @@ app.post('/send-text', (req, res) => {
     //Send Text
     client.messages.create({
         body: message,
-        to: 'whatsapp:+447954549514',  // Text this number
+        to: `whatsapp:${process.env.TEST_PHONE_NUMBER}`,  // Text this number
         from: `whatsapp:${process.env.TWILIO_PHONE_NUMBER}` // From a valid Twilio number
     }).then(message => console.log(message))
     .catch(err => {
@@ -54,7 +54,7 @@ app.post('/send-www', (req, res) => {
   //Send Text
   client.messages.create({
       body: message,
-      to: 'whatsapp:+447954549514',  // Text this number
+      to: `whatsapp:${process.env.TEST_PHONE_NUMBER}`,  // Text this number
       from: `whatsapp:${process.env.TWILIO_PHONE_NUMBER}`,
       messagingServiceSid: 'MGcc8b099a58150efd0d85c844ece28df5' // From a valid Twilio number
   }).then(message => console.log(message))
@@ -72,7 +72,7 @@ app.post('/send-sms', (req, res) => {
   //Send Text
   client.messages.create({
       body: message,
-      to: '+447954549514',  // Text this number
+      to: process.env.TEST_PHONE_NUMBER,  // Text this number
       messagingServiceSid: 'MGcc8b099a58150efd0d85c844ece28df5' // From a valid Twilio number
   }).then(message => console.log(message))
   .catch(err => {
