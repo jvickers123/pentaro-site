@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 
 // CHAKRA STYLING
@@ -12,6 +12,10 @@ import { FiInstagram, FiTwitter, FiFacebook } from 'react-icons/fi'
 
 
 const Contact = () => {
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
 
   const toast = useToast()
   
@@ -38,9 +42,9 @@ const Contact = () => {
       if (!company_name) throw 'Please provide a company name'
       if (!message) throw 'Looks like you forgot to fill in the message.'
 
-      const {data: emailData} = await axios.post('/send-email', formData)
+      const {data: emailData} = await axios.post('https://5021147o54.execute-api.eu-west-2.amazonaws.com/staging/send-message/send-email', formData)
 
-      const { data: whatsappData } = await axios.post('/send-text', 
+      const { data: whatsappData } = await axios.post('https://5021147o54.execute-api.eu-west-2.amazonaws.com/staging/send-message/send-text', 
       {message: 
         `New Message from 
         

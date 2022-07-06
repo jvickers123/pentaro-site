@@ -1,9 +1,14 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 
 // IMAGES
 import handshake from '../assets/business-deal.jpg'
 
 const Recruitment = () => {
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
+  
   return (
     <section>
       <div className='hero-container'>

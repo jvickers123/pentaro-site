@@ -27,7 +27,7 @@ const EnquireNow = () => {
 
 
     try {
-      const {data: emailData} = await axios.post('/send-enquiry', formData)
+      const {data: emailData} = await axios.post('https://5021147o54.execute-api.eu-west-2.amazonaws.com/staging/send-message/send-enquiry', formData)
       const date = new Date()
       const dateString = date.toString()
       const {full_name, email, phone_number} = formData
@@ -37,7 +37,7 @@ const EnquireNow = () => {
       if (!phone_number) throw 'Please provide a phone number'
 
 
-      const { data: whatsappData } = await axios.post('/send-text', 
+      const { data: whatsappData } = await axios.post('https://5021147o54.execute-api.eu-west-2.amazonaws.com/staging/send-message/send-text', 
       {message: 
         `Quick enquiry from ${full_name}:
         
