@@ -12,8 +12,11 @@ import {
 } from '@chakra-ui/react'
 
 // ICONS
-import { TbPentagon } from 'react-icons/tb'
 import { GiHamburgerMenu } from 'react-icons/gi'
+
+// IMAGES
+import greenPentText from '../assets/pent-text-green.png'
+import whitePentText from '../assets/pent-text-white.png'
 
 const SiteNavBar = () => {
 
@@ -21,7 +24,7 @@ const SiteNavBar = () => {
 
   return (
     <div className='nav-bar-main'>
-      <Link to='/' className='accent'>Pentaro</Link>
+      <Link to='/' className='accent'><img src={greenPentText} alt='Pentaro' /></Link>
 
       <div className='mobile-navbar'>
 
@@ -37,7 +40,7 @@ const SiteNavBar = () => {
           <DrawerOverlay />
           <DrawerContent>
             <DrawerCloseButton />
-              <DrawerHeader><Link to='/' onClick={onClose}><h2 className='dropdown-heading'>Pentaro</h2></Link></DrawerHeader>
+              <DrawerHeader><Link to='/' onClick={onClose}><img src={whitePentText} alt='Pentaro' /></Link></DrawerHeader>
 
               <div className="dropdown-options-container">
                 
