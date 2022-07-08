@@ -131,37 +131,37 @@
 
 
 
-@media screen and (min-width: 600px) {
+// @media screen and (min-width: 600px) {
 
-  .pentagon-screen-split-container {
+//   .pentagon-screen-split-container {
 
-    @include flex-center(row);
-    .wheel {
-      flex-grow: 1;
-      position: sticky;
-      align-self: flex-start;
-      top: 0;
-      padding-top: 50px;
-    }
-    .plain-section-container.service-option-container {
-      flex-grow: 1;
-      margin-right: 0;
-      .content-container {
-        padding-top: 100px;
-        .dotted-line.offset-left-top {
-          width: 200px;
-          left: auto;
-          right: 0;
-        }
-      }
-    }
-    .service-options-container {
-      .service-option {
-        padding-top: 50px;
-        button {
-          display: none;
-        }
-      }
-    }
-  }
-}
+//     @include flex-center(row);
+//     .wheel {
+//       flex-grow: 1;
+//       position: sticky;
+//       align-self: flex-start;
+//       top: 0;
+//       padding-top: 50px;
+//     }
+//     .plain-section-container.service-option-container {
+//       flex-grow: 1;
+//       margin-right: 0;
+//       .content-container {
+//         padding-top: 100px;
+//         .dotted-line.offset-left-top {
+//           width: 200px;
+//           left: auto;
+//           right: 0;
+//         }
+//       }
+//     }
+//     .service-options-container {
+//       .service-option {
+//         padding-top: 50px;
+//         button {
+//           display: none;
+//         }
+//       }
+//     }
+//   }
+// }

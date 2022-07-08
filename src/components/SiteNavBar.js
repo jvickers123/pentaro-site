@@ -17,6 +17,7 @@ import { GiHamburgerMenu } from 'react-icons/gi'
 // IMAGES
 import greenPentText from '../assets/pent-text-green.png'
 import whitePentText from '../assets/pent-text-white.png'
+import greenLogo from '../assets/logo-screenshot.png'
 
 const SiteNavBar = () => {
 
