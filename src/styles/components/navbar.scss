@@ -1,7 +1,7 @@
 .nav-bar-main {
   position: fixed;
   top: 0px;
-  padding: 10px 15px;
+  padding: 20px 15px;
   width: 100%;
   z-index: 2;
   @include flex-center(row);
@@ -11,6 +11,15 @@
   // img {
   //   height: 20px;
   // }
+  .logo-container {
+    height: 30px;
+    display: flex;
+    width: 240px;
+    justify-content: space-between;
+    img {
+      height: 30px;
+    }
+  }
   .desktop-navbar {
     display: none;
     a {

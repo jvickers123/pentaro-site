@@ -37,8 +37,13 @@
   }
   
 }
+
+#pentaro-way-box {
+  padding-top: 50px;
+}
+
 .grey-section-container {
-  background-color: $greybg;
+  background-color: #fff;
   background-size: cover;
   padding: 50px 40px;
   hr {
@@ -65,17 +70,22 @@
 
 @media screen and (min-width: 600px) {
 
-  .light-background.pent-way-background {
-    width: 85%;
-    top: 50px;
-    left: 7.5%;
+  .hero.pent-way-background {
+    width: 95%;
+    right: 0px;
   }
   .section-flex-container {
-    margin: 0 7%;
-    @include flex-center(column);
-    align-items: flex-start;
-    h1, h2 {
-      width: 400px;
+    // margin: 0 7%;
+    // @include flex-center(column);
+    // align-items: flex-start;
+    // h1, h2 {
+    //   width: 400px;
+    // }
+    width: 550px;
+    margin-left: 7%;
+    padding-top: 100px;
+    h2, h1, p {
+      width: auto;
     }
   }
 

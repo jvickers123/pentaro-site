@@ -17,6 +17,9 @@
     margin-bottom: 20px;
     @extend %box-shadow;
     border-radius: 1px;
+    &:hover {
+      background-color: darken($accent, 20%);
+    }
   }
   .footer-desktop {
     display: none;

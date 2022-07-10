@@ -15,7 +15,7 @@ import {
 import { GiHamburgerMenu } from 'react-icons/gi'
 
 // IMAGES
-import greenPentText from '../assets/pent-text-green.png'
+import greenPentText from '../assets/pent-text-green.jpg'
 import whitePentText from '../assets/pent-text-white.png'
 import greenLogo from '../assets/logo-screenshot.png'
 
@@ -25,7 +25,13 @@ const SiteNavBar = () => {
 
   return (
     <div className='nav-bar-main'>
-      <Link to='/' className='accent'><img src={greenPentText} alt='Pentaro' /></Link>
+      <Link to='/' className='accent'>
+        <div className='logo-container'>
+          <img src={greenLogo} alt='Pentaro logo' />
+          <img src={greenPentText} alt='Pentaro' />
+        </div>
+        
+        </Link>
 
       <div className='mobile-navbar'>
 

@@ -3,6 +3,8 @@ import React, {useEffect, useRef, useState} from 'react'
 // IMAGES
 import individual from '../assets/telemarketing-individual.jpg'
 import logo from '../assets/logo-screenshot.png'
+import smilingTeleSales from '../assets/smiling-telesales.jpg'
+import teleResearch from '../assets/telemarketing-research.jpg'
 
 const Telemarketing = () => {
 
@@ -57,11 +59,11 @@ const Telemarketing = () => {
 
               <img src={logo} alt='pentaro logo' />
 
-              <div className='wheel-option top-left' onClick={() => scrollTo(oneRef)}><h3 onClick={() => scrollTo(oneRef)}>TELE- <br /> MARKETING</h3></div>
+              <div className='wheel-option top-left' onClick={() => scrollTo(oneRef)}><h3 onClick={() => scrollTo(oneRef)}>DIRECT <br /> SELLING</h3></div>
               <div className='wheel-option top-right'onClick={() => scrollTo(twoRef)}><h3 onClick={() => scrollTo(twoRef)}>CUSTOMER <br /> SERVICE</h3></div>
               <div className='wheel-option right' onClick={() => scrollTo(threeRef)}><h3 onClick={() => scrollTo(threeRef)}>MARKET <br /> RESEARCH {/*<br /> & DATA <br /> CLEANSING */}</h3></div>
               <div className='wheel-option bottom' onClick={() => scrollTo(fourRef)}><h3 onClick={() => scrollTo(fourRef)}>LEAD <br /> GENERATION</h3></div>
-              <div className='wheel-option left' onClick={() => scrollTo(fiveRef)}><h3 onClick={() => scrollTo(fiveRef)}>SCHEDULING</h3></div>
+              <div className='wheel-option left' onClick={() => scrollTo(fiveRef)}><h3 onClick={() => scrollTo(fiveRef)}>APPOINTMENT<br /> SETTING</h3></div>
 
             </div>
           </div>
@@ -71,11 +73,12 @@ const Telemarketing = () => {
             
           </div>
 
-          <div className='plain-section-container service-option-container'>
+          {/* <div className='plain-section-container service-option-container'> */}
 
-            <div className='content-container service-option' ref={oneRef}>
+          <div className='plain-section-container off-left'>
+            <div className='content-container left' ref={oneRef}>
               <div className='dotted-line offset-left-top'></div>
-                <h2 className='accent'>TELEMARKETING</h2>
+                <h2 className='accent'>DIRECT SELLING</h2>
                 <hr></hr>
                 {/* <h3>Telemarketing at pentaro priorities quality, clarity, and consistency, producing direct connections and opportunities with your target audience.</h3> */}
                 
@@ -101,16 +104,21 @@ const Telemarketing = () => {
               </div> */}
 
             </div>
-
-            <div className='image-container'>
+          </div>
+            
+          <div className='plain-section-container middle'>
+        
+            <div className='left-content-container'>
+              <div className='image-container'>
                 <img 
-                  src={individual}
-                  alt='Man calling customers'
+                  src={smilingTeleSales}
+                  alt='Telemarketer smiling'
                   />
 
               </div>
+            </div>
 
-            <div className='content-container service-option' ref={twoRef}>
+            <div className='content-container middle' ref={twoRef}>
                         <div className='dotted-line offset-left-top'></div>
               {/* <div className='dark-background customer-service-background'></div> */}
 
@@ -136,16 +144,10 @@ const Telemarketing = () => {
               </div> */}
 
             </div>
+          </div>
 
-            <div className='image-container'>
-                <img 
-                  src={individual}
-                  alt='Man calling customers'
-                  />
-
-              </div>
-
-            <div className='content-container service-option' ref={threeRef}>
+          <div className='plain-section-container offset-right'>
+          <div className='content-container right' ref={threeRef}>
                         <div className='dotted-line offset-left-top'></div>
                 <h2 className='accent'>MARKET RESEARCH & DATA CLEANSING</h2>
                 <hr></hr>
@@ -172,14 +174,25 @@ const Telemarketing = () => {
 
             <div className='image-container'>
                 <img 
-                  src={individual}
-                  alt='Man calling customers'
+                  src={teleResearch}
+                  alt='Man calling someone and looking at computer screen'
                   />
 
               </div>
+          </div>
 
+          <div className='plain-section-container middle'>
+            <div className='left-content-container'>
+              <div className='image-container'>
+                  <img 
+                    src={individual}
+                    alt='Man calling customers'
+                    />
 
-            <div className='content-container service-option' ref={fourRef}>
+                </div>
+            </div>
+
+            <div className='content-container middle' ref={fourRef}>
                         <div className='dotted-line offset-left-top'></div>
                 <h2 className='accent'>LEAD GENERATION</h2>
                 <hr></hr>
@@ -196,18 +209,25 @@ const Telemarketing = () => {
 
 
             </div>
+          </div>
 
-            <div className='image-container'>
+            
+
+
+            
+
+            {/* <div className='image-container'>
                 <img 
                   src={individual}
                   alt='Man calling customers'
                   />
 
-              </div>
+              </div> */}
 
-            <div className='content-container service-option' ref={fiveRef}>
+            <div className='plain-section-container offset-left'>
+              <div className='content-container left' ref={fiveRef}>
                         <div className='dotted-line offset-left-top'></div>
-                <h2 className='accent'>SCHEDULING & APPOINTMENT SETTING</h2>
+                <h2 className='accent'>APPOINTMENT SETTING</h2>
                 <hr></hr>
                 <h3>At Pentaro, our appointment setting service generates high quality pre-booked meetings, with relevant key decision makers for your sales development team to attend.</h3>
 
@@ -231,8 +251,11 @@ const Telemarketing = () => {
               {/* </div> */}
 
             </div>
+            </div>
 
-          </div>
+   
+
+          {/* </div> */}
 
       </div>
 

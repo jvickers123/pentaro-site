@@ -35,14 +35,30 @@ const Recruitment = () => {
           <p>Aenean sed sem at ante aliquam consequat. Ut rhoncus ex et orci feugiat, nec finibus neque rhoncus.</p>
           
         </div>
-        
-        <div className='image-container'>
-          <img 
-            src={handshake}
-            alt='People shaking hands at meeting'
-            />
+
+        <div className='plain-section-container middle'>
+
+        <div className='left-content-container'>
+          <div className='image-container'>
+            <img 
+              src={handshake}
+              alt='Shaking hands in a meeting'
+              />
+          </div>
+        </div>
+
+        <div className='content-container middle'>
+          
+          <div className='dotted-line offset-left-top'></div>
+          
+          <h2 className='accent'>RECRUITMENT 2</h2>
+          <h3>Proin fringilla augue at sapien imperdiet mollis. Vivamus ut quam ut tellus ullamcorper elementum non non turpis.</h3>
+          <p>Proin fringilla augue at sapien imperdiet mollis. Vivamus ut quam ut tellus ullamcorper elementum non non turpis.</p>
 
         </div>
+
+      </div>
+        
         
       </div>
     </section>

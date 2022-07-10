@@ -21,9 +21,19 @@ const PentaroWay = () => {
 
       </div>
 
-      <div className='plain-section-container off-left'>
+      <div className='plain-section-container middle' id='pentaro-way-box'>
 
-        <div className='content-container left'>
+        <div className='left-content-container'>
+          <div className='image-container'>
+          <img 
+            src={meeting}
+            alt='business meeting'
+            />
+
+        </div>
+        </div>
+        
+        <div className='content-container middle'>
 
           <div className='dotted-line offset-left-top'></div>
           <h2 className='accent'>THE PENTARO WAY</h2>
@@ -35,13 +45,7 @@ const PentaroWay = () => {
           
         </div>
         
-        <div className='image-container'>
-          <img 
-            src={meeting}
-            alt='business meeting'
-            />
-
-        </div>
+        
         
       </div>
 
@@ -65,7 +69,7 @@ const PentaroWay = () => {
             <p className='values-numer accent'>2</p>
             <h3>People</h3>
           </div>
-          <p className='values-description'>At Pentaro, our culture puts our people at the heart of our process. Creating a working environment where success is shared, where professionalism is paramount, and where results are delivered.</p>
+          <p className='values-description'>At Pentaro, our culture puts our people at the heart of our process. Creating a working environment where success is shared, where professionalism is paramount, and where results are repeated.</p>
         </div>
 
         <hr></hr>
@@ -93,7 +97,7 @@ const PentaroWay = () => {
         <div className='values-container'>
           <div className='values-number-container'>
             <p className='values-numer accent'>5</p>
-            <h3>Ethical</h3>
+            <h3>Ethics</h3>
           </div>
           <p className='values-description'>Doing the right thing is often ignored. At Pentaro, we pride ourselves on having a clear code of ethics that puts integrity, honesty, and standards first.</p>
         </div>

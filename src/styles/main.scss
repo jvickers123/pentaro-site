@@ -93,6 +93,15 @@ a {
   z-index: -1;
 }
 
+ul {
+  li {
+    list-style-image: url('../assets/logo-bullets-spaced.png');
+    margin-left: 20px;
+    margin-top: 10px;
+    vertical-align: text-top;
+  }
+}
+
 .plain-section-container {
   background-color: $greybg;
   width: 100vw;

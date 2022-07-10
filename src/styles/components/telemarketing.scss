@@ -105,9 +105,11 @@
       // border: 0.3px solid $greybgline;
       @extend %box-shadow;
       background-color: $accent;
+      height: 85px;
+      width: 85px;
       cursor: pointer;
       h3 {
-        font-size: 9px;
+        font-size: 10px;
       }
     }
   }
@@ -131,7 +133,12 @@
 
 
 
-// @media screen and (min-width: 600px) {
+@media screen and (min-width: 600px) {
+  .hero.telemarketing-background {
+    width: 95%;
+    right: 0px;
+  }
+}
 
 //   .pentagon-screen-split-container {
 
