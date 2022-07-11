@@ -28,7 +28,7 @@ const SiteNavBar = () => {
       <Link to='/' className='accent'>
         <div className='logo-container'>
           <img src={greenLogo} alt='Pentaro logo' />
-          <img src={greenPentText} alt='Pentaro' />
+          <h2 className='pentaro-name'>PENTARO</h2>
         </div>
         
         </Link>

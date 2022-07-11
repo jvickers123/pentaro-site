@@ -21,6 +21,11 @@
   font-family: 'Montserrat', sans-serif;
 }
 
+.pentaro-name {
+  font-family: 'Reem Kufi', sans-serif;
+  font-weight: 400;
+}
+
 section {
   // min-height: 100vh;
   background-color: $greybg;
@@ -32,6 +37,7 @@ section {
     font-weight: bold;
     font-size: 28px;
   }
+  
   h2 {
     font-weight: 700;
     font-size: 10px;

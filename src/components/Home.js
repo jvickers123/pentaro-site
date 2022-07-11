@@ -18,7 +18,7 @@ const Home = () => {
         <div className='hero home-background'><div className='blue-background'></div></div>
 
         <div className='home-flex-container'>
-          <h1 className='accent home-heading'>PENTARO</h1>
+          <h1 className='accent home-heading pentaro-name'>PENTARO</h1>
           {/* <h2 className='home-h2'>ANOTHER SLOGAN HERE</h2> */}
           <h2 className='home-h2'>Bespoke telemarketing and recruitment solutions for your business</h2>
           <Link to='/getintouch' >

@@ -14,10 +14,15 @@
   .logo-container {
     height: 30px;
     display: flex;
-    width: 240px;
+    width: 200px;
     justify-content: space-between;
+    align-items: center;
     img {
       height: 30px;
+    }
+    .pentaro-name {
+      font-size: 32px;
+      font-weight: 700;
     }
   }
   .desktop-navbar {
