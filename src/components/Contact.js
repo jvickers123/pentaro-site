@@ -143,7 +143,7 @@ const Contact = () => {
           <p>Or contact us directly.</p>
           <h3>Email</h3>
 
-          <a href='mailto:example@email.com'>example@email.com</a>
+          <a href='mailto:example@email.com'>enquiries@pentaro.co.uk</a>
             
           <h3>Phone Number</h3>
 

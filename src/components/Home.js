@@ -80,9 +80,10 @@ const Home = () => {
           <div className='dotted-line offset-left-top'></div>
           
           <h2 className='accent'>RECRUITMENT</h2>
-          <h3>Proin fringilla augue at sapien imperdiet mollis. Vivamus ut quam ut tellus ullamcorper elementum non non turpis.</h3>
-          <p>Aenean sed sem at ante aliquam consequat. Ut rhoncus ex et orci feugiat, nec finibus neque rhoncus.</p>
-
+          <h3>Details coming soon</h3>
+          {/* <h3>Proin fringilla augue at sapien imperdiet mollis. Vivamus ut quam ut tellus ullamcorper elementum non non turpis.</h3> */}
+          {/* <p>Aenean sed sem at ante aliquam consequat. Ut rhoncus ex et orci feugiat, nec finibus neque rhoncus.</p> */}
+          <p>We're still building our site. So contact us directly for more details.</p>
           <Link to='/recruitment'>View our services <span className='accent'>&gt;&gt;</span></Link>
         </div>
 

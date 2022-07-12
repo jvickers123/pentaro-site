@@ -76,6 +76,7 @@ const Telemarketing = () => {
           {/* <div className='plain-section-container service-option-container'> */}
 
           <div className='plain-section-container off-left'>
+            
             <div className='content-container left' ref={oneRef}>
               <div className='dotted-line offset-left-top'></div>
                 <h2 className='accent'>DIRECT SELLING</h2>
@@ -224,9 +225,12 @@ const Telemarketing = () => {
 
               </div> */}
 
-            <div className='plain-section-container offset-left'>
+            <div className='plain-section-container off-left'>
+              
               <div className='content-container left' ref={fiveRef}>
-                        <div className='dotted-line offset-left-top'></div>
+                
+                <div className='dotted-line offset-left-top'></div>
+                
                 <h2 className='accent'>APPOINTMENT SETTING</h2>
                 <hr></hr>
                 <h3>At Pentaro, our appointment setting service generates high quality pre-booked meetings, with relevant key decision makers for your sales development team to attend.</h3>

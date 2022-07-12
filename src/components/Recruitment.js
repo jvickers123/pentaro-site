@@ -17,7 +17,7 @@ const Recruitment = () => {
         <div className='section-flex-container'>
 
           <h1 className='accent'>RECRUITMENT</h1>
-          <h2>Proin fringilla augue at sapien imperdiet mollis. Vivamus ut quam ut tellus ullamcorper elementum non non turpis.</h2>
+          {/* <h2>Proin fringilla augue at sapien imperdiet mollis. Vivamus ut quam ut tellus ullamcorper elementum non non turpis.</h2> */}
         </div>
       </div>
 
@@ -29,14 +29,14 @@ const Recruitment = () => {
           
           <h2 className='accent'>RECRUITMENT</h2>
           {/* <hr></hr> */}
-          <h3>Proin fringilla augue at sapien</h3>
-          <p>Proin fringilla augue at sapien imperdiet mollis. Vivamus ut quam ut tellus ullamcorper elementum non non turpis.</p>
-            
-          <p>Aenean sed sem at ante aliquam consequat. Ut rhoncus ex et orci feugiat, nec finibus neque rhoncus.</p>
+          <h3>Details coming soon</h3>
+          {/* <p>Proin fringilla augue at sapien imperdiet mollis. Vivamus ut quam ut tellus ullamcorper elementum non non turpis.</p> */}
+          <p>We're still building our site. So contact us directly for more details.</p>
+          {/* <p>Aenean sed sem at ante aliquam consequat. Ut rhoncus ex et orci feugiat, nec finibus neque rhoncus.</p> */}
           
         </div>
 
-        <div className='plain-section-container middle'>
+        {/* <div className='plain-section-container middle'>
 
         <div className='left-content-container'>
           <div className='image-container'>
@@ -57,7 +57,7 @@ const Recruitment = () => {
 
         </div>
 
-      </div>
+      </div> */}
         
         
       </div>
