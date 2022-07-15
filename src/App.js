@@ -3,6 +3,10 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 import { ChakraProvider } from '@chakra-ui/react'
 
+// COOKIES
+import CookieConsent from 'react-cookie-consent'
+import { initGA } from './components/GA-Helper'
+
 
 // COMPONENTS
 import SiteNavBar from './components/SiteNavBar'
@@ -15,6 +19,13 @@ import EnquireNow from './components/EnquireNow'
 import Footer from './components/Footer'
 
 function App() {
+
+  const handleAcceptCookie = () => {
+    if (process.env.REACT_APP_GOOGLE_ANALYTICS_ID) {
+      initGA(process.env.REACT_APP_GOOGLE_ANALYTICS_ID)
+    }
+  }
+
   return (
     <ChakraProvider >
       <BrowserRouter>
@@ -29,6 +40,14 @@ function App() {
         <EnquireNow />
         <Footer />
       </BrowserRouter>
+      <CookieConsent 
+          enableDeclineButton 
+          style={{ background: "#082233" }}
+          buttonStyle={{ color: "#52c4b1", background: "#fff" }}
+          declineButtonStyle={{ background: "#fff", color: "#52c4b1"}}
+          onAccept={handleAcceptCookie}>
+        This website uses cookies to enhance the user experience.
+      </CookieConsent>
     </ChakraProvider>
     
   )
