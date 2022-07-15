@@ -1,10 +1,10 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 import { ChakraProvider } from '@chakra-ui/react'
 
 // COOKIES
-import CookieConsent from 'react-cookie-consent'
+import CookieConsent, { getCookieConsentValue } from 'react-cookie-consent'
 import { initGA } from './components/GA-Helper'
 
 
@@ -25,6 +25,13 @@ function App() {
       initGA(process.env.REACT_APP_GOOGLE_ANALYTICS_ID)
     }
   }
+
+  useEffect(() => {
+    const isConsent = getCookieConsentValue();
+    if (isConsent === "true") {
+      handleAcceptCookie();
+    }
+  }, [])
 
   return (
     <ChakraProvider >
