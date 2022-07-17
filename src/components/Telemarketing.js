@@ -38,7 +38,7 @@ const Telemarketing = () => {
         <div className='section-flex-container'>
 
           <h1 className='accent'>TELEMARKETING</h1>
-          <h2>Telemarketing at pentaro priorities quality, clarity, and consistency, producing direct connections and opportunities with your target audience.</h2>
+          <h2>Telemarketing at Pentaro prioritises quality, clarity, and consistency, producing direct connections and opportunities with your target audience.</h2>
         </div>
       </div>
 
@@ -199,7 +199,7 @@ const Telemarketing = () => {
                 <hr></hr>
                 <h3>Our lead generation service unearths and cultivates businesses within your target market, in order to collect a wide range of information to streamline your sales process, enhancing your sales activity.</h3>
                 
-                <p>Lead generation allows for a more strategic approach to prospecting, resulting in efficient development of your companies &#39; pipeline, optimising the scope for capitalisation of leads.</p>
+                <p>Lead generation allows for a more strategic approach to prospecting, resulting in efficient development of your company's &#39; pipeline, optimising the scope for capitalisation of leads.</p>
                   
                 <p>Our heavily analytical style utilises the best methods currently available, to ensure a constant and consistent flow of new business leads to nurture.</p>
                 
@@ -233,9 +233,9 @@ const Telemarketing = () => {
                 
                 <h2 className='accent'>APPOINTMENT SETTING</h2>
                 <hr></hr>
-                <h3>At Pentaro, our appointment setting service generates high quality pre-booked meetings, with relevant key decision makers for your sales development team to attend.</h3>
+                <h3>At Pentaro, our appointment setting service generates high quality pre-booked meetings with relevant key decision makers for your sales development team to attend.</h3>
 
-                <p>All of our appointments are qualified by your telemarketer, ensuring that prospects are in line with your business’s needs, generating interest for your products and or services. Your sales representatives can then do what they do best; build relationships and close meetings.</p>
+                <p>All of our appointments are qualified by your telemarketer, ensuring that prospects are in line with your business needs, generating interest for your products and or services. Your sales representatives can then do what they do best; build relationships and close meetings.</p>
                   
                 <p>We take the stress out of booking valuable meetings, combining bespoke data analytics with a trained telemarketer, with a high level of industry knowledge, reflecting your companies’ values, culture and identity.</p>
                 
