@@ -73,7 +73,7 @@ const Recruitment = () => {
 
 
             <div className='content-container right'>
-                        <div className='dotted-line offset-left-top'></div>
+                <div className='dotted-line offset-left-top'></div>
 
                 <h2 className='accent'>EXPERIENCE</h2>
                 <hr></hr>

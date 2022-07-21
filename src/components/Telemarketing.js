@@ -83,7 +83,7 @@ const Telemarketing = () => {
                 <hr></hr>
                 <h3>Our lead generation service unearths and cultivates businesses within your target market, in order to collect a wide range of information to streamline your sales process, enhancing your sales activity.</h3>
                 
-                <p>Lead generation allows for a more strategic approach to prospecting, resulting in efficient development of your company's &#39; pipeline, optimising the scope for capitalisation of leads.</p>
+                <p>Lead generation allows for a more strategic approach to prospecting, resulting in efficient development of your company's pipeline, optimising the scope for capitalisation of leads.</p>
                   
                 <p>Our heavily analytical style utilises the best methods currently available, to ensure a constant and consistent flow of new business leads to nurture.</p>
                 
