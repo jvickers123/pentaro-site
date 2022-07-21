@@ -77,7 +77,7 @@ const Recruitment = () => {
 
                 <h2 className='accent'>EXPERIENCE</h2>
                 <hr></hr>
-                <h3>Our team’s key experience lies in filling roles for growing business and SME’s.</h3>
+                <h3>Our team’s key experience lies in filling roles for growing businesses and SME’s.</h3>
                 
                 <p>Reliability and consistency are core values we hold, and require of candidates we propose.</p>
                   

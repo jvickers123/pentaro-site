@@ -87,7 +87,7 @@ const PentaroWay = () => {
         <div className='values-container'>
           <div className='values-number-container'>
             <p className='values-numer accent'>4</p>
-            <h3>Transparancy</h3>
+            <h3>Transparency</h3>
           </div>
           <p className='values-description'>We are up front about all costs, with no hidden fees and flat fee recruitment options, so you can be sure you are getting the best service for the best price. Furthermore, we keep recordings of all our calls, which can be requested instantaneously for monitoring purposes.</p>
         </div>

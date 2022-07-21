@@ -149,7 +149,7 @@ const Contact = () => {
             
           <h3>Phone Number</h3>
 
-          <p className='phone-num'>+44 1234 567 567</p>
+          <p className='phone-num'>01133231850</p>
           
           <h3>Social Media</h3>
 
