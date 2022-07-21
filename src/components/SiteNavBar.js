@@ -47,7 +47,7 @@ const SiteNavBar = () => {
           <DrawerOverlay />
           <DrawerContent>
             <DrawerCloseButton />
-              <DrawerHeader><Link to='/' onClick={onClose}><img src={whitePentText} alt='Pentaro' /></Link></DrawerHeader>
+              <DrawerHeader><Link to='/' onClick={onClose} className='pentaro-name dropdown-title'>PENTARO</Link></DrawerHeader>
 
               <div className="dropdown-options-container">
                 

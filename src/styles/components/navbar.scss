@@ -11,6 +11,7 @@
   // img {
   //   height: 20px;
   // }
+  
   .logo-container {
     height: 30px;
     display: flex;
@@ -24,6 +25,7 @@
       font-size: 32px;
       font-weight: 700;
     }
+    
   }
   .desktop-navbar {
     display: none;
@@ -49,6 +51,12 @@
   font-weight: bold;
   font-size: 40px;
   align-self: flex-start;
+  
+}
+
+.pentaro-name.dropdown-title {
+  font-size: 40px;
+  font-weight: 700;
 }
 
 // options drawer
