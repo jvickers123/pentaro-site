@@ -65,7 +65,7 @@ const Home = () => {
           <div className='dotted-line offset-left-top'></div>
           
           <h2 className='accent'>TELEMARKETING</h2>
-          <h3>Telemarketing at pentaro priorities quality, clarity, and consistency, producing direct connections and opportunities with your target audience.</h3>
+          <h3>Telemarketing at Pentaro prioritises quality, clarity, and consistency, producing direct connections and opportunities with your target audience.</h3>
           <p>Our strategic approach and emphasis on analysis delivers a service that sets us apart from our competitors.</p>
 
           <Link to='/telemarketing'>View our services <span className='accent'>&gt;&gt;</span></Link>
