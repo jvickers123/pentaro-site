@@ -75,23 +75,27 @@
         // width: 50vw;
       }
       .dark-section-container.contact-details {
-        padding-top: 70px;
-        // padding-right: 0;
-        padding-bottom: 70px;
+        padding-top: 0;
+        padding-right: 0;
+        // padding-bottom: 70px;
         display: block;
         height: inherit;
         // width: 50vw;
-        align-self: stretch;
+        // align-self: stretch;
         display: flex;
         .contact-info-container {
           width: 50vw;
+          hr {
+            width: 43vw;
+          }
         }
         img {
           height: 100%;
           transform: none;
           // right: 0;
-          height: 100%;
-          width: 45vw;
+          height: 700px;
+          width: 50vw;
+          // align-self: flex-end;
 
           object-fit: cover;
           margin: 0;
