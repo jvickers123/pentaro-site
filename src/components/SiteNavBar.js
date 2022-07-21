@@ -51,10 +51,11 @@ const SiteNavBar = () => {
 
               <div className="dropdown-options-container">
                 
+                <Link className='options' onClick={onClose} to='/'>Home</Link>
                 <Link className='options' onClick={onClose} to='/telemarketing'>Telemarketing</Link>
                 <Link className='options' onClick={onClose} to='/recruitment'>Recruitment</Link>
-                <Link className='options' onClick={onClose} to='/pentaroway'>The Pentaro Way</Link>
-                <Link className='options' onClick={onClose} to='/getintouch'>Get In Touch</Link>
+                <Link className='options' onClick={onClose} to='/pentaro-way'>The Pentaro Way</Link>
+                <Link className='options' onClick={onClose} to='/get-in-touch'>Get In Touch</Link>
               </div>
 
               
@@ -64,10 +65,11 @@ const SiteNavBar = () => {
       </div>
 
       <div className='desktop-navbar'>
+                <Link className='options' onClick={onClose} to='/'>Home</Link>
                 <Link className='options' to='/telemarketing'>Telemarketing</Link>
                 <Link className='options' to='/recruitment'>Recruitment</Link>
-                <Link className='options' to='/pentaroway'>The Pentaro Way</Link>
-                <Link className='options' to='/getintouch'>Get In Touch</Link>
+                <Link className='options' to='/pentaro-way'>The Pentaro Way</Link>
+                <Link className='options' to='/get-in-touch'>Get In Touch</Link>
       </div>
 
     </div>

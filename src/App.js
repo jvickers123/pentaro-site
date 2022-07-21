@@ -34,8 +34,8 @@ function App() {
           <Route path='/' element={<Home />}/>
           <Route path='/recruitment' element={<Recruitment />}/>
           <Route path='/telemarketing' element={<Telemarketing />}/>
-          <Route path='/pentaroway' element={<PentaroWay/>}/>
-          <Route path='/getintouch' element={<Contact />}/>
+          <Route path='/pentaro-way' element={<PentaroWay/>}/>
+          <Route path='/get-in-touch' element={<Contact />}/>
         </Routes>
         <EnquireNow />
         <Footer />

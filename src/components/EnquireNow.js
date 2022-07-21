@@ -82,14 +82,14 @@ const EnquireNow = () => {
   // CHECK IF ON THE GETINTOUCH PAGE
   useEffect(() => {
     const url = window.location.href.split('/')
-    url.includes('getintouch') ? setHideFooter(true) : setHideFooter(false)
+    url.includes('get-in-touch') ? setHideFooter(true) : setHideFooter(false)
   }, )
   
   return (
 
     <div className={hideFooter ? 'footer-hiddent' : 'footer-main'}>
       <div className='footer-mobile'>
-        <Button onClick={() => navigate('getintouch')} className='enquire-now-button'>Send us a message</Button>
+        <Button onClick={() => navigate('get-in-touch')} className='enquire-now-button'>Send us a message</Button>
       </div>
 
       <div className='footer-desktop'>
