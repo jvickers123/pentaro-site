@@ -70,22 +70,31 @@
     .contact-main-container {
       padding-top: 50px;
       // @include flex-center(row);
-      display: flex;
+      // display: flex;
       .contact-section{
-        width: 50vw;
+        // width: 50vw;
       }
       .dark-section-container.contact-details {
         padding-top: 70px;
+        // padding-right: 0;
+        padding-bottom: 70px;
         display: block;
         height: inherit;
-        width: 50vw;
+        // width: 50vw;
         align-self: stretch;
-        img {
-          height: 405px;
-          bottom: 0;
+        display: flex;
+        .contact-info-container {
           width: 50vw;
+        }
+        img {
+          height: 100%;
+          transform: none;
+          // right: 0;
+          height: 100%;
+          width: 45vw;
+
           object-fit: cover;
-          margin-bottom: 0;
+          margin: 0;
         }
       }
     }

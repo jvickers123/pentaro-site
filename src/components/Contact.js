@@ -137,7 +137,9 @@ const Contact = () => {
       </div>
 
       <div className='dark-section-container contact-details'>
-      <h2 className='accent'>CONTACT INFO</h2>
+
+        <div className='contact-info-container'>
+          <h2 className='accent'>CONTACT INFO</h2>
           <hr></hr>
 
           <p>Or contact us directly.</p>
@@ -157,6 +159,8 @@ const Contact = () => {
             <a href='www.twitter.co.uk' target='_blank'><FiTwitter /></a>
 
           </div>
+        </div>
+      
 
           <img
             src={outside}
