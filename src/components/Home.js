@@ -1,5 +1,6 @@
 import React, {useEffect} from 'react'
 import { Link } from 'react-router-dom'
+import { Helmet } from 'react-helmet'
 
 // IMAGES
 import handshake from '../assets/happy-handshake.jpg'
@@ -13,6 +14,14 @@ const Home = () => {
   
   return (
     <section>
+
+      <Helmet>
+        <meta
+          name="description"
+          content="Bespoke telemarketing and recruitment solutions for your business."
+        />
+        <title>Pentaro: Telemarketing and Recruitment</title>
+      </Helmet>
 
       <div className='hero-container'>
         <div className='hero home-background'><div className='blue-background'></div></div>

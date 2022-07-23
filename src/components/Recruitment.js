@@ -1,4 +1,5 @@
 import React, {useEffect} from 'react'
+import {Helmet} from 'react-helmet'
 
 // IMAGES
 import handshake from '../assets/business-deal.jpg'
@@ -12,6 +13,13 @@ const Recruitment = () => {
   
   return (
     <section>
+      <Helmet>
+        <meta
+          name="description"
+          content="Pentaro utilises modern research and data analysis techniques to acquire the best selection of viable candidates."
+        />
+        <title>Recruitment | Pentaro: Telemarketing and Recruitment</title>
+      </Helmet>
       <div className='hero-container'>
         <div className='hero recruitment-background'><div className='blue-background'></div></div>
 

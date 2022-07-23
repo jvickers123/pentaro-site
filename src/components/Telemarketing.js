@@ -1,4 +1,5 @@
 import React, {useEffect, useRef, useState} from 'react'
+import {Helmet} from 'react-helmet'
 
 // IMAGES
 import individual from '../assets/telemarketing-individual.jpg'
@@ -32,6 +33,14 @@ const Telemarketing = () => {
 
   return (
     <section> 
+      <Helmet>
+        <meta
+          name="description"
+          content="Telemarketing at Pentaro prioritises quality, clarity, and consistency, producing direct connections and opportunities with your target audience."
+        />
+        <title>Telemarketing | Pentaro: Telemarketing and Recruitment</title>
+
+      </Helmet>
       <div className='hero-container'>
         <div className='hero telemarketing-background'><div className='blue-background'></div></div>
 

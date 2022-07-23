@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
+import { Helmet } from 'react-helmet'
 
 // CHAKRA STYLING
 import { Button, useToast } from '@chakra-ui/react'
@@ -99,6 +100,15 @@ const Contact = () => {
   }
   return (
     <section className='contact-main-container'>
+
+      <Helmet>
+        <meta
+          name="description"
+          content="Have a project you need help with? Send us a message and one of our team will be in touch as soon as possible."
+        />
+        <title>Get in touch | Pentaro: Telemarketing and Recruitment</title>
+      </Helmet>
+
       <div className='contact-section'>
         <h1>GET IN TOUCH</h1>
 
