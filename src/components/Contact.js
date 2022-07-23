@@ -42,26 +42,30 @@ const Contact = () => {
       if (!company_name) throw 'Please provide a company name'
       if (!message) throw 'Looks like you forgot to fill in the message.'
 
-      const {data: emailData} = await axios.post('https://5021147o54.execute-api.eu-west-2.amazonaws.com/staging/send-message/send-email', formData)
+      await axios.post('https://5021147o54.execute-api.eu-west-2.amazonaws.com/staging/send-message/send-email', formData)
 
-      const { data: whatsappData } = await axios.post('https://5021147o54.execute-api.eu-west-2.amazonaws.com/staging/send-message/send-text', 
-      {message: 
-        `New Message from 
-        
-      ${full_name}
-        
-      Company: ${company_name}
+      const textMessageData = {
+        message: 
+            `New Message from 
+            
+          ${full_name}
+            
+          Company: ${company_name}
+    
+            ${message} 
+    
+          on ${dateString}
+    
+          reply to: 
+          ${email} 
+        or 
+          ${phone_number}.`}
 
-        ${message} 
-
-      on ${dateString}
-
-      reply to: 
-      ${email} 
-    or 
-      ${phone_number}.`})
-
-      console.log(whatsappData, emailData)
+      // SEND TEXT NOTIFICATION
+      const {data} = await axios.post('https://5021147o54.execute-api.eu-west-2.amazonaws.com/staging/send-message/send-sms-1', textMessageData)
+      await axios.post('https://5021147o54.execute-api.eu-west-2.amazonaws.com/staging/send-message/send-sms-2', textMessageData)
+      await axios.post('https://5021147o54.execute-api.eu-west-2.amazonaws.com/staging/send-message/send-sms-3', textMessageData)
+      console.log(data)
       toast({
         title: 'Message Sent.',
         description: "Thank you for your message. We will be in touch as soon as possible",

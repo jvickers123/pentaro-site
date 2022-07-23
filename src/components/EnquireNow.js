@@ -27,7 +27,8 @@ const EnquireNow = () => {
 
 
     try {
-      const {data: emailData} = await axios.post('https://5021147o54.execute-api.eu-west-2.amazonaws.com/staging/send-message/send-enquiry', formData)
+      await axios.post('https://5021147o54.execute-api.eu-west-2.amazonaws.com/staging/send-message/send-enquiry', formData)
+      
       const date = new Date()
       const dateString = date.toString()
       const {full_name, email, phone_number} = formData
@@ -37,17 +38,22 @@ const EnquireNow = () => {
       if (!phone_number) throw 'Please provide a phone number'
 
 
-      const { data: whatsappData } = await axios.post('https://5021147o54.execute-api.eu-west-2.amazonaws.com/staging/send-message/send-text', 
-      {message: 
-        `Quick enquiry from ${full_name}:
-        
-      on ${dateString}
-        
-      reply to 
-      ${email} 
+      const textMessageData = {
+        message: 
+      `Quick enquiry from ${full_name}:
       
-      or ${phone_number}`})
-      console.log(whatsappData, emailData)
+    on ${dateString}
+      
+    reply to 
+    ${email} 
+    
+    or ${phone_number}`}
+
+      await axios.post('https://5021147o54.execute-api.eu-west-2.amazonaws.com/staging/send-message/send-sms-1', textMessageData)
+      await axios.post('https://5021147o54.execute-api.eu-west-2.amazonaws.com/staging/send-message/send-sms-2', textMessageData)
+      await axios.post('https://5021147o54.execute-api.eu-west-2.amazonaws.com/staging/send-message/send-sms-3', textMessageData)
+
+      
       toast({
         title: 'Enquiry Sent.',
         description: "Thank you for your enquiry. We will be in touch as soon as possible",
