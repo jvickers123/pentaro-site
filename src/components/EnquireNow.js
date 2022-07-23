@@ -5,6 +5,9 @@ import axios from 'axios'
 // STYLING
 import { Button, useToast } from '@chakra-ui/react'
 
+// GOOGLE ANALYTICS
+import { enquireNowLocation } from './GA-Helper'
+
 
 const EnquireNow = () => {
   
@@ -66,6 +69,12 @@ const EnquireNow = () => {
         email: '',
         phone_number: '',
       })
+
+      // GOOGLE ANALYTICS
+      const url = window.location.href.split('/')
+      let path = url[url.length - 1]
+      if (!path) {path = 'home'}
+      enquireNowLocation(window.location.href.split('/')[-1])
     } catch (error) {
       console.log(error)
       toast({

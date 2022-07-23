@@ -1,7 +1,22 @@
-import ReactGA from 'react-ga'
+import ReactGA from 'react-ga4'
+
+
 
 export const initGA = (id) => {
-  if (process.env.NODE_ENV === "production") {
     ReactGA.initialize(id)
-  }
+    ReactGA.send("pageview")
 }
+
+export const enquireNowLocation = (page) => {
+  ReactGA.event({
+    category: "engagement",
+    action: "Clicked enquire now",
+    label: `from ${page}`,
+})}
+
+export const sendGetInTouch = () => {
+  ReactGA.event({
+    category: "engagement",
+    action: "Enquiry Sent",
+})}
+

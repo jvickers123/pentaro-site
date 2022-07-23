@@ -11,6 +11,9 @@ import outside from '../assets/outside.jpg'
 // ICONS
 import { FiInstagram, FiTwitter, FiFacebook } from 'react-icons/fi'
 
+// GOOGLE ANALYTICS
+import { sendGetInTouch } from './GA-Helper'
+
 
 const Contact = () => {
 
@@ -63,10 +66,13 @@ const Contact = () => {
           ${phone_number}.`}
 
       // SEND TEXT NOTIFICATION
-      const {data} = await axios.post('https://5021147o54.execute-api.eu-west-2.amazonaws.com/staging/send-message/send-sms-1', textMessageData)
+      await axios.post('https://5021147o54.execute-api.eu-west-2.amazonaws.com/staging/send-message/send-sms-1', textMessageData)
       await axios.post('https://5021147o54.execute-api.eu-west-2.amazonaws.com/staging/send-message/send-sms-2', textMessageData)
       await axios.post('https://5021147o54.execute-api.eu-west-2.amazonaws.com/staging/send-message/send-sms-3', textMessageData)
-      console.log(data)
+      
+      // GOOGLE ANALYTICS
+      sendGetInTouch()
+      
       toast({
         title: 'Message Sent.',
         description: "Thank you for your message. We will be in touch as soon as possible",

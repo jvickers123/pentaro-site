@@ -7,15 +7,13 @@ import logo from '../assets/logo-screenshot.png'
 import smilingTeleSales from '../assets/smiling-telesales.jpg'
 import teleResearch from '../assets/telemarketing-research.jpg'
 
+
 const Telemarketing = () => {
 
   // RENDER AT TOP OF PAGE
   useEffect(() => {
     window.scrollTo(0, 0)
   }, [])
-
-  // STATE
-  // const [hovered, setHovered] = useState(false)
 
   // REF
   const pentRef = useRef(null)
@@ -39,8 +37,8 @@ const Telemarketing = () => {
           content="Telemarketing at Pentaro prioritises quality, clarity, and consistency, producing direct connections and opportunities with your target audience."
         />
         <title>Telemarketing | Pentaro: Telemarketing and Recruitment</title>
-
       </Helmet>
+      
       <div className='hero-container'>
         <div className='hero telemarketing-background'><div className='blue-background'></div></div>
 
