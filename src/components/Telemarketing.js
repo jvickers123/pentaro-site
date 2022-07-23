@@ -14,7 +14,7 @@ const Telemarketing = () => {
   }, [])
 
   // STATE
-  const [hovered, setHovered] = useState(false)
+  // const [hovered, setHovered] = useState(false)
 
   // REF
   const pentRef = useRef(null)
@@ -60,9 +60,9 @@ const Telemarketing = () => {
               <img src={logo} alt='pentaro logo' />
 
               <div className='wheel-option top-left' onClick={() => scrollTo(oneRef)}><h3 onClick={() => scrollTo(oneRef)}>LEAD <br /> GENERATION</h3></div>
-              <div className='wheel-option top-right'onClick={() => scrollTo(twoRef)}><h3 onClick={() => scrollTo(twoRef)}>APPOINTMENT<br /> SETTING</h3></div>
+              <div className='wheel-option top-right'onClick={() => scrollTo(twoRef)}><h3 onClick={() => scrollTo(twoRef)}id='appointment-text'>APPOINTMENT<br /> SETTING</h3></div>
               <div className='wheel-option right' onClick={() => scrollTo(threeRef)}><h3 onClick={() => scrollTo(threeRef)}>MARKET <br /> RESEARCH {/*<br /> & DATA <br /> CLEANSING */}</h3></div>
-              <div className='wheel-option bottom' onClick={() => scrollTo(fourRef)}><h3 onClick={() => scrollTo(fourRef)}>CUSTOMER <br /> SERVICE</h3></div>
+              <div className='wheel-option bottom' onClick={() => scrollTo(fourRef)}><h3 onClick={() => scrollTo(fourRef)} >CUSTOMER <br /> SERVICE</h3></div>
               <div className='wheel-option left' onClick={() => scrollTo(fiveRef)}><h3 onClick={() => scrollTo(fiveRef)}>DIRECT <br /> SELLING</h3></div>
 
             </div>

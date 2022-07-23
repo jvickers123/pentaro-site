@@ -22,37 +22,7 @@
     }
   }
 }
-// .service-option {
-//   // background-color: $darkbackground;
-//   // color: white;
-//   width: 100vw;
-//   background-size: cover;
-//   .content-container {
-//     padding: 50px 40px 0 40px;
 
-//   }
-//   hr {
-//     height: 1px;
-//     background-color: $darkbgline;
-//     border: none;
-//   }
-//   &.dark-container {
-//     color: #fff;
-//     // background-color: $darkbackground;
-//     height: 100vh;
-//     hr {
-//       height: 1px;
-//       background-color: $darkbgline;
-//       border: none;
-//     }
-//     &.customer-service {
-//       background:linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-//         url("../../assets/telemarketing-individual.jpg");
-//       background-size: cover;
-
-//     }
-//   }
-// }
 
 .white-section-container {
   padding: 50px 40px;
@@ -88,6 +58,9 @@
       font-size: 8px;
       line-height: 17px;
     }
+    #appointment-text {
+      font-size: 7px;
+    }
     // border: 3px solid #fff;
     // @extend %box-shadow;
     // box-shadow: inset 0 0 5px $accent;
@@ -117,7 +90,7 @@
     transform: translate(-70px, -107px);
   }
   .top-right {
-    transform: translate(70px, -108px);
+    transform: translate(73px, -108px);
   }
   .right {
     transform: translate(115px, 26px);
@@ -146,15 +119,16 @@
     .wheel-option {
       height: 109px;
       width: 109px;
-      h3 {
+      h3, #appointment-text {
         font-size: 11px;
         line-height: 18px;
       }
+
       &.top-left {
         transform: translate(-116.5px, -179px);
       }
       &.top-right {
-        transform: translate(117.5px, -180px);
+        transform: translate(122px, -180px);
       }
       &.right {
         transform: translate(191px, 44px);
