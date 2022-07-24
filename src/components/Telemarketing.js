@@ -238,9 +238,9 @@ const Telemarketing = () => {
                 <p>Effective communication is a key component in all of our processes, with frequent updates, daily statistics, and with constant availability to discuss progress in order to ensure results.</p>
                 
 
-                <p>Our team have experience in dealing with clients from a wide variety of industries, having dealt with SME’s through to international corporates. </p>
+                <p>Our team have experience in dealing with partners from a wide variety of industries, having dealt with SME’s through to international corporates. </p>
                 
-                <p>Every campaign Pentaro take on, regardless it’s size, will receive the same level of service to gain the best possible returns. Our ambition is to build productive relationships and share success.</p>
+                <p>Every campaign Pentaro take on, regardless its size, will receive the same level of service to gain the best possible returns. Our ambition is to build productive relationships and share success.</p>
                 
                 <button onClick={() => scrollTo(pentRef)}>Back to top <span className='accent'>^</span></button>
 
