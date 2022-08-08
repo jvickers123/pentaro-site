@@ -127,28 +127,28 @@ const Contact = () => {
 
           <div className='form-field'>
             <label  htmlFor='full_name'>Name <span className='red'>*</span></label>
-            <input required type='text' name='full_name' value={formData.full_name} onChange={handleChange}/>
+            <input required type='text' id='full_name' name='full_name' value={formData.full_name} onChange={handleChange}/>
           </div>
 
 
           <div className='form-field'>
             <label htmlFor='email'>Email <span className='red'>*</span></label>
-            <input required type='email' name='email' value={formData.email} onChange={handleChange}/>
+            <input required type='email' id='email' name='email' value={formData.email} onChange={handleChange}/>
           </div>
 
           <div className='form-field'>
             <label htmlFor='company_name'>Company Name <span className='red'>*</span></label>
-            <input required type='text' name='company_name' value={formData.company_name} onChange={handleChange}/>
+            <input required type='text' id='company_name' name='company_name' value={formData.company_name} onChange={handleChange}/>
           </div>
 
           <div className='form-field'>
             <label htmlFor='phone_number'>Phone Number <span className='red'>*</span></label>
-            <input required type='tel' name='phone_number' value={formData.phone_number} onChange={handleChange}/>
+            <input required type='tel' id='phone_number' name='phone_number' value={formData.phone_number} onChange={handleChange}/>
           </div>
 
           <div className='form-field message-area'>
             <label htmlFor='message'>Message <span className='red'>*</span></label>
-            <textarea rows='6' required name='message' value={formData.message} onChange={handleChange}/>
+            <textarea rows='6' required id='message' name='message' value={formData.message} onChange={handleChange}/>
           </div>
 
           <Button className='light-btn' onClick={handleSubmit}>Send message</Button>
