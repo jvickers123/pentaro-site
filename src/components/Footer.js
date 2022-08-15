@@ -10,8 +10,8 @@ const Footer = () => {
         <Link to='/'>Pentaro</Link>
         <Link to='/recruitment'>Recruitment</Link>
         <Link to='/telemarketing'>Telemarketing</Link>
-        <Link to='/pentaroway'>The Pentaro Way</Link>
-        <Link to='/getintouch'>Contact Us</Link>
+        <Link to='/pentaro-way'>The Pentaro Way</Link>
+        <Link to='/get-in-touch'>Contact Us</Link>
       </div>
 
       <p>&copy; Pentaro Ltd. 2022</p>
