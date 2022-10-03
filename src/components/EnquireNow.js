@@ -112,18 +112,18 @@ const EnquireNow = () => {
 
           <div className='form-field'>
             <label  htmlFor='full_name'>Name</label>
-            <input required type='text' name='full_name' value={formData.full_name} onChange={handleChange}/>
+            <input required type='text' id='full_name' name='full_name' value={formData.full_name} onChange={handleChange}/>
           </div>
 
 
           <div className='form-field'>
             <label htmlFor='email'>Email</label>
-            <input required type='email' name='email' value={formData.email} onChange={handleChange}/>
+            <input required type='email' id='email' name='email' value={formData.email} onChange={handleChange}/>
           </div>
 
           <div className='form-field'>
             <label htmlFor='phone_number'>Phone No.</label>
-            <input required type='tel' name='phone_number' value={formData.phone_number} onChange={handleChange}/>
+            <input required type='tel' id='phone_number' name='phone_number' value={formData.phone_number} onChange={handleChange}/>
           </div>
 
           <Button className='light-btn' onClick={handleSubmit}>Enquire now</Button>

@@ -44,7 +44,7 @@ const Home = () => {
           <div className='dotted-line offset-left-top'></div>
           
           <h2 className='accent'>WHY US?</h2>
-          <h3>Pentaro aims to capitalise on synergies to enhance the profitability and growth potential of its partners.</h3>
+          <h3>Pentaro prioritises clear communication to ensure maximum growth potential for all our partners.</h3>
           <p>We are a modern, data-driven, results-focused business development agency, ready to help your business boost its bottom line.</p>
 
           <Link to='/pentaroway'>The Pentaro Way <span className='accent'>&gt;&gt;</span></Link>
