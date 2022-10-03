@@ -116,9 +116,12 @@
   }
 
   .grey-section-container {
+    max-width: 1200px;
+    margin: 0 auto;
     .values-container {
       margin-top: 50px;
       margin-bottom: 30px;
+
       display: flex;
       justify-content: space-between;
       .values-number-container {

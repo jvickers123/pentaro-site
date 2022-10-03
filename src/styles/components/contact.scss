@@ -73,6 +73,8 @@
       // display: flex;
       .contact-section{
         // width: 50vw;
+        max-width: 1200px;
+        margin: 0 auto;
       }
       .dark-section-container.contact-details {
         padding-top: 0;
@@ -85,6 +87,7 @@
         display: flex;
         .contact-info-container {
           width: 50vw;
+          max-width: 600px;
           hr {
             width: 43vw;
           }
@@ -95,6 +98,7 @@
           // right: 0;
           height: 700px;
           width: 50vw;
+          max-width: 600px;
           // align-self: flex-end;
 
           object-fit: cover;

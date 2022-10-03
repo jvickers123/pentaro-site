@@ -74,6 +74,8 @@
   @media screen and (min-width: 600px) {
 
     .nav-bar-main {
+      max-width: 1400px;
+
       font-size: 30px;
       background-color: #fff;
       padding: 20px 30px;
@@ -96,4 +98,21 @@
       }
     }
 
+
+
+  }
+
+  @media screen and (min-width: 1400px) {
+    .navbar-background {
+      background-color: #fff;
+      position: fixed;
+      top: 0;
+      z-index: 2;
+      height: 70px;
+      width: 100vw;
+      
+      .nav-bar-main {
+        left: calc((100vw - 1400px) / 2);
+      }
+    }
   }

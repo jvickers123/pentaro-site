@@ -24,6 +24,8 @@ const SiteNavBar = () => {
   const { isOpen, onOpen, onClose } = useDisclosure()
 
   return (
+    
+    <div className='navbar-background'>
     <div className='nav-bar-main'>
       <Link to='/' className='accent'>
         <div className='logo-container'>
@@ -43,7 +45,7 @@ const SiteNavBar = () => {
           placement='top'
           onClose={onClose}
           size='full'
-        >
+          >
           <DrawerOverlay />
           <DrawerContent>
             <DrawerCloseButton />
@@ -73,6 +75,7 @@ const SiteNavBar = () => {
       </div>
 
     </div>
+  </div>
   )
 }
 
