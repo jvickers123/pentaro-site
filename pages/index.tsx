@@ -68,8 +68,9 @@ const Home = () => {
           <div className="image-container">
             <Image
               src="/assets/happy-handshake.jpg"
-              width={660}
-              height={470}
+              width={400}
+              height={450}
+              // layout="responsive"
               alt="Two people shaking hands"
             />
           </div>
