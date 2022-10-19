@@ -26,9 +26,16 @@ const SiteNavBar = () => {
     <div className="navbar-background">
       <div className="nav-bar-main">
         <Link href="/">
-          <a className="logo-container">
-            <Image src={greenLogo} alt="Pentaro logo" />
-            <h2 className="pentaro-name accent">PENTARO</h2>
+          <a className="accent ">
+            <div className="logo-container">
+              <Image
+                src={greenLogo}
+                alt="Pentaro logo"
+                height={30}
+                width={30}
+              />
+              <h2 className="pentaro-name">PENTARO</h2>
+            </div>
           </a>
         </Link>
 

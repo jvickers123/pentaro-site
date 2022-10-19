@@ -66,7 +66,12 @@ const Home = () => {
       <div className="plain-section-container middle">
         <div className="left-content-container">
           <div className="image-container">
-            <Image src={handshake} alt="Two people shaking hands" />
+            <Image
+              src="/assets/happy-handshake.jpg"
+              width={660}
+              height={470}
+              alt="Two people shaking hands"
+            />
           </div>
         </div>
 
