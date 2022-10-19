@@ -3,10 +3,10 @@ import Head from 'next/head';
 import Image from 'next/image';
 
 // IMAGES
-import individual from '../assets/telemarketing-individual.jpg';
-import logo from '../assets/logo-screenshot.png';
-import smilingTeleSales from '../assets/smiling-telesales.jpg';
-import teleResearch from '../assets/telemarketing-research.jpg';
+import individual from '../src/assets/telemarketing-individual.jpg';
+import logo from '../src/assets/logo-screenshot.png';
+import smilingTeleSales from '../src/assets/smiling-telesales.jpg';
+import teleResearch from '../src/assets/telemarketing-research.jpg';
 
 const Telemarketing = () => {
   // RENDER AT TOP OF PAGE
