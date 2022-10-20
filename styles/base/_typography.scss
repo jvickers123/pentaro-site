@@ -15,6 +15,7 @@ body {
   line-height: 1.2rem;
   margin-bottom: 2rem;
 }
+
 .headingh3 {
   font-weight: 400;
   font-size: 2rem;
@@ -30,6 +31,22 @@ body {
 
 .accent {
   color: $accent;
+}
+
+.pentaro-name {
+  font-family: 'Reem Kufi', sans-serif;
+  font-weight: 400;
+
+  &__logo {
+    font-size: 3.2rem;
+    font-weight: 700;
+  }
+
+  &__mobile-nav {
+    font-size: 4rem;
+    font-weight: 700;
+    align-self: flex-start;
+  }
 }
 
 .link {

@@ -1,4 +1,5 @@
-import '../src/styles/main.scss';
+// import '../src/styles/main.scss';
+import '../styles/main.scss';
 import { ChakraProvider } from '@chakra-ui/react';
 
 import type { AppProps } from 'next/app';

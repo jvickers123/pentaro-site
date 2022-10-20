@@ -9,13 +9,6 @@ $greybg: #dce2e7;
 $greygrey: #8a8a8a;
 $greybgline: #b2afaf;
 
-@mixin flex-center($direction) {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: $direction;
-}
-
 %box-shadow {
   box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.26);
 }

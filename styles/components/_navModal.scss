@@ -1,0 +1,16 @@
+.nav-modal {
+  height: 70%;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 0 5%;
+  background-color: $accent;
+  color: white;
+  @include flex-center(column);
+
+  &__options {
+    font-size: 24px;
+    margin: 5px 0;
+    font-weight: 500;
+  }
+}

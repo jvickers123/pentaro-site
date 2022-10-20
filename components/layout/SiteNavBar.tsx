@@ -23,14 +23,15 @@ const SiteNavBar = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   return (
-    <div className="navbar-background">
-      <div className="nav-bar-main">
+    <div className="navbar-background navigation__background">
+      <div className="nav-bar-main navigation">
         <Link href="/">
           <a className="accent ">
             <div className="logo-container">
               <Image
                 src={greenLogo}
                 alt="Pentaro logo"
+                className="logo"
                 height={30}
                 width={30}
               />
@@ -39,13 +40,13 @@ const SiteNavBar = () => {
           </a>
         </Link>
 
-        <div className="mobile-navbar">
+        <div className="mobile-navbar navigation__mobile">
           <button onClick={onOpen}>
             <GiHamburgerMenu className="accent" />
           </button>
           <Drawer isOpen={isOpen} placement="top" onClose={onClose} size="full">
             <DrawerOverlay />
-            <DrawerContent>
+            <DrawerContent className="">
               <DrawerCloseButton />
               <DrawerHeader>
                 <Link href="/">
@@ -55,25 +56,37 @@ const SiteNavBar = () => {
                 </Link>
               </DrawerHeader>
 
-              <div className="dropdown-options-container">
-                <Link className="options" onClick={onClose} href="/">
+              <div className="dropdown-options-container nav-modal">
+                <Link
+                  className="options nav-modal__options"
+                  onClick={onClose}
+                  href="/"
+                >
                   Home
                 </Link>
                 <Link
-                  className="options"
+                  className="options nav-modal__options"
                   onClick={onClose}
                   href="/telemarketing"
                 >
                   Telemarketing
                 </Link>
-                <Link className="options" onClick={onClose} href="/recruitment">
+                <Link
+                  className="options nav-modal__options"
+                  onClick={onClose}
+                  href="/recruitment"
+                >
                   Recruitment
                 </Link>
-                <Link className="options" onClick={onClose} href="/pentaro-way">
+                <Link
+                  className="options nav-modal__options"
+                  onClick={onClose}
+                  href="/pentaro-way"
+                >
                   The Pentaro Way
                 </Link>
                 <Link
-                  className="options"
+                  className="options nav-modal__options"
                   onClick={onClose}
                   href="/get-in-touch"
                 >
@@ -84,21 +97,21 @@ const SiteNavBar = () => {
           </Drawer>
         </div>
 
-        <div className="desktop-navbar">
-          <Link className="options" href="/">
-            <a onClick={onClose}>Home </a>
+        <div className="desktop-navbar navigation__desktop">
+          <Link href="/">
+            <a className="options nav-modal__options">Home </a>
           </Link>
-          <Link className="options" href="/telemarketing">
-            Telemarketing
+          <Link href="/telemarketing">
+            <a className="options nav-modal__options">Telemarketing</a>
           </Link>
-          <Link className="options" href="/recruitment">
-            Recruitment
+          <Link href="/recruitment">
+            <a className="options nav-modal__options">Recruitment</a>
           </Link>
-          <Link className="options" href="/pentaro-way">
-            The Pentaro Way
+          <Link href="/pentaro-way">
+            <a className="options nav-modal__options">The Pentaro Way</a>
           </Link>
-          <Link className="options" href="/get-in-touch">
-            Get In Touch
+          <Link href="/get-in-touch">
+            <a className="options nav-modal__options">Get In Touch</a>
           </Link>
         </div>
       </div>

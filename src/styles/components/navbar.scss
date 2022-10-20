@@ -11,7 +11,7 @@
   // img {
   //   height: 20px;
   // }
-  
+
   .logo-container {
     height: 30px;
     display: flex;
@@ -25,7 +25,6 @@
       font-size: 32px;
       font-weight: 700;
     }
-    
   }
   .desktop-navbar {
     display: none;
@@ -51,7 +50,6 @@
   font-weight: bold;
   font-size: 40px;
   align-self: flex-start;
-  
 }
 
 .pentaro-name.dropdown-title {
@@ -60,7 +58,8 @@
 }
 
 // options drawer
-#chakra-modal-\:r3\:, #chakra-modal-\:r1\:{
+#chakra-modal-\:r3\:,
+#chakra-modal-\:r1\: {
   background-color: $accent;
   color: white;
   // @include flex-center(column);
@@ -68,51 +67,46 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  
-  }
+}
 
-  @media screen and (min-width: 600px) {
+@media screen and (min-width: 600px) {
+  .nav-bar-main {
+    max-width: 1400px;
 
-    .nav-bar-main {
-      max-width: 1400px;
-
-      font-size: 30px;
-      background-color: #fff;
-      padding: 20px 30px;
-      .mobile-navbar {
-        display: none;
-      }
-      .desktop-navbar {
-        display: flex;
-        align-items: center;
-        margin-right: 100px;
-        font-weight: 700;
-        font-size: 15px;
-        line-height: 24px;
-        a {
-          margin: 0 20px;
-          &:hover {
-            color: $accent;
-          }
+    font-size: 30px;
+    background-color: #fff;
+    padding: 20px 30px;
+    .mobile-navbar {
+      display: none;
+    }
+    .desktop-navbar {
+      display: flex;
+      align-items: center;
+      margin-right: 100px;
+      font-weight: 700;
+      font-size: 15px;
+      line-height: 24px;
+      a {
+        margin: 0 20px;
+        &:hover {
+          color: $accent;
         }
       }
     }
-
-
-
   }
+}
 
-  @media screen and (min-width: 1400px) {
-    .navbar-background {
-      background-color: #fff;
-      position: fixed;
-      top: 0;
-      z-index: 2;
-      height: 70px;
-      width: 100vw;
-      
-      .nav-bar-main {
-        left: calc((100vw - 1400px) / 2);
-      }
+@media screen and (min-width: 1400px) {
+  .navbar-background {
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    z-index: 2;
+    height: 70px;
+    width: 100vw;
+
+    .nav-bar-main {
+      left: calc((100vw - 1400px) / 2);
     }
   }
+}
