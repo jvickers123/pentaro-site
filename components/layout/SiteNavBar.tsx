@@ -47,51 +47,46 @@ const SiteNavBar = () => {
           <Drawer isOpen={isOpen} placement="top" onClose={onClose} size="full">
             <DrawerOverlay />
             <DrawerContent className="">
-              <DrawerCloseButton />
-              <DrawerHeader>
-                <Link href="/">
-                  <h2 onClick={onClose} className="pentaro-name dropdown-title">
-                    PENTARO
-                  </h2>
-                </Link>
-              </DrawerHeader>
+              <div className="nav-modal">
+                <DrawerCloseButton />
+                <DrawerHeader>
+                  <Link href="/">
+                    <h2
+                      onClick={onClose}
+                      className="pentaro-name dropdown-title pentaro-name__mobile-nav"
+                    >
+                      PENTARO
+                    </h2>
+                  </Link>
+                </DrawerHeader>
 
-              <div className="dropdown-options-container nav-modal">
-                <Link
-                  className="options nav-modal__options"
-                  onClick={onClose}
-                  href="/"
-                >
-                  Home
-                </Link>
-                <Link
-                  className="options nav-modal__options"
-                  onClick={onClose}
-                  href="/telemarketing"
-                >
-                  Telemarketing
-                </Link>
-                <Link
-                  className="options nav-modal__options"
-                  onClick={onClose}
-                  href="/recruitment"
-                >
-                  Recruitment
-                </Link>
-                <Link
-                  className="options nav-modal__options"
-                  onClick={onClose}
-                  href="/pentaro-way"
-                >
-                  The Pentaro Way
-                </Link>
-                <Link
-                  className="options nav-modal__options"
-                  onClick={onClose}
-                  href="/get-in-touch"
-                >
-                  Get In Touch
-                </Link>
+                <div className="dropdown-options-container nav-modal__options-container">
+                  <Link href="/">
+                    <a className="options nav-modal__options" onClick={onClose}>
+                      Home{' '}
+                    </a>
+                  </Link>
+                  <Link href="/telemarketing">
+                    <a className="options nav-modal__options" onClick={onClose}>
+                      Telemarketing{' '}
+                    </a>
+                  </Link>
+                  <Link href="/recruitment">
+                    <a className="options nav-modal__options" onClick={onClose}>
+                      Recruitment{' '}
+                    </a>
+                  </Link>
+                  <Link href="/pentaro-way">
+                    <a className="options nav-modal__options" onClick={onClose}>
+                      The Pentaro Way{' '}
+                    </a>
+                  </Link>
+                  <Link href="/get-in-touch">
+                    <a className="options nav-modal__options" onClick={onClose}>
+                      Get In Touch{' '}
+                    </a>
+                  </Link>
+                </div>
               </div>
             </DrawerContent>
           </Drawer>
