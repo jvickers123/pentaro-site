@@ -99,19 +99,19 @@ const SiteNavBar = () => {
 
         <div className="desktop-navbar navigation__desktop">
           <Link href="/">
-            <a className="options nav-modal__options">Home </a>
+            <a className="options navigation__item">Home </a>
           </Link>
           <Link href="/telemarketing">
-            <a className="options nav-modal__options">Telemarketing</a>
+            <a className="options navigation__item">Telemarketing</a>
           </Link>
           <Link href="/recruitment">
-            <a className="options nav-modal__options">Recruitment</a>
+            <a className="options navigation__item">Recruitment</a>
           </Link>
           <Link href="/pentaro-way">
-            <a className="options nav-modal__options">The Pentaro Way</a>
+            <a className="options navigation__item">The Pentaro Way</a>
           </Link>
           <Link href="/get-in-touch">
-            <a className="options nav-modal__options">Get In Touch</a>
+            <a className="options navigation__item">Get In Touch</a>
           </Link>
         </div>
       </div>
