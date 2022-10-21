@@ -22,21 +22,21 @@ const Home = () => {
         <title>Pentaro: Telemarketing and Recruitment</title>
       </Helmet>
 
-      <div className="hero-container">
-        <div className="hero home-background">
-          <div className="blue-background"></div>
+      <div className="hero-container ">
+        <div className="hero home-background hero-container__image hero-container__image--home">
+          <div className="blue-background hero-container__blue-background"></div>
         </div>
 
-        <div className="home-flex-container">
-          <h1 className="accent home-heading pentaro-name">PENTARO</h1>
+        <div className="home-flex-container hero-container__content">
+          <h1 className="accent home-heading heading1 pentaro-name">PENTARO</h1>
           {/* <h2 className='home-h2'>ANOTHER SLOGAN HERE</h2> */}
-          <h2 className="home-h2">
+          <h2 className="home-h2 heading2 heading2--hero">
             Bespoke telemarketing and recruitment solutions
           </h2>
           <Link href="/getintouch">
-            <p>
+            <a className="link">
               Get in touch <span className="accent">&gt;&gt;</span>
-            </p>
+            </a>
           </Link>
         </div>
       </div>

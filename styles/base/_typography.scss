@@ -7,7 +7,8 @@ body,
 
 .heading1 {
   font-weight: bold;
-  font-size: 2.8rem;
+  font-size: 4.4rem;
+  margin-bottom: 6rem;
 }
 
 .heading2 {
@@ -15,6 +16,12 @@ body,
   font-size: 1rem;
   line-height: 1.2rem;
   margin-bottom: 2rem;
+
+  &--hero {
+    font-weight: 600;
+    font-size: 2rem;
+    line-height: 2.4rem;
+  }
 }
 
 .headingh3 {
@@ -36,18 +43,20 @@ body,
 
 .pentaro-name {
   font-family: 'Reem Kufi', sans-serif;
-  font-weight: 400;
+  font-weight: 700;
 
   &__logo {
     font-size: 3.2rem;
-    font-weight: 700;
     line-height: 4.8rem;
   }
 
   &__mobile-nav {
     font-size: 4rem;
-    font-weight: 700;
     align-self: flex-start;
     color: #fff;
   }
+}
+
+.link {
+  font-size: 1.7rem;
 }
