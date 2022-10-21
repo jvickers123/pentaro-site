@@ -26,7 +26,7 @@ const SiteNavBar = () => {
     <div className="navbar-background navigation__background">
       <div className="nav-bar-main navigation">
         <Link href="/">
-          <a className="accent ">
+          <a className="accent link">
             <div className="logo-container">
               <Image
                 src={greenLogo}
@@ -35,7 +35,7 @@ const SiteNavBar = () => {
                 height={30}
                 width={30}
               />
-              <h2 className="pentaro-name">PENTARO</h2>
+              <h2 className="pentaro-name pentaro-name__logo">PENTARO</h2>
             </div>
           </a>
         </Link>
@@ -62,27 +62,42 @@ const SiteNavBar = () => {
 
                 <div className="dropdown-options-container nav-modal__options-container">
                   <Link href="/">
-                    <a className="options nav-modal__options" onClick={onClose}>
+                    <a
+                      className="link options nav-modal__options"
+                      onClick={onClose}
+                    >
                       Home{' '}
                     </a>
                   </Link>
                   <Link href="/telemarketing">
-                    <a className="options nav-modal__options" onClick={onClose}>
+                    <a
+                      className="link options nav-modal__options"
+                      onClick={onClose}
+                    >
                       Telemarketing{' '}
                     </a>
                   </Link>
                   <Link href="/recruitment">
-                    <a className="options nav-modal__options" onClick={onClose}>
+                    <a
+                      className="link options nav-modal__options"
+                      onClick={onClose}
+                    >
                       Recruitment{' '}
                     </a>
                   </Link>
                   <Link href="/pentaro-way">
-                    <a className="options nav-modal__options" onClick={onClose}>
+                    <a
+                      className="link options nav-modal__options"
+                      onClick={onClose}
+                    >
                       The Pentaro Way{' '}
                     </a>
                   </Link>
                   <Link href="/get-in-touch">
-                    <a className="options nav-modal__options" onClick={onClose}>
+                    <a
+                      className="link options nav-modal__options"
+                      onClick={onClose}
+                    >
                       Get In Touch{' '}
                     </a>
                   </Link>
@@ -94,19 +109,19 @@ const SiteNavBar = () => {
 
         <div className="desktop-navbar navigation__desktop">
           <Link href="/">
-            <a className="options navigation__item">Home </a>
+            <a className="link options navigation__item">Home </a>
           </Link>
           <Link href="/telemarketing">
-            <a className="options navigation__item">Telemarketing</a>
+            <a className="link options navigation__item">Telemarketing</a>
           </Link>
           <Link href="/recruitment">
-            <a className="options navigation__item">Recruitment</a>
+            <a className="link options navigation__item">Recruitment</a>
           </Link>
           <Link href="/pentaro-way">
-            <a className="options navigation__item">The Pentaro Way</a>
+            <a className="link options navigation__item">The Pentaro Way</a>
           </Link>
           <Link href="/get-in-touch">
-            <a className="options navigation__item">Get In Touch</a>
+            <a className="link options navigation__item">Get In Touch</a>
           </Link>
         </div>
       </div>
