@@ -20,14 +20,14 @@ const PentaroWay = () => {
         <title>The Pentaro Way | Pentaro: Telemarketing and Recruitment</title>
       </Head>
 
-      <div className="hero-container">
-        <div className="hero pent-way-background">
-          <div className="blue-background"></div>
+      <div className="hero-container ">
+        <div className="hero pent-way-background hero-container__image hero-container__image--pentaro-way">
+          <div className="blue-background hero-container__blue-background"></div>
         </div>
 
-        <div className="section-flex-container">
-          <h1 className="accent">THE PENTARO WAY</h1>
-          <h2>
+        <div className="section-flex-container hero-container__content">
+          <h1 className="accent heading1">THE PENTARO WAY</h1>
+          <h2 className="heading2 heading2--hero">
             We have modernised and streamlined outsourced business development
             with sustainability and growth at the core of our process.
           </h2>

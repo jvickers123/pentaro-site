@@ -21,13 +21,13 @@ const Recruitment = () => {
         <title>Recruitment | Pentaro: Telemarketing and Recruitment</title>
       </Head>
       <div className="hero-container">
-        <div className="hero recruitment-background">
-          <div className="blue-background"></div>
+        <div className="hero recruitment-background hero-container__image hero-container__image--recruitment">
+          <div className="blue-background hero-container__blue-background"></div>
         </div>
 
-        <div className="section-flex-container">
-          <h1 className="accent">RECRUITMENT</h1>
-          <h2>
+        <div className="section-flex-container hero-container__content">
+          <h1 className="accent heading1">RECRUITMENT</h1>
+          <h2 className="heading2 heading2--hero">
             Pentaro utilises modern research and data analysis techniques to
             acquire the best selection of viable candidates.
           </h2>

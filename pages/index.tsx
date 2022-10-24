@@ -29,7 +29,6 @@ const Home = () => {
 
         <div className="home-flex-container hero-container__content">
           <h1 className="accent home-heading heading1 pentaro-name">PENTARO</h1>
-          {/* <h2 className='home-h2'>ANOTHER SLOGAN HERE</h2> */}
           <h2 className="home-h2 heading2 heading2--hero">
             Bespoke telemarketing and recruitment solutions
           </h2>
