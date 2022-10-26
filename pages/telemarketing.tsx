@@ -43,8 +43,8 @@ const Telemarketing = () => {
         </div>
 
         <div className="section-flex-container hero-container__content">
-          <h1 className="accent heading1">TELEMARKETING</h1>
-          <h2 className="heading2 heading2--hero">
+          <h1 className="accent heading1 heading1__hero">TELEMARKETING</h1>
+          <h2 className="heading2 heading2__hero">
             Telemarketing at Pentaro prioritises quality, clarity, and
             consistency, producing direct connections and opportunities with
             your target audience.

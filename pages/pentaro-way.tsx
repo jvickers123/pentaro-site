@@ -26,8 +26,8 @@ const PentaroWay = () => {
         </div>
 
         <div className="section-flex-container hero-container__content">
-          <h1 className="accent heading1">THE PENTARO WAY</h1>
-          <h2 className="heading2 heading2--hero">
+          <h1 className="accent heading1  heading1__hero">THE PENTARO WAY</h1>
+          <h2 className="heading2 heading2__hero">
             We have modernised and streamlined outsourced business development
             with sustainability and growth at the core of our process.
           </h2>

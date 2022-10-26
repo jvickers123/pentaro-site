@@ -27,9 +27,9 @@ const Home = () => {
           <div className="blue-background hero-container__blue-background"></div>
         </div>
 
-        <div className="home-flex-container hero-container__content">
+        <div className="home-flex-container hero-container__content--home">
           <h1 className="accent home-heading heading1 pentaro-name">PENTARO</h1>
-          <h2 className="home-h2 heading2 heading2--hero">
+          <h2 className="home-h2 heading2 heading2__hero--home">
             Bespoke telemarketing and recruitment solutions
           </h2>
           <Link href="/getintouch">

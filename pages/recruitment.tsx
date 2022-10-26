@@ -26,8 +26,8 @@ const Recruitment = () => {
         </div>
 
         <div className="section-flex-container hero-container__content">
-          <h1 className="accent heading1">RECRUITMENT</h1>
-          <h2 className="heading2 heading2--hero">
+          <h1 className="accent heading1  heading1__hero">RECRUITMENT</h1>
+          <h2 className="heading2 heading2__hero">
             Pentaro utilises modern research and data analysis techniques to
             acquire the best selection of viable candidates.
           </h2>
