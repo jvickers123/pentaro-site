@@ -1,12 +1,12 @@
 .navigation {
   position: fixed;
   top: 0px;
-  padding: 20px 15px;
+  padding: 2rem 1.5rem;
   width: 100%;
   z-index: 2;
   @include flex-center(row);
   justify-content: space-between;
-  font-size: 18px;
+  font-size: 1.8rem;
   background-color: #fff;
 
   &__desktop {
@@ -14,16 +14,16 @@
   }
 
   &__item {
-    margin: 0 20px;
+    margin: 0 2rem;
 
     &:hover {
       color: $accent;
     }
   }
 
-  @include respond(tablet) {
-    max-width: 1400px;
-    padding: 20px 30px;
+  @include respond(desk) {
+    max-width: 140rem;
+    padding: 2rem 3rem;
 
     &__mobile {
       display: none;
@@ -39,14 +39,14 @@
   }
 
   @include respond(big-desk) {
-    left: calc((100vw - 1400px) / 2);
+    left: calc((100vw - 140rem) / 2);
 
     &__background {
       background-color: #fff;
       position: fixed;
       top: 0;
       z-index: 2;
-      height: 70px;
+      height: 7rem;
       width: 100vw;
     }
   }

@@ -33,7 +33,7 @@ const Home = () => {
             Bespoke telemarketing and recruitment solutions
           </h2>
           <Link href="/getintouch">
-            <a className="link">
+            <a className="link link--hero">
               Get in touch <span className="accent">&gt;&gt;</span>
             </a>
           </Link>
