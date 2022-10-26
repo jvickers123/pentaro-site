@@ -13,7 +13,7 @@ const Home = () => {
   }, []);
 
   return (
-    <section>
+    <>
       <Helmet>
         <meta
           name="description"
@@ -22,7 +22,7 @@ const Home = () => {
         <title>Pentaro: Telemarketing and Recruitment</title>
       </Helmet>
 
-      <div className="hero-container ">
+      <section className="hero-container ">
         <div className="hero home-background hero-container__image hero-container__image--home">
           <div className="blue-background hero-container__blue-background"></div>
         </div>
@@ -38,9 +38,9 @@ const Home = () => {
             </a>
           </Link>
         </div>
-      </div>
+      </section>
 
-      <div className="plain-section-container off-left">
+      <section className="plain-section-container off-left">
         <div className="content-container left">
           <div className="dotted-line offset-left-top"></div>
 
@@ -60,9 +60,9 @@ const Home = () => {
             </p>
           </Link>
         </div>
-      </div>
+      </section>
 
-      <div className="plain-section-container middle">
+      <section className="plain-section-container middle">
         <div className="left-content-container">
           <div className="image-container">
             <Image
@@ -95,9 +95,9 @@ const Home = () => {
             </p>
           </Link>
         </div>
-      </div>
+      </section>
 
-      <div className="plain-section-container offset-right">
+      <section className="plain-section-container offset-right">
         <div className="content-container right">
           <div className="dotted-line offset-left-top"></div>
 
@@ -123,8 +123,8 @@ const Home = () => {
         <div className="image-container">
           <Image src={businessWoman} alt="Business woman on computer" />
         </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 };
 

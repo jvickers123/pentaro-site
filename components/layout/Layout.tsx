@@ -7,7 +7,7 @@ const Layout = (props: { children: ReactNode }) => {
   return (
     <>
       <SiteNavBar />
-      <main>{props.children}</main>
+      <main className="main">{props.children}</main>
       <EnquireNow />
       <Footer />
     </>

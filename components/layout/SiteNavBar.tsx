@@ -23,8 +23,8 @@ const SiteNavBar = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   return (
-    <div className="navbar-background navigation__background">
-      <div className="nav-bar-main navigation">
+    <header className="navbar-background navigation__background">
+      <nav className="nav-bar-main navigation">
         <Link href="/">
           <a className="accent link">
             <div className="logo-container">
@@ -124,8 +124,8 @@ const SiteNavBar = () => {
             <a className="link options navigation__item">Get In Touch</a>
           </Link>
         </div>
-      </div>
-    </div>
+      </nav>
+    </header>
   );
 };
 

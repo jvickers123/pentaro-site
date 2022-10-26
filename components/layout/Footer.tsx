@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 const Footer = () => {
   return (
-    <div className="real-footer-container">
+    <footer className="real-footer-container">
       <div className="footer-links-container">
         <Link href="/">Pentaro</Link>
         <Link href="/recruitment">Recruitment</Link>
@@ -18,7 +18,7 @@ const Footer = () => {
           Jonny Vickers
         </a>
       </p>
-    </div>
+    </footer>
   );
 };
 

@@ -106,7 +106,7 @@ const EnquireNow = () => {
   });
 
   return (
-    <div className={hideFooter ? 'footer-hiddent' : 'footer-main'}>
+    <aside className={hideFooter ? 'footer-hiddent' : 'footer-main'}>
       <div className="footer-mobile">
         <Link href="/get-in-touch">
           <button className="enquire-now-button">Send us a message</button>
@@ -156,7 +156,7 @@ const EnquireNow = () => {
           </Button>
         </form>
       </div>
-    </div>
+    </aside>
   );
 };
 
