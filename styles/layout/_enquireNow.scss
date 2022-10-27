@@ -1,0 +1,58 @@
+.enquire-now {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  z-index: 2;
+  color: #fff;
+  @include flex-center(row);
+
+  &__mobile {
+    width: 100%;
+    text-align: right;
+  }
+  &__desktop {
+    display: none;
+  }
+
+  &--hidden {
+    display: none;
+  }
+}
+
+@include respond(tablet) {
+  .enquire-now {
+    background-color: #fff;
+    padding: 0.5rem;
+    color: #000;
+    border-top: 0.5px solid $accent;
+
+    &__mobile {
+      display: none;
+    }
+
+    &__desktop {
+      display: flex;
+      width: 100%;
+    }
+
+    &__form {
+      width: 100%;
+      max-width: 120rem;
+      margin: 0 auto;
+      @include flex-center(row);
+      justify-content: space-around;
+    }
+
+    &__label {
+      margin: 0 1rem;
+      font-size: 1.6rem;
+    }
+
+    &__input {
+      color: black;
+      border: 1px solid $greygrey;
+      border-radius: 0.5rem;
+      padding: 0.5rem 1.5rem;
+    }
+  }
+}

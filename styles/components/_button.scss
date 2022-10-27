@@ -1,0 +1,24 @@
+.button {
+  background: $accent;
+  color: #fff;
+  margin-right: 2rem;
+  margin-bottom: 2rem;
+  border-radius: 1px;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  padding: 1rem 1.6rem;
+  font-weight: 600;
+  &:hover {
+    background-color: darken($accent, 20%);
+  }
+
+  &--enquire-now {
+    border-width: 0.5px;
+    margin-bottom: 0;
+    line-height: 1.9rem;
+  }
+
+  &--box-shadow {
+    @extend %box-shadow;
+  }
+}

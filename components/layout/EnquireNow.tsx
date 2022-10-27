@@ -106,18 +106,23 @@ const EnquireNow = () => {
   });
 
   return (
-    <aside className={hideFooter ? 'footer-hiddent' : 'footer-main'}>
-      <div className="footer-mobile">
+    <aside className={`enquire-now ${hideFooter ? 'enquire-now.hidden' : ''}`}>
+      <div className="enquire-now__mobile">
         <Link href="/get-in-touch">
-          <button className="enquire-now-button">Send us a message</button>
+          <button className="button button--box-shadow">
+            Send us a message
+          </button>
         </Link>
       </div>
 
-      <div className="footer-desktop">
-        <form onSubmit={handleSubmit}>
-          <div className="form-field">
-            <label htmlFor="full_name">Name</label>
+      <div className="enquire-now__desktop">
+        <form onSubmit={handleSubmit} className="enquire-now__form">
+          <div className="enquire-now__form-field">
+            <label className="enquire-now__label" htmlFor="full_name">
+              Name
+            </label>
             <input
+              className="enquire-now__input"
               required
               type="text"
               id="full_name"
@@ -127,9 +132,12 @@ const EnquireNow = () => {
             />
           </div>
 
-          <div className="form-field">
-            <label htmlFor="email">Email</label>
+          <div className="enquire-now__form-field">
+            <label className="enquire-now__label" htmlFor="email">
+              Email
+            </label>
             <input
+              className="enquire-now__input"
               required
               type="email"
               id="email"
@@ -139,9 +147,12 @@ const EnquireNow = () => {
             />
           </div>
 
-          <div className="form-field">
-            <label htmlFor="phone_number">Phone No.</label>
+          <div className="enquire-now__form-field">
+            <label className="enquire-now__label" htmlFor="phone_number">
+              Phone No.
+            </label>
             <input
+              className="enquire-now__input"
               required
               type="tel"
               id="phone_number"
@@ -151,9 +162,9 @@ const EnquireNow = () => {
             />
           </div>
 
-          <Button className="light-btn" onClick={handleSubmit}>
+          <button className="button button--enquire-now" onClick={handleSubmit}>
             Enquire now
-          </Button>
+          </button>
         </form>
       </div>
     </aside>
