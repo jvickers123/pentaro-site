@@ -11,3 +11,20 @@
     padding: 50px 40px 60px 30px;
   }
 }
+
+@include respond(tablet) {
+  .card {
+    max-width: 85rem;
+    padding: 8rem 0;
+    padding-left: 10rem;
+    padding-right: 5rem;
+
+    &--middle {
+      width: 60rem;
+      margin-left: -30rem;
+    }
+    &--right {
+      margin: 0 7% 0 auto;
+    }
+  }
+}

@@ -7,3 +7,25 @@
     margin-top: -40px;
   }
 }
+
+@include respond(tablet) {
+  .image-container {
+    &--left {
+      img {
+        height: 450px;
+        width: 400px !important;
+        margin-right: -30px;
+      }
+    }
+    &--right {
+      display: flex;
+      justify-content: flex-end;
+      margin-top: -50px;
+      img {
+        width: 60vw;
+        max-width: 800px;
+        max-height: 400px;
+      }
+    }
+  }
+}

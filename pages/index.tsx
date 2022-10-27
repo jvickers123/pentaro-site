@@ -29,11 +29,11 @@ const Home = () => {
 
         <div className="home-flex-container hero-container__content--home">
           <h1 className="accent home-heading heading1 pentaro-name">PENTARO</h1>
-          <h2 className="home-h2 heading2 heading2__hero--home">
+          <h2 className="home-h2 heading2 heading2__hero heading2__hero--home">
             Bespoke telemarketing and recruitment solutions
           </h2>
           <Link href="/getintouch">
-            <a className="link link--hero">
+            <a className="link">
               Get in touch <span className="accent">&gt;&gt;</span>
             </a>
           </Link>
@@ -44,20 +44,20 @@ const Home = () => {
         <div className="card card--left">
           <div className="dotted-line offset-left-top"></div>
 
-          <h2 className="accent">WHY US?</h2>
-          <h3>
+          <h2 className="accent heading2">WHY US?</h2>
+          <h3 className="heading3">
             Pentaro prioritises clear communication to ensure maximum growth
             potential for all our partners.
           </h3>
-          <p>
+          <p className="paragraph">
             We are a modern, data-driven, results-focused business development
             agency, ready to help your business boost its bottom line.
           </p>
 
           <Link href="/pentaroway">
-            <p>
+            <a className="link">
               The Pentaro Way <span className="accent">&gt;&gt;</span>
-            </p>
+            </a>
           </Link>
         </div>
       </section>
@@ -72,21 +72,21 @@ const Home = () => {
         <div className="card card--middle">
           <div className="dotted-line offset-left-top"></div>
 
-          <h2 className="accent">TELEMARKETING</h2>
-          <h3>
+          <h2 className="accent heading2">TELEMARKETING</h2>
+          <h3 className="heading3">
             Telemarketing at Pentaro prioritises quality, clarity, and
             consistency, producing direct connections and opportunities with
             your target audience.
           </h3>
-          <p>
+          <p className="paragraph">
             Our strategic approach and emphasis on analysis delivers a service
             that sets us apart from our competitors.
           </p>
 
           <Link href="/telemarketing">
-            <p>
+            <a className="link">
               View our services <span className="accent">&gt;&gt;</span>
-            </p>
+            </a>
           </Link>
         </div>
       </section>
@@ -95,22 +95,22 @@ const Home = () => {
         <div className="card card--right">
           <div className="dotted-line offset-left-top"></div>
 
-          <h2 className="accent">RECRUITMENT</h2>
-          <h3>
+          <h2 className="accent heading2">RECRUITMENT</h2>
+          <h3 className="heading3">
             Pentaro utilises modern research and data analysis techniques to
             acquire the best selection of viable candidates.
           </h3>
 
-          <p>
+          <p className="paragraph">
             We will gain key insight into your business’s structure, talent,
             culture, and processes to provide candidates that exceed your
             expectations, and reflect your company values.
           </p>
 
           <Link href="/recruitment">
-            <p>
+            <a className="link">
               View our services <span className="accent">&gt;&gt;</span>
-            </p>
+            </a>
           </Link>
         </div>
 

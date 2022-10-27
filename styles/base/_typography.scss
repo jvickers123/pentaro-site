@@ -38,7 +38,7 @@ body,
   }
 }
 
-.headingh3 {
+.heading3 {
   font-weight: 400;
   font-size: 2rem;
   line-height: 2.4rem;
@@ -48,7 +48,7 @@ body,
   font-weight: 300;
   font-size: 1.7rem;
   line-height: 2.2rem;
-  margin-top: 2rem;
+  margin: 2rem 0;
 }
 
 .accent {
@@ -72,20 +72,34 @@ body,
 }
 
 .link {
-  &--hero {
-    font-size: 1.6rem;
-  }
+  font-size: 1.6rem;
 }
 
 @include respond(tablet) {
   .heading2 {
+    &:not(.heading2__hero) {
+      font-size: 1.2rem;
+      line-height: 1.4rem;
+    }
     &__hero {
       width: auto;
     }
   }
 
+  .heading3 {
+    font-size: 3.2rem;
+    line-height: 4rem;
+    margin: 4rem 0;
+  }
+
+  .paragraph {
+    font-size: 1.8rem;
+    line-height: 2.6rem;
+    margin: 4rem 0;
+  }
+
   .link {
-    &--hero {
+    &:not(.navigation__item) {
       font-size: 2.4rem;
     }
   }
