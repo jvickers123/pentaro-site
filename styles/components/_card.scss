@@ -10,6 +10,10 @@
   &--right {
     padding: 50px 40px 60px 30px;
   }
+
+  &--wheel {
+    padding: 60px 10%;
+  }
 }
 
 @include respond(tablet) {

@@ -43,6 +43,12 @@ body,
   font-size: 2rem;
   line-height: 2.4rem;
   margin: 2rem 0;
+
+  &--wheel-option {
+    font-weight: 600;
+    font-size: 8px;
+    line-height: 17px;
+  }
 }
 .paragraph {
   font-weight: 300;
@@ -90,6 +96,10 @@ body,
     font-size: 3.2rem;
     line-height: 4rem;
     margin: 4rem 0;
+    &--wheel-option {
+      font-size: 11px;
+      line-height: 18px;
+    }
   }
 
   .paragraph {

@@ -17,7 +17,7 @@ const Home = () => {
       <Helmet>
         <meta
           name="description"
-          content="Bespoke telemarketing and recruitment solutions for your business."
+          content="Bespoke telemarketing and recruitment solutions, tailored to your business. A modern, data-driven business development agency, specialising in B2B telesales. Based in the UK."
         />
         <title>Pentaro: Telemarketing and Recruitment</title>
       </Helmet>

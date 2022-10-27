@@ -53,57 +53,80 @@ const Telemarketing = () => {
       </div>
 
       <div className="pentagon-screen-split-container">
-        <div className="plain-section-container wheel" ref={pentRef}>
-          <div className="content-container wheel">
-            <h2 className="accent">THE POWER OF 5</h2>
+        <div className="section section--center wheel" ref={pentRef}>
+          <div className="card card--wheel">
+            <h2 className="accent heading2">THE POWER OF 5</h2>
 
             <hr></hr>
 
-            <p>Here at Pentaro, we offer five telemarketing services</p>
+            <p className="paragraph">
+              Here at Pentaro, we offer five telemarketing services
+            </p>
 
             {/* <p>Click to find out more below.</p> */}
 
-            <div className="logo-wheel-container">
-              <Image src={logo} alt="pentaro logo" />
+            <div className="wheel__container">
+              <Image
+                src={logo}
+                alt="pentaro logo"
+                layout="fill"
+                objectFit="cover"
+              />
 
               <div
-                className="wheel-option top-left"
+                className="wheel__option wheel__option--top-left"
                 onClick={() => scrollTo(oneRef)}
               >
-                <h3 onClick={() => scrollTo(oneRef)}>
+                <h3
+                  className="heading3 heading3--wheel-option"
+                  onClick={() => scrollTo(oneRef)}
+                >
                   LEAD <br /> GENERATION
                 </h3>
               </div>
               <div
-                className="wheel-option top-right"
+                className="wheel__option wheel__option--top-right"
                 onClick={() => scrollTo(twoRef)}
               >
-                <h3 onClick={() => scrollTo(twoRef)} id="appointment-text">
+                <h3
+                  className="heading3 heading3--wheel-option"
+                  onClick={() => scrollTo(twoRef)}
+                  id="appointment-text"
+                >
                   APPOINTMENT
                   <br /> SETTING
                 </h3>
               </div>
               <div
-                className="wheel-option right"
+                className="wheel__option wheel__option--right"
                 onClick={() => scrollTo(threeRef)}
               >
-                <h3 onClick={() => scrollTo(threeRef)}>
+                <h3
+                  className="heading3 heading3--wheel-option"
+                  onClick={() => scrollTo(threeRef)}
+                >
                   MARKET <br /> RESEARCH {/*<br /> & DATA <br /> CLEANSING */}
                 </h3>
               </div>
               <div
-                className="wheel-option bottom"
+                className="wheel__option wheel__option--bottom"
                 onClick={() => scrollTo(fourRef)}
               >
-                <h3 onClick={() => scrollTo(fourRef)}>
+                <h3
+                  className="heading3 heading3--wheel-option"
+                  onClick={() => scrollTo(fourRef)}
+                >
                   CUSTOMER <br /> SERVICE
                 </h3>
               </div>
               <div
-                className="wheel-option left"
+                className="wheel__option wheel__option--left"
                 onClick={() => scrollTo(fiveRef)}
               >
-                <h3 onClick={() => scrollTo(fiveRef)}>
+                <h3
+                  className="heading3 heading3--wheel-option"
+                  onClick={() => scrollTo(fiveRef)}
+                >
                   DIRECT <br /> SELLING
                 </h3>
               </div>
