@@ -28,7 +28,7 @@ const Telemarketing = () => {
   };
 
   return (
-    <section>
+    <>
       <Head>
         <meta
           name="description"
@@ -37,7 +37,7 @@ const Telemarketing = () => {
         <title>Telemarketing | Pentaro: Telemarketing and Recruitment</title>
       </Head>
 
-      <div className="hero-container">
+      <section className="hero-container">
         <div className="hero telemarketing-background hero-container__image hero-container__image--telemarketing">
           <div className="blue-background hero-container__blue-background"></div>
         </div>
@@ -50,315 +50,297 @@ const Telemarketing = () => {
             your target audience.
           </h2>
         </div>
-      </div>
+      </section>
 
-      <div className="pentagon-screen-split-container">
-        <div className="section section--center wheel" ref={pentRef}>
-          <div className="card card--wheel">
-            <h2 className="accent heading2">THE POWER OF 5</h2>
+      <section className="section section--center wheel" ref={pentRef}>
+        <div className="card card--wheel">
+          <h2 className="accent heading2">THE POWER OF 5</h2>
 
-            <hr></hr>
+          <hr></hr>
 
-            <p className="paragraph">
-              Here at Pentaro, we offer five telemarketing services
-            </p>
+          <p className="paragraph">
+            Here at Pentaro, we offer five telemarketing services
+          </p>
 
-            {/* <p>Click to find out more below.</p> */}
+          {/* <p>Click to find out more below.</p> */}
 
-            <div className="wheel__container">
-              <Image
-                src={logo}
-                alt="pentaro logo"
-                layout="fill"
-                objectFit="cover"
-              />
+          <div className="wheel__container">
+            <Image
+              src={logo}
+              alt="pentaro logo"
+              layout="fill"
+              objectFit="cover"
+            />
 
-              <div
-                className="wheel__option wheel__option--top-left"
+            <div
+              className="wheel__option wheel__option--top-left"
+              onClick={() => scrollTo(oneRef)}
+            >
+              <h3
+                className="heading3 heading3--wheel-option"
                 onClick={() => scrollTo(oneRef)}
               >
-                <h3
-                  className="heading3 heading3--wheel-option"
-                  onClick={() => scrollTo(oneRef)}
-                >
-                  LEAD <br /> GENERATION
-                </h3>
-              </div>
-              <div
-                className="wheel__option wheel__option--top-right"
+                LEAD <br /> GENERATION
+              </h3>
+            </div>
+            <div
+              className="wheel__option wheel__option--top-right"
+              onClick={() => scrollTo(twoRef)}
+            >
+              <h3
+                className="heading3 heading3--wheel-option"
                 onClick={() => scrollTo(twoRef)}
+                id="appointment-text"
               >
-                <h3
-                  className="heading3 heading3--wheel-option"
-                  onClick={() => scrollTo(twoRef)}
-                  id="appointment-text"
-                >
-                  APPOINTMENT
-                  <br /> SETTING
-                </h3>
-              </div>
-              <div
-                className="wheel__option wheel__option--right"
+                APPOINTMENT
+                <br /> SETTING
+              </h3>
+            </div>
+            <div
+              className="wheel__option wheel__option--right"
+              onClick={() => scrollTo(threeRef)}
+            >
+              <h3
+                className="heading3 heading3--wheel-option"
                 onClick={() => scrollTo(threeRef)}
               >
-                <h3
-                  className="heading3 heading3--wheel-option"
-                  onClick={() => scrollTo(threeRef)}
-                >
-                  MARKET <br /> RESEARCH {/*<br /> & DATA <br /> CLEANSING */}
-                </h3>
-              </div>
-              <div
-                className="wheel__option wheel__option--bottom"
+                MARKET <br /> RESEARCH {/*<br /> & DATA <br /> CLEANSING */}
+              </h3>
+            </div>
+            <div
+              className="wheel__option wheel__option--bottom"
+              onClick={() => scrollTo(fourRef)}
+            >
+              <h3
+                className="heading3 heading3--wheel-option"
                 onClick={() => scrollTo(fourRef)}
               >
-                <h3
-                  className="heading3 heading3--wheel-option"
-                  onClick={() => scrollTo(fourRef)}
-                >
-                  CUSTOMER <br /> SERVICE
-                </h3>
-              </div>
-              <div
-                className="wheel__option wheel__option--left"
+                CUSTOMER <br /> SERVICE
+              </h3>
+            </div>
+            <div
+              className="wheel__option wheel__option--left"
+              onClick={() => scrollTo(fiveRef)}
+            >
+              <h3
+                className="heading3 heading3--wheel-option"
                 onClick={() => scrollTo(fiveRef)}
               >
-                <h3
-                  className="heading3 heading3--wheel-option"
-                  onClick={() => scrollTo(fiveRef)}
-                >
-                  DIRECT <br /> SELLING
-                </h3>
-              </div>
+                DIRECT <br /> SELLING
+              </h3>
             </div>
           </div>
         </div>
+      </section>
 
-        <div className="plain-section-container offset-right">
-          <div className="content-container right" ref={oneRef}>
-            <div className="dotted-line offset-left-top"></div>
-            <h2 className="accent">LEAD GENERATION</h2>
-            <hr></hr>
-            <h3>
-              Our lead generation service unearths and cultivates businesses
-              within your target market, in order to collect a wide range of
-              information to streamline your sales process, enhancing your sales
-              activity.
-            </h3>
+      <section className="section section--right">
+        <div className="card card--right" ref={oneRef}>
+          <div className="dotted-line offset-left-top"></div>
+          <h2 className="accent heading2">LEAD GENERATION</h2>
+          <hr></hr>
+          <h3 className="heading3">
+            Our lead generation service unearths and cultivates businesses
+            within your target market, in order to collect a wide range of
+            information to streamline your sales process, enhancing your sales
+            activity.
+          </h3>
 
-            <p>
-              Lead generation allows for a more strategic approach to
-              prospecting, resulting in efficient development of your company's
-              pipeline, optimising the scope for capitalisation of leads.
-            </p>
+          <p className="paragraph">
+            Lead generation allows for a more strategic approach to prospecting,
+            resulting in efficient development of your company's pipeline,
+            optimising the scope for capitalisation of leads.
+          </p>
 
-            <p>
-              Our heavily analytical style utilises the best methods currently
-              available, to ensure a constant and consistent flow of new
-              business leads to nurture.
-            </p>
+          <p className="paragraph">
+            Our heavily analytical style utilises the best methods currently
+            available, to ensure a constant and consistent flow of new business
+            leads to nurture.
+          </p>
 
-            <button onClick={() => scrollTo(pentRef)}>
-              Back to top <span className="accent">^</span>
-            </button>
-          </div>
-
-          <div className="image-container">
-            <Image src={individual} alt="Man calling customers" />
-          </div>
+          <button
+            className="link link__back-to-top"
+            onClick={() => scrollTo(pentRef)}
+          >
+            Back to top <span className="accent">^</span>
+          </button>
         </div>
 
-        {/* <div className='plain-section-container service-option-container'> */}
-        <div className="plain-section-container off-left">
-          <div className="content-container left" ref={twoRef}>
-            <div className="dotted-line offset-left-top"></div>
+        <div className="image-container image-container--right">
+          <Image src={individual} alt="Man calling customers" />
+        </div>
+      </section>
 
-            <h2 className="accent">APPOINTMENT SETTING</h2>
-            <hr></hr>
-            <h3>
-              At Pentaro, our appointment setting service generates high quality
-              pre-booked meetings with relevant key decision makers for your
-              sales development team to attend.
-            </h3>
+      <section className="section section--left">
+        <div className="card card--left" ref={twoRef}>
+          <div className="dotted-line offset-left-top"></div>
 
-            <p>
-              All of our appointments are qualified by your telemarketer,
-              ensuring that prospects are in line with your business needs,
-              generating interest for your products and or services. Your sales
-              representatives can then do what they do best; build relationships
-              and close meetings.
-            </p>
+          <h2 className="accent heading2">APPOINTMENT SETTING</h2>
+          <hr></hr>
+          <h3 className="heading3">
+            At Pentaro, our appointment setting service generates high quality
+            pre-booked meetings with relevant key decision makers for your sales
+            development team to attend.
+          </h3>
 
-            <p>
-              We take the stress out of booking valuable meetings, combining
-              bespoke data analytics with a trained telemarketer, with a high
-              level of industry knowledge, reflecting your companies’ values,
-              culture and identity.
-            </p>
+          <p className="paragraph">
+            All of our appointments are qualified by your telemarketer, ensuring
+            that prospects are in line with your business needs, generating
+            interest for your products and or services. Your sales
+            representatives can then do what they do best; build relationships
+            and close meetings.
+          </p>
 
-            <p>
-              Your telemarketer provides information packs detailing every
-              appointment made, the key decision maker, and all buying signals
-              or pain points that have been identified.
-            </p>
-            <button onClick={() => scrollTo(pentRef)}>
-              Back to top <span className="accent">^</span>
-            </button>
+          <p className="paragraph">
+            We take the stress out of booking valuable meetings, combining
+            bespoke data analytics with a trained telemarketer, with a high
+            level of industry knowledge, reflecting your companies’ values,
+            culture and identity.
+          </p>
 
-            {/* <div className='image-container'>
-                <Image 
-                  src={individual}
-                  alt='Man calling customers'
-                  /> */}
+          <p className="paragraph">
+            Your telemarketer provides information packs detailing every
+            appointment made, the key decision maker, and all buying signals or
+            pain points that have been identified.
+          </p>
+          <button
+            className="link link__back-to-top"
+            onClick={() => scrollTo(pentRef)}
+          >
+            Back to top <span className="accent">^</span>
+          </button>
+        </div>
+      </section>
 
-            {/* </div> */}
-          </div>
+      <section className="section section--right">
+        <div className="card card--right" ref={threeRef}>
+          <div className="dotted-line offset-left-top"></div>
+          <h2 className="heading2 accent">MARKET RESEARCH & DATA CLEANSING</h2>
+          <hr></hr>
+          <h3 className="heading3">
+            At Pentaro, our trained market research specialists implement
+            bespoke strategies for each individual campaign. Using market
+            trends, direct research, process development, and risk analysis, we
+            ensure the best insight into the market of your designated industry.
+          </h3>
+          <p className="paragraph">
+            Information that we frequently provide includes:
+          </p>
+
+          <ul className="list">
+            <li className="list-item">
+              Current customer satisfaction levels and feedback
+            </li>
+            <li className="list-item">Lapsed current customer warming</li>
+            <li className="list-item">
+              Alternative markets and revenue streams
+            </li>
+            <li className="list-item">
+              Price and cost analysis relative to your competitors
+            </li>
+            <li className="list-item">Causes of customer migration</li>
+            <li className="list-item">
+              Competitors within the industry including locations, activities
+              and operating markets
+            </li>
+          </ul>
+
+          <p className="paragraph">
+            Information and market knowledge is invaluable to the success and
+            growth for businesses in the current economic world. Market research
+            and data cleansing through telemarketing is a fast and efficient
+            method of delving deeper into your target audience, and the needs
+            and desires of your customers.
+          </p>
+
+          <button
+            className="link link__back-to-top"
+            onClick={() => scrollTo(pentRef)}
+          >
+            Back to top <span className="accent">^</span>
+          </button>
         </div>
 
-        <div className="plain-section-container offset-right">
-          <div className="content-container right" ref={threeRef}>
-            <div className="dotted-line offset-left-top"></div>
-            <h2 className="accent">MARKET RESEARCH & DATA CLEANSING</h2>
-            <hr></hr>
-            <h3>
-              At Pentaro, our trained market research specialists implement
-              bespoke strategies for each individual campaign. Using market
-              trends, direct research, process development, and risk analysis,
-              we ensure the best insight into the market of your designated
-              industry.
-            </h3>
-            <p>Information that we frequently provide includes:</p>
+        <div className="image-container image-container--right">
+          <Image
+            src={teleResearch}
+            alt="Man calling someone and looking at computer screen"
+          />
+        </div>
+      </section>
 
-            <ul>
-              <li>Current customer satisfaction levels and feedback</li>
-              <li>Lapsed current customer warming</li>
-              <li>Alternative markets and revenue streams</li>
-              <li>Price and cost analysis relative to your competitors</li>
-              <li>Causes of customer migration</li>
-              <li>
-                Competitors within the industry including locations, activities
-                and operating markets
-              </li>
-            </ul>
+      <section className="section section--right">
+        <div className="card card--right" ref={fourRef}>
+          <div className="dotted-line offset-left-top"></div>
 
-            <p>
-              Information and market knowledge is invaluable to the success and
-              growth for businesses in the current economic world. Market
-              research and data cleansing through telemarketing is a fast and
-              efficient method of delving deeper into your target audience, and
-              the needs and desires of your customers.
-            </p>
+          <h2 className="heading2 accent">CUSTOMER SERVICE</h2>
+          <hr></hr>
+          <h3 className="heading3">
+            Building and maintaining relationships with your customers is our
+            speciality.{' '}
+          </h3>
 
-            <button onClick={() => scrollTo(pentRef)}>
-              Back to top <span className="accent">^</span>
-            </button>
-          </div>
+          <p className="paragraph">
+            General enquiries and issues that your current and prospective
+            customers face are vital to your client retention and growth.
+          </p>
 
-          <div className="image-container">
-            <Image
-              src={teleResearch}
-              alt="Man calling someone and looking at computer screen"
-            />
-          </div>
+          <p className="paragraph">
+            Our customer service contact centre reflects your company ethos at
+            every point of contact to ensure a satisfied customer base – our
+            team always applies a methodical approach to customer service.{' '}
+          </p>
+
+          <button
+            className="link link__back-to-top"
+            onClick={() => scrollTo(pentRef)}
+          >
+            Back to top <span className="accent">^</span>
+          </button>
         </div>
 
-        <div className="plain-section-container offset-right">
-          <div className="content-container right" ref={fourRef}>
-            <div className="dotted-line offset-left-top"></div>
-            {/* <div className='dark-background customer-service-background'></div> */}
-
-            <h2 className="accent">CUSTOMER SERVICE</h2>
-            <hr></hr>
-            <h3>
-              Building and maintaining relationships with your customers is our
-              speciality.{' '}
-            </h3>
-
-            <p>
-              General enquiries and issues that your current and prospective
-              customers face are vital to your client retention and growth.
-            </p>
-
-            <p>
-              Our customer service contact centre reflects your company ethos at
-              every point of contact to ensure a satisfied customer base – our
-              team always applies a methodical approach to customer service.{' '}
-            </p>
-
-            <button onClick={() => scrollTo(pentRef)}>
-              Back to top <span className="accent">^</span>
-            </button>
-
-            {/* <div className='image-container'>
-                <Image 
-                  src={individual}
-                  alt='Man calling customers'
-                  />
-
-              </div> */}
-          </div>
-
-          <div className="image-container">
-            <Image src={smilingTeleSales} alt="Telemarketer smiling" />
-          </div>
+        <div className="image-container image-container--right">
+          <Image src={smilingTeleSales} alt="Telemarketer smiling" />
         </div>
+      </section>
 
-        <div className="plain-section-container off-left">
-          <div className="content-container left" ref={fiveRef}>
-            <div className="dotted-line offset-left-top"></div>
-            <h2 className="accent">DIRECT SELLING</h2>
-            <hr></hr>
-            {/* <h3>Telemarketing at pentaro priorities quality, clarity, and consistency, producing direct connections and opportunities with your target audience.</h3> */}
+      <section className="section section--left">
+        <div className="card card--left" ref={fiveRef}>
+          <div className="dotted-line offset-left-top"></div>
+          <h2 className="heading2 accent">DIRECT SELLING</h2>
+          <hr></hr>
 
-            <h3>
-              Our strategic approach and emphasis on analysis delivers a service
-              that sets us apart from our competitors.
-            </h3>
+          <h3 className="heading3">
+            Our strategic approach and emphasis on analysis delivers a service
+            that sets us apart from our competitors.
+          </h3>
 
-            <p>
-              Effective communication is a key component in all of our
-              processes, with frequent updates, daily statistics, and with
-              constant availability to discuss progress in order to ensure
-              results.
-            </p>
+          <p className="paragraph">
+            Effective communication is a key component in all of our processes,
+            with frequent updates, daily statistics, and with constant
+            availability to discuss progress in order to ensure results.
+          </p>
 
-            <p>
-              Our team have experience in dealing with partners from a wide
-              variety of industries, having dealt with SME’s through to
-              international corporates.{' '}
-            </p>
+          <p className="paragraph">
+            Our team have experience in dealing with partners from a wide
+            variety of industries, having dealt with SME’s through to
+            international corporates.{' '}
+          </p>
 
-            <p>
-              Every campaign Pentaro take on, regardless its size, will receive
-              the same level of service to gain the best possible returns. Our
-              ambition is to build productive relationships and share success.
-            </p>
+          <p className="paragraph">
+            Every campaign Pentaro take on, regardless its size, will receive
+            the same level of service to gain the best possible returns. Our
+            ambition is to build productive relationships and share success.
+          </p>
 
-            <button onClick={() => scrollTo(pentRef)}>
-              Back to top <span className="accent">^</span>
-            </button>
-
-            {/* <div className='image-container'>
-                <Image 
-                  src={individual}
-                  alt='Man calling customers'
-                  />
-
-              </div> */}
-          </div>
+          <button
+            className="link link__back-to-top"
+            onClick={() => scrollTo(pentRef)}
+          >
+            Back to top <span className="accent">^</span>
+          </button>
         </div>
-
-        {/* <div className='image-container'>
-                <Image 
-                  src={individual}
-                  alt='Man calling customers'
-                  />
-
-              </div> */}
-
-        {/* </div> */}
-      </div>
-    </section>
+      </section>
+    </>
   );
 };
 
