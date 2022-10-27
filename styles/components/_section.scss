@@ -1,0 +1,16 @@
+.section {
+  width: 100vw;
+  background-size: cover;
+
+  &--left {
+    padding: 20px 40px 20px 0;
+  }
+
+  &--middle {
+    padding: 20px;
+  }
+
+  &--right {
+    padding: 20px 0 20px 20px;
+  }
+}

@@ -40,8 +40,8 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="plain-section-container off-left">
-        <div className="content-container left">
+      <section className="section section--left">
+        <div className="card card--left">
           <div className="dotted-line offset-left-top"></div>
 
           <h2 className="accent">WHY US?</h2>
@@ -62,20 +62,14 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="plain-section-container middle">
+      <section className="section section--middle">
         <div className="left-content-container">
-          <div className="image-container">
-            <Image
-              src="/assets/happy-handshake.jpg"
-              width={400}
-              height={450}
-              // layout="responsive"
-              alt="Two people shaking hands"
-            />
+          <div className="image-container image-container--left">
+            <Image src={handshake} alt="Two people shaking hands" />
           </div>
         </div>
 
-        <div className="content-container middle">
+        <div className="card card--middle">
           <div className="dotted-line offset-left-top"></div>
 
           <h2 className="accent">TELEMARKETING</h2>
@@ -97,8 +91,8 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="plain-section-container offset-right">
-        <div className="content-container right">
+      <section className="section section--right">
+        <div className="card card--right">
           <div className="dotted-line offset-left-top"></div>
 
           <h2 className="accent">RECRUITMENT</h2>
@@ -120,7 +114,7 @@ const Home = () => {
           </Link>
         </div>
 
-        <div className="image-container">
+        <div className="image-container image-container--right">
           <Image src={businessWoman} alt="Business woman on computer" />
         </div>
       </section>
