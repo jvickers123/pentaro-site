@@ -12,7 +12,7 @@ const Recruitment = () => {
   }, []);
 
   return (
-    <section>
+    <>
       <Head>
         <meta
           name="description"
@@ -20,7 +20,7 @@ const Recruitment = () => {
         />
         <title>Recruitment | Pentaro: Telemarketing and Recruitment</title>
       </Head>
-      <div className="hero-container">
+      <section className="hero-container">
         <div className="hero recruitment-background hero-container__image hero-container__image--recruitment">
           <div className="blue-background hero-container__blue-background"></div>
         </div>
@@ -32,43 +32,50 @@ const Recruitment = () => {
             acquire the best selection of viable candidates.
           </h2>
         </div>
-      </div>
+      </section>
 
-      <div className="plain-section-container off-left">
-        <div className="content-container left">
+      <section className="section section--left">
+        <div className="card card--left">
           <div className="dotted-line offset-left-top"></div>
 
-          <h2 className="accent">BESPOKE RECRUITMENT SOLUTIONS</h2>
+          <h2 className="accent heading2">BESPOKE RECRUITMENT SOLUTIONS</h2>
           <hr></hr>
-          <h3>
+          <h3 className="heading3">
             Pentaro utilises modern research and data analysis techniques to
             acquire the best selection of viable candidates.
           </h3>
 
-          <p>
+          <p className="paragraph">
             Our experienced team will learn and understand your business and the
             role. Every candidate must pass our rigorous selection and screening
             process, finding the right candidates for you
           </p>
         </div>
-      </div>
+      </section>
 
-      <div className="plain-section-container middle">
+      <div className="section section--middle">
         <div className="left-content-container">
-          <div className="image-container">
-            <Image src={handshake} alt="Shaking hands in a meeting" />
+          <div className="image-container image-container--left">
+            <Image
+              src={handshake}
+              alt="Shaking hands in a meeting"
+              layout="fill"
+              objectFit="cover"
+            />
           </div>
         </div>
 
-        <div className="content-container middle">
+        <div className="card card-content--middle">
           <div className="dotted-line offset-left-top"></div>
 
           <h2 className="accent">PARTNERSHIP</h2>
 
           <hr></hr>
 
-          <h3>Placing the best talent comes from working in a partnership.</h3>
-          <p>
+          <h3 className="heading3">
+            Placing the best talent comes from working in a partnership.
+          </h3>
+          <p className="paragraph">
             We will gain key insight into your business’s structure, talent,
             culture, and processes to provide candidates that exceed your
             expectations, and reflect your company values.
@@ -76,44 +83,46 @@ const Recruitment = () => {
         </div>
       </div>
 
-      <div className="plain-section-container offset-right">
-        <div className="content-container right">
+      <div className="section section--right">
+        <div className="card card--right">
           <div className="dotted-line offset-left-top"></div>
 
           <h2 className="accent">EXPERIENCE</h2>
           <hr></hr>
-          <h3>
+          <h3 className="heading3">
             Our team’s key experience lies in filling roles for growing
             businesses and SME’s.
           </h3>
 
-          <p>
+          <p className="paragraph">
             Reliability and consistency are core values we hold, and require of
             candidates we propose.
           </p>
         </div>
 
-        <div className="image-container">
+        <div className="image-container image-container--right">
           <Image src={handshake2} alt="Business meeting handshake" />
         </div>
       </div>
 
-      <div className="plain-section-container off-left">
-        <div className="content-container left">
+      <div className="section section--left">
+        <div className="card card--left">
           <div className="dotted-line offset-left-top"></div>
 
           <h2 className="accent">PERSONNEL</h2>
           <hr></hr>
-          <h3>Personnel is the most important asset of any business.</h3>
+          <h3 className="heading3">
+            Personnel is the most important asset of any business.
+          </h3>
 
-          <p>
+          <p className="paragraph">
             We ensure the best possible return on investment, taking the stress
             out of the recruitment process whilst sourcing top talent across a
             spectrum of industries.
           </p>
         </div>
       </div>
-    </section>
+    </>
   );
 };
 
