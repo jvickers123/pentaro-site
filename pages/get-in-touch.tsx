@@ -218,36 +218,46 @@ const Contact = () => {
         </form>
       </section>
 
-      <section className="dark-section-container contact-details">
-        <div className="contact-info-container">
-          <h2 className="accent">CONTACT INFO</h2>
-          <hr></hr>
+      <section className="section section--dark">
+        <div className="contact-details__container">
+          <h2 className="accent heading2">CONTACT INFO</h2>
+          <hr className="line-break--white"></hr>
 
-          <p className="paragraph">Or contact us directly.</p>
-          <h3>Email</h3>
+          <p className="paragraph white">Or contact us directly.</p>
+          <h3 className="heading3 white">Email</h3>
 
-          <a href="mailto:example@email.com">enquiries@pentaro.co.uk</a>
+          <a href="mailto:example@email.com" className="link link--faded">
+            enquiries@pentaro.co.uk
+          </a>
 
-          <h3>Phone Number</h3>
+          <h3 className="heading3 white">Phone Number</h3>
 
-          <p className="phone-num">01133231850</p>
+          <p className="paragraph paragraph--faded">01133231850</p>
 
-          <h3>Social Media</h3>
+          <h3 className="heading3 white">Social Media</h3>
 
-          <div className="socials">
-            <a href="www.instagram.co.uk" target="_blank">
+          <div className="socials-container">
+            <a className="link link--faded link__socials" href="#">
               <FiInstagram />
             </a>
-            <a href="www.facebook.co.uk" target="_blank">
+            <a className="link link--faded link__socials" href="#">
               <FiFacebook />
             </a>
-            <a href="www.twitter.co.uk" target="_blank">
+
+            <a className="link link--faded link__socials" href="#">
               <FiTwitter />
             </a>
           </div>
         </div>
 
-        <Image src={outside} alt="people outside an office" />
+        <div className="image-container image-container--bottom">
+          <Image
+            src={outside}
+            alt="people outside an office"
+            layout="fill"
+            objectFit="cover"
+          />
+        </div>
       </section>
     </>
   );

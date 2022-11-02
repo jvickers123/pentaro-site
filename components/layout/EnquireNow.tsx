@@ -4,7 +4,7 @@ import Link from 'next/link';
 import axios from 'axios';
 
 // STYLING
-import { Button, useToast } from '@chakra-ui/react';
+import { useToast } from '@chakra-ui/react';
 
 // GOOGLE ANALYTICS
 import { enquireNowLocation } from '../../helpers/GA-Helper';

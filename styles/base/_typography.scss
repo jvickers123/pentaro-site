@@ -65,6 +65,7 @@ body,
   margin: 2rem 0 1rem 0;
   font-size: 1.5rem;
 }
+
 .paragraph {
   font-weight: 300;
   font-size: 1.7rem;
@@ -74,10 +75,18 @@ body,
   &--values {
     font-size: 1.4rem;
   }
+
+  &--faded {
+    color: #a19b9b;
+  }
 }
 
 .accent {
   color: $accent;
+}
+
+.white {
+  color: #fff;
 }
 
 .pentaro-name {
@@ -98,6 +107,18 @@ body,
 
 .link {
   font-size: 1.6rem;
+
+  &--faded {
+    color: #a19b9b;
+
+    &:hover {
+      color: #e4dada;
+    }
+  }
+
+  &__socials {
+    margin: 0 1rem;
+  }
 }
 
 .line-break {
@@ -108,6 +129,10 @@ body,
 
   &--dark {
     background-color: $greybgline;
+  }
+
+  &--white {
+    background-color: $darkbgline;
   }
 }
 

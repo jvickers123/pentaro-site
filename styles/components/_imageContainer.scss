@@ -10,6 +10,13 @@
     margin-left: 100px;
     margin-top: -40px;
   }
+
+  &--bottom {
+    transform: translateX(-40px);
+    margin-top: 50px;
+    height: 243px;
+    width: 100vw;
+  }
 }
 
 @include respond(tablet) {
@@ -28,6 +35,14 @@
         max-width: 800px;
         max-height: 400px;
       }
+    }
+
+    &--bottom {
+      height: 700px;
+      width: calc(50vw + 0px);
+      max-width: 600px;
+      margin: 0;
+      transform: translateX(-40px);
     }
   }
 }
