@@ -3,11 +3,11 @@
   background-size: cover;
 
   &--left {
-    padding: 20px 40px 20px 0;
+    padding: 2rem 4rem 2rem 0;
   }
 
   &--middle {
-    padding: 20px;
+    padding: 2rem;
   }
 
   &--center {
@@ -16,12 +16,17 @@
   }
 
   &--right {
-    padding: 20px 0 20px 20px;
+    padding: 2rem 0 2rem;
+  }
+
+  &--white {
+    background-color: #fff;
+    padding: 5rem 4rem;
   }
 
   &--grey {
-    background-color: #fff;
-    padding: 50px 40px;
+    padding: 7rem 4rem;
+    background-color: $greybg;
   }
 }
 
@@ -31,7 +36,7 @@
     margin: 0 auto;
 
     &--left {
-      padding-left: 40px;
+      padding-left: 4rem;
     }
 
     &--middle {
@@ -39,7 +44,7 @@
     }
 
     &--right {
-      padding-bottom: 100px;
+      padding-bottom: 10rem;
     }
   }
 }

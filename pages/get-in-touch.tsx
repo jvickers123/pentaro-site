@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
 // CHAKRA STYLING
-import { Button, useToast } from '@chakra-ui/react';
+import { useToast } from '@chakra-ui/react';
 
 // IMAGES
 import outside from '../src/assets/outside.jpg';
@@ -116,7 +116,7 @@ const Contact = () => {
     setFormData(newObj);
   };
   return (
-    <section className="contact-main-container">
+    <>
       <Head>
         <meta
           name="description"
@@ -125,23 +125,24 @@ const Contact = () => {
         <title>Get in touch | Pentaro: Telemarketing and Recruitment</title>
       </Head>
 
-      <div className="contact-section">
-        <h1>GET IN TOUCH</h1>
+      <section className="section section--grey">
+        <h1 className="heading1 heading1__contact accent">GET IN TOUCH</h1>
 
-        <hr></hr>
+        <hr className="line-break line-break--dark"></hr>
 
-        <h3>Have a project you need help with?</h3>
-        <p>
+        <h3 className="heading3">Have a project you need help with?</h3>
+        <p className="paragraph">
           Send us a message and one of our team will be in touch as soon as
           possible.
         </p>
 
-        <form onSubmit={handleSubmit} className="contact-form">
-          <div className="form-field">
-            <label htmlFor="full_name">
-              Name <span className="red">*</span>
+        <form onSubmit={handleSubmit} className="contact-form__form">
+          <div className="contact-form__form-field">
+            <label className="contact-form__label" htmlFor="full_name">
+              Name <span className="contact-form__required">*</span>
             </label>
             <input
+              className="contact-form__input"
               required
               type="text"
               id="full_name"
@@ -151,11 +152,12 @@ const Contact = () => {
             />
           </div>
 
-          <div className="form-field">
-            <label htmlFor="email">
-              Email <span className="red">*</span>
+          <div className="contact-form__form-field">
+            <label className="contact-form__label" htmlFor="email">
+              Email <span className="contact-form__required">*</span>
             </label>
             <input
+              className="contact-form__input"
               required
               type="email"
               id="email"
@@ -165,11 +167,12 @@ const Contact = () => {
             />
           </div>
 
-          <div className="form-field">
-            <label htmlFor="company_name">
-              Company Name <span className="red">*</span>
+          <div className="contact-form__form-field">
+            <label className="contact-form__label" htmlFor="company_name">
+              Company Name <span className="contact-form__required">*</span>
             </label>
             <input
+              className="contact-form__input"
               required
               type="text"
               id="company_name"
@@ -179,11 +182,12 @@ const Contact = () => {
             />
           </div>
 
-          <div className="form-field">
-            <label htmlFor="phone_number">
-              Phone Number <span className="red">*</span>
+          <div className="contact-form__form-field">
+            <label className="contact-form__label" htmlFor="phone_number">
+              Phone Number <span className="contact-form__required">*</span>
             </label>
             <input
+              className="contact-form__input"
               required
               type="tel"
               id="phone_number"
@@ -193,11 +197,12 @@ const Contact = () => {
             />
           </div>
 
-          <div className="form-field message-area">
-            <label htmlFor="message">
-              Message <span className="red">*</span>
+          <div className="contact-form__form-field message-area">
+            <label className="contact-form__label" htmlFor="message">
+              Message <span className="contact-form__required">*</span>
             </label>
             <textarea
+              className="contact-form__input"
               rows={6}
               required
               id="message"
@@ -207,18 +212,18 @@ const Contact = () => {
             />
           </div>
 
-          <Button className="light-btn" onClick={handleSubmit}>
+          <button className="button" onClick={handleSubmit}>
             Send message
-          </Button>
+          </button>
         </form>
-      </div>
+      </section>
 
-      <div className="dark-section-container contact-details">
+      <section className="dark-section-container contact-details">
         <div className="contact-info-container">
           <h2 className="accent">CONTACT INFO</h2>
           <hr></hr>
 
-          <p>Or contact us directly.</p>
+          <p className="paragraph">Or contact us directly.</p>
           <h3>Email</h3>
 
           <a href="mailto:example@email.com">enquiries@pentaro.co.uk</a>
@@ -243,8 +248,8 @@ const Contact = () => {
         </div>
 
         <Image src={outside} alt="people outside an office" />
-      </div>
-    </section>
+      </section>
+    </>
   );
 };
 

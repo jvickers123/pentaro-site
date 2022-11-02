@@ -16,6 +16,12 @@ body,
     line-height: 3.4rem;
     margin-bottom: 6rem;
   }
+
+  &__contact {
+    font-size: 1rem;
+    line-height: 1.2rem;
+    margin-bottom: 2rem;
+  }
 }
 
 .heading2 {
@@ -99,6 +105,10 @@ body,
   background-color: $greybgline;
   border: none;
   margin: 1rem 0;
+
+  &--dark {
+    background-color: $greybgline;
+  }
 }
 
 @include respond(tablet) {

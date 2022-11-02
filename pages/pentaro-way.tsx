@@ -58,7 +58,7 @@ const PentaroWay = () => {
         </div>
       </section>
 
-      <section className="section section--grey">
+      <section className="section section--white">
         <h2 className="accent heading2">OUR VALUES</h2>
 
         <hr className="line-break"></hr>
