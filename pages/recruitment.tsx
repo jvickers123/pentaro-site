@@ -65,7 +65,7 @@ const Recruitment = () => {
           </div>
         </div>
 
-        <div className="card card-content--middle">
+        <div className="card card--middle">
           <div className="dotted-line offset-left-top"></div>
 
           <h2 className="accent">PARTNERSHIP</h2>

@@ -18,6 +18,11 @@
   &--right {
     padding: 20px 0 20px 20px;
   }
+
+  &--grey {
+    background-color: #fff;
+    padding: 50px 40px;
+  }
 }
 
 @include respond(tablet) {

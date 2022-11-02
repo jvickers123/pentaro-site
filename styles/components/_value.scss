@@ -1,0 +1,14 @@
+@include respond(tablet) {
+  .values-container {
+    margin-top: 5rem;
+    margin-bottom: 3rem;
+    display: flex;
+    justify-content: space-between;
+
+    &__number-container {
+      width: 20vw;
+      display: flex;
+      align-items: baseline;
+    }
+  }
+}

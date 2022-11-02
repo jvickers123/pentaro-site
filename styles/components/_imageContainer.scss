@@ -3,8 +3,8 @@
 
   &--left {
     margin: -20px 20px;
-    height: 450px;
-    width: 400px;
+    height: 210px;
+    width: 295px;
   }
   &--right {
     margin-left: 100px;
@@ -16,6 +16,8 @@
   .image-container {
     &--left {
       margin-right: -30px;
+      height: 450px;
+      width: 400px;
     }
     &--right {
       display: flex;

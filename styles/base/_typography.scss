@@ -49,12 +49,25 @@ body,
     font-size: 8px;
     line-height: 17px;
   }
+
+  &--values {
+    font-size: 2.5rem;
+  }
+}
+
+.heading-number {
+  margin: 2rem 0 1rem 0;
+  font-size: 1.5rem;
 }
 .paragraph {
   font-weight: 300;
   font-size: 1.7rem;
   line-height: 2.2rem;
   margin: 2rem 0;
+
+  &--values {
+    font-size: 1.4rem;
+  }
 }
 
 .accent {
@@ -81,6 +94,13 @@ body,
   font-size: 1.6rem;
 }
 
+.line-break {
+  height: 1px;
+  background-color: $greybgline;
+  border: none;
+  margin: 1rem 0;
+}
+
 @include respond(tablet) {
   .heading2 {
     &:not(.heading2__hero) {
@@ -96,9 +116,14 @@ body,
     font-size: 3.2rem;
     line-height: 4rem;
     margin: 4rem 0;
+
     &--wheel-option {
       font-size: 11px;
       line-height: 18px;
+    }
+
+    &--values {
+      margin-left: 6rem;
     }
   }
 
@@ -106,6 +131,15 @@ body,
     font-size: 1.8rem;
     line-height: 2.6rem;
     margin: 4rem 0;
+
+    &--values {
+      width: 40rem;
+      font-size: 1.4rem;
+    }
+  }
+
+  .heading-number {
+    font-size: 24px;
   }
 
   .link {
