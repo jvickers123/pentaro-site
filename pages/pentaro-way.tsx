@@ -11,7 +11,7 @@ const PentaroWay = () => {
   }, []);
 
   return (
-    <section>
+    <>
       <Head>
         <meta
           name="description"
@@ -20,7 +20,7 @@ const PentaroWay = () => {
         <title>The Pentaro Way | Pentaro: Telemarketing and Recruitment</title>
       </Head>
 
-      <div className="hero-container ">
+      <section className="hero-container ">
         <div className="hero pent-way-background hero-container__image hero-container__image--pentaro-way">
           <div className="blue-background hero-container__blue-background"></div>
         </div>
@@ -32,16 +32,16 @@ const PentaroWay = () => {
             with sustainability and growth at the core of our process.
           </h2>
         </div>
-      </div>
+      </section>
 
-      <div className="plain-section-container middle" id="pentaro-way-box">
+      <div className="section section--middle" id="pentaro-way-box">
         <div className="left-content-container">
-          <div className="image-container">
+          <div className="image-container image-container--left">
             <Image src={meeting} alt="business meeting" />
           </div>
         </div>
 
-        <div className="content-container middle">
+        <div className="card card--middle">
           <div className="dotted-line offset-left-top"></div>
           <h2 className="accent">THE PENTARO WAY</h2>
           {/* <hr></hr> */}
@@ -138,7 +138,7 @@ const PentaroWay = () => {
           </p>
         </div>
       </div>
-    </section>
+    </>
   );
 };
 
