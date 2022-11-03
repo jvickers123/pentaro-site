@@ -22,9 +22,7 @@
 @include respond(tablet) {
   .image-container {
     &--left {
-      margin-right: -30px;
-      height: 450px;
-      width: 400px;
+      margin-right: -3rem;
     }
     &--right {
       display: flex;
@@ -43,6 +41,15 @@
       max-width: 600px;
       margin: 0;
       transform: translateX(0);
+    }
+  }
+}
+
+@include respond(desk) {
+  .image-container {
+    &--left {
+      height: 450px;
+      width: 400px;
     }
   }
 }

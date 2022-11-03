@@ -23,13 +23,13 @@ const Home = () => {
       </Helmet>
 
       <section className="hero-container ">
-        <div className="hero home-background hero-container__image hero-container__image--home">
-          <div className="blue-background hero-container__blue-background"></div>
+        <div className="hero-container__image hero-container__image--home">
+          <div className="hero-container__blue-background"></div>
         </div>
 
-        <div className="home-flex-container hero-container__content--home">
-          <h1 className="accent home-heading heading1 pentaro-name">PENTARO</h1>
-          <h2 className="home-h2 heading2 heading2__hero heading2__hero--home">
+        <div className="hero-container__content--home">
+          <h1 className="accent heading1 pentaro-name">PENTARO</h1>
+          <h2 className="heading2 heading2__hero heading2__hero--home">
             Bespoke telemarketing and recruitment solutions
           </h2>
           <Link href="/getintouch">
