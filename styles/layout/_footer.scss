@@ -1,0 +1,27 @@
+.footer {
+  &__container {
+    @include flex-center(column);
+    background-color: rgb(45, 45, 45);
+    border-top: 0.5px solid $darkbgline;
+    color: white;
+    padding: 1rem 0 8rem 0;
+  }
+
+  &__links-container {
+    padding-bottom: 1rem;
+    font-weight: 600;
+    font-size: 1.4rem;
+    @include flex-center(column);
+  }
+}
+
+@include respond(tablet) {
+  .footer {
+    &__links-container {
+      width: 100%;
+      max-width: 80rem;
+      flex-direction: row;
+      justify-content: space-around;
+    }
+  }
+}
