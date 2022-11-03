@@ -42,7 +42,7 @@ const PentaroWay = () => {
         </div>
 
         <div className="card card--middle">
-          <div className="dotted-line offset-left-top"></div>
+          <div className="dots dots--right"></div>
           <h2 className="accent">THE PENTARO WAY</h2>
           {/* <hr className='line-break'></hr> */}
           <h3 className="heading3">Changing perceptions.</h3>

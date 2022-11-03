@@ -42,7 +42,7 @@ const Home = () => {
 
       <section className="section section--left">
         <div className="card card--left">
-          <div className="dotted-line offset-left-top"></div>
+          <div className="dots "></div>
 
           <h2 className="accent heading2">WHY US?</h2>
           <h3 className="heading3">
@@ -75,7 +75,7 @@ const Home = () => {
         </div>
 
         <div className="card card--middle">
-          <div className="dotted-line offset-left-top"></div>
+          <div className="dots dots--right"></div>
 
           <h2 className="accent heading2">TELEMARKETING</h2>
           <h3 className="heading3">
@@ -98,7 +98,7 @@ const Home = () => {
 
       <section className="section section--right">
         <div className="card card--right">
-          <div className="dotted-line offset-left-top"></div>
+          <div className="dots dots--right"></div>
 
           <h2 className="accent heading2">RECRUITMENT</h2>
           <h3 className="heading3">

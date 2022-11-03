@@ -133,7 +133,7 @@ const Telemarketing = () => {
 
       <section className="section section--right">
         <div className="card card--right" ref={oneRef}>
-          <div className="dotted-line offset-left-top"></div>
+          <div className="dots dots--right"></div>
           <h2 className="accent heading2">LEAD GENERATION</h2>
           <hr></hr>
           <h3 className="heading3">
@@ -170,7 +170,7 @@ const Telemarketing = () => {
 
       <section className="section section--left">
         <div className="card card--left" ref={twoRef}>
-          <div className="dotted-line offset-left-top"></div>
+          <div className="dots"></div>
 
           <h2 className="accent heading2">APPOINTMENT SETTING</h2>
           <hr></hr>
@@ -211,7 +211,7 @@ const Telemarketing = () => {
 
       <section className="section section--right">
         <div className="card card--right" ref={threeRef}>
-          <div className="dotted-line offset-left-top"></div>
+          <div className="dots dots--right"></div>
           <h2 className="heading2 accent">MARKET RESEARCH & DATA CLEANSING</h2>
           <hr></hr>
           <h3 className="heading3">
@@ -268,7 +268,7 @@ const Telemarketing = () => {
 
       <section className="section section--right">
         <div className="card card--right" ref={fourRef}>
-          <div className="dotted-line offset-left-top"></div>
+          <div className="dots dots--right"></div>
 
           <h2 className="heading2 accent">CUSTOMER SERVICE</h2>
           <hr></hr>
@@ -303,7 +303,7 @@ const Telemarketing = () => {
 
       <section className="section section--left">
         <div className="card card--left" ref={fiveRef}>
-          <div className="dotted-line offset-left-top"></div>
+          <div className="dots"></div>
           <h2 className="heading2 accent">DIRECT SELLING</h2>
           <hr></hr>
 

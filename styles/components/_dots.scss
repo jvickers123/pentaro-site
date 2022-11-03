@@ -1,0 +1,21 @@
+.dots {
+  border-bottom: 3px dotted $accent;
+  position: absolute;
+
+  left: 3px;
+  -webkit-transform: translateY(4px);
+  transform: translateY(4px);
+  width: 3rem;
+}
+
+@include respond(tablet) {
+  .dots {
+    width: 12rem;
+
+    &--right {
+      left: auto;
+      right: 0;
+      width: 20rem;
+    }
+  }
+}

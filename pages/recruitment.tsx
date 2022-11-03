@@ -36,7 +36,7 @@ const Recruitment = () => {
 
       <section className="section section--left">
         <div className="card card--left">
-          <div className="dotted-line offset-left-top"></div>
+          <div className="dots"></div>
 
           <h2 className="accent heading2">BESPOKE RECRUITMENT SOLUTIONS</h2>
           <hr></hr>
@@ -66,7 +66,7 @@ const Recruitment = () => {
         </div>
 
         <div className="card card--middle">
-          <div className="dotted-line offset-left-top"></div>
+          <div className="dots dots--right"></div>
 
           <h2 className="accent">PARTNERSHIP</h2>
 
@@ -85,7 +85,7 @@ const Recruitment = () => {
 
       <div className="section section--right">
         <div className="card card--right">
-          <div className="dotted-line offset-left-top"></div>
+          <div className="dots dots--right"></div>
 
           <h2 className="accent">EXPERIENCE</h2>
           <hr></hr>
@@ -107,7 +107,7 @@ const Recruitment = () => {
 
       <div className="section section--left">
         <div className="card card--left">
-          <div className="dotted-line offset-left-top"></div>
+          <div className="dots"></div>
 
           <h2 className="accent">PERSONNEL</h2>
           <hr></hr>
