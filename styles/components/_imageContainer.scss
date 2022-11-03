@@ -12,7 +12,7 @@
   }
 
   &--bottom {
-    transform: translateX(-40px);
+    transform: translateX(-4rem);
     margin-top: 50px;
     height: 243px;
     width: 100vw;
@@ -42,7 +42,7 @@
       width: calc(50vw + 0px);
       max-width: 600px;
       margin: 0;
-      transform: translateX(-40px);
+      transform: translateX(0);
     }
   }
 }
