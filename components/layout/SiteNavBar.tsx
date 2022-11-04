@@ -26,7 +26,7 @@ const SiteNavBar = () => {
           <a className="accent link">
             <div className="logo-container">
               <Image
-                src={greenLogo}
+                src="/assets/logo.svg"
                 alt="Pentaro logo"
                 className="logo"
                 height={30}

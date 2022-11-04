@@ -68,7 +68,7 @@ const Telemarketing = () => {
 
           <div className="wheel__container">
             <Image
-              src={logo}
+              src="/assets/logo.svg"
               alt="pentaro logo"
               layout="fill"
               objectFit="cover"

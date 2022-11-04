@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { Helmet } from 'react-helmet';
+import Head from 'next/head';
 
 const Home = () => {
   useEffect(() => {
@@ -10,13 +10,13 @@ const Home = () => {
 
   return (
     <>
-      <Helmet>
+      <Head>
         <meta
           name="description"
           content="Bespoke telemarketing and recruitment solutions, tailored to your business. A modern, data-driven business development agency, specialising in B2B telesales. Based in the UK."
         />
         <title>Pentaro: Telemarketing and Recruitment</title>
-      </Helmet>
+      </Head>
 
       <section className="hero-container ">
         <div className="hero-container__image hero-container__image--home">
