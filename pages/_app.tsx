@@ -1,6 +1,5 @@
 import { useEffect } from 'react';
 
-// import '../src/styles/main.scss';
 import '../styles/main.scss';
 import { ChakraProvider } from '@chakra-ui/react';
 

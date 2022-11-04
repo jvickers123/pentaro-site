@@ -18,6 +18,13 @@ const Recruitment = () => {
       </Head>
       <section className="hero-container">
         <div className="hero recruitment-background hero-container__image hero-container__image--recruitment">
+          <Image
+            src="/assets/meeting.jpg"
+            alt="business meeting"
+            layout="fill"
+            objectFit="cover"
+            priority
+          />
           <div className="blue-background hero-container__blue-background"></div>
         </div>
 

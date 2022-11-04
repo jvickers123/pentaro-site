@@ -1,7 +1,6 @@
 .hero-container {
   @include flex-center(column);
   height: calc(100vh - 7rem);
-  padding: 5rem 2rem;
   color: #fff;
 
   &__blue-background {
@@ -15,30 +14,6 @@
     height: inherit;
     position: absolute;
     width: 100%;
-
-    &--home {
-      background: url('../../src/assets/home-background.jpg');
-      background-position: 50%;
-      background-size: cover;
-    }
-
-    &--telemarketing {
-      background: url('../../src/assets/telemarketing-team.jpg');
-      background-position: 50%;
-      background-size: cover;
-    }
-
-    &--recruitment {
-      background: url('../../src/assets/meeting.jpg');
-      background-position: 50%;
-      background-size: cover;
-    }
-
-    &--pentaro-way {
-      background: url('../../src/assets/business-meeting.jpg');
-      background-position: 50%;
-      background-size: cover;
-    }
   }
 
   &__content {

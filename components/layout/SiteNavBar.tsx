@@ -14,17 +14,14 @@ import {
 // ICONS
 import { GiHamburgerMenu } from 'react-icons/gi';
 
-// IMAGES
-// import greenPentText from '../public/assets/pent-text-green.jpg';
-// import whitePentText from '../public/assets/pent-text-white.png';
-import greenLogo from '../../src/assets/logo-screenshot.png';
+import greenLogo from '../../public/assets/logo-screenshot.png';
 
 const SiteNavBar = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   return (
     <header className="navbar-background navigation__background">
-      <nav className="nav-bar-main navigation">
+      <div className="nav-bar-main navigation">
         <Link href="/">
           <a className="accent link">
             <div className="logo-container">
@@ -41,7 +38,7 @@ const SiteNavBar = () => {
         </Link>
 
         <div className="mobile-navbar navigation__mobile">
-          <button onClick={onOpen}>
+          <button onClick={onOpen} aria-label="navigation">
             <GiHamburgerMenu className="accent" />
           </button>
           <Drawer isOpen={isOpen} placement="top" onClose={onClose} size="full">
@@ -53,20 +50,20 @@ const SiteNavBar = () => {
                   <Link href="/">
                     <h2
                       onClick={onClose}
-                      className="pentaro-name dropdown-title pentaro-name__mobile-nav"
+                      className="pentaro-name pentaro-name__mobile-nav"
                     >
                       PENTARO
                     </h2>
                   </Link>
                 </DrawerHeader>
 
-                <div className="dropdown-options-container nav-modal__options-container">
+                <nav className="nav-modal__options-container">
                   <Link href="/">
                     <a
                       className="link options nav-modal__options"
                       onClick={onClose}
                     >
-                      Home{' '}
+                      Home
                     </a>
                   </Link>
                   <Link href="/telemarketing">
@@ -74,7 +71,7 @@ const SiteNavBar = () => {
                       className="link options nav-modal__options"
                       onClick={onClose}
                     >
-                      Telemarketing{' '}
+                      Telemarketing
                     </a>
                   </Link>
                   <Link href="/recruitment">
@@ -82,7 +79,7 @@ const SiteNavBar = () => {
                       className="link options nav-modal__options"
                       onClick={onClose}
                     >
-                      Recruitment{' '}
+                      Recruitment
                     </a>
                   </Link>
                   <Link href="/pentaro-way">
@@ -90,7 +87,7 @@ const SiteNavBar = () => {
                       className="link options nav-modal__options"
                       onClick={onClose}
                     >
-                      The Pentaro Way{' '}
+                      The Pentaro Way
                     </a>
                   </Link>
                   <Link href="/get-in-touch">
@@ -98,16 +95,16 @@ const SiteNavBar = () => {
                       className="link options nav-modal__options"
                       onClick={onClose}
                     >
-                      Get In Touch{' '}
+                      Get In Touch
                     </a>
                   </Link>
-                </div>
+                </nav>
               </div>
             </DrawerContent>
           </Drawer>
         </div>
 
-        <div className="desktop-navbar navigation__desktop">
+        <nav className="desktop-navbar navigation__desktop">
           <Link href="/">
             <a className="link options navigation__item">Home </a>
           </Link>
@@ -123,8 +120,8 @@ const SiteNavBar = () => {
           <Link href="/get-in-touch">
             <a className="link options navigation__item">Get In Touch</a>
           </Link>
-        </div>
-      </nav>
+        </nav>
+      </div>
     </header>
   );
 };

@@ -20,6 +20,13 @@ const Home = () => {
 
       <section className="hero-container ">
         <div className="hero-container__image hero-container__image--home">
+          <Image
+            src="/assets/home-background.jpg"
+            alt="telemarketers at work"
+            layout="fill"
+            objectFit="cover"
+            priority
+          />
           <div className="hero-container__blue-background"></div>
         </div>
 

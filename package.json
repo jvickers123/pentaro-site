@@ -21,6 +21,7 @@
     "react-icons": "^4.4.0",
     "react-shapes": "^0.1.0",
     "sass": "^1.55.0",
+    "sharp": "^0.31.2",
     "twilio": "^3.77.2",
     "web-vitals": "^2.1.4"
   },

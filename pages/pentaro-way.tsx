@@ -20,6 +20,13 @@ const PentaroWay = () => {
 
       <section className="hero-container ">
         <div className="hero pent-way-background hero-container__image hero-container__image--pentaro-way">
+          <Image
+            src="/assets/business-meeting.jpg"
+            alt="business meeting"
+            layout="fill"
+            objectFit="cover"
+            priority
+          />
           <div className="blue-background hero-container__blue-background"></div>
         </div>
 

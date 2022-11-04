@@ -3,7 +3,7 @@ import Head from 'next/head';
 import Image from 'next/image';
 
 // IMAGES
-import logo from '../src/assets/logo-screenshot.png';
+import logo from '../public/assets/logo-screenshot.png';
 
 const Telemarketing = () => {
   // RENDER AT TOP OF PAGE
@@ -36,6 +36,13 @@ const Telemarketing = () => {
 
       <section className="hero-container">
         <div className="hero telemarketing-background hero-container__image hero-container__image--telemarketing">
+          <Image
+            src="/assets/telemarketing-team.jpg"
+            alt="telemarketers at work"
+            layout="fill"
+            objectFit="cover"
+            priority
+          />
           <div className="blue-background hero-container__blue-background"></div>
         </div>
 
