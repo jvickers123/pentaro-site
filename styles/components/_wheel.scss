@@ -1,6 +1,6 @@
 .wheel {
   &__container {
-    height: 28.4rem;
+    height: 28.8rem;
     width: 30rem;
     position: relative;
     margin: 0 auto;
@@ -28,19 +28,19 @@
     }
 
     &--top-left {
-      transform: translate(-7rem, -10.7rem);
+      transform: translate(-7rem, -11.5rem);
     }
     &--top-right {
-      transform: translate(7.3rem, -10.8rem);
+      transform: translate(7.3rem, -11.5rem);
     }
     &--right {
-      transform: translate(11.5rem, 2.6rem);
+      transform: translate(11.8rem, 2.6rem);
     }
     &--bottom {
-      transform: translate(0.3rem, 10.9rem);
+      transform: translate(0rem, 11.3rem);
     }
     &--left {
-      transform: translate(-11.3rem, 2.7rem);
+      transform: translate(-11.8rem, 2.7rem);
     }
   }
 }
@@ -48,7 +48,7 @@
 @include respond(tablet) {
   .wheel {
     &__container {
-      height: 47.63rem;
+      height: 48.1rem;
       width: 50rem;
     }
 
@@ -64,19 +64,19 @@
       }
 
       &--top-left {
-        transform: translate(-11.65rem, -17.9rem);
+        transform: translate(-12rem, -18.7rem);
       }
       &--top-right {
-        transform: translate(12.2rem, -18rem);
+        transform: translate(12.3rem, -18.7rem);
       }
       &--right {
-        transform: translate(19.1rem, 4.4rem);
+        transform: translate(19.5rem, 4.4rem);
       }
       &--bottom {
-        transform: translate(0.3rem, 18.15rem);
+        transform: translate(0.3rem, 18.8rem);
       }
       &--left {
-        transform: translate(-18.8rem, 4.4rem);
+        transform: translate(-19.5rem, 4.4rem);
       }
     }
   }

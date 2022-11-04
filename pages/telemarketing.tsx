@@ -79,7 +79,7 @@ const Telemarketing = () => {
               onClick={() => scrollTo(oneRef)}
             >
               <h3
-                className="heading3 heading3--wheel-option"
+                className="heading3 heading3__wheel-option"
                 onClick={() => scrollTo(oneRef)}
               >
                 LEAD <br /> GENERATION
@@ -90,7 +90,7 @@ const Telemarketing = () => {
               onClick={() => scrollTo(twoRef)}
             >
               <h3
-                className="heading3 heading3--wheel-option"
+                className="heading3 heading3__wheel-option heading3__wheel-option--smaller"
                 onClick={() => scrollTo(twoRef)}
                 id="appointment-text"
               >
@@ -103,7 +103,7 @@ const Telemarketing = () => {
               onClick={() => scrollTo(threeRef)}
             >
               <h3
-                className="heading3 heading3--wheel-option"
+                className="heading3 heading3__wheel-option"
                 onClick={() => scrollTo(threeRef)}
               >
                 MARKET <br /> RESEARCH {/*<br /> & DATA <br /> CLEANSING */}
@@ -114,7 +114,7 @@ const Telemarketing = () => {
               onClick={() => scrollTo(fourRef)}
             >
               <h3
-                className="heading3 heading3--wheel-option"
+                className="heading3 heading3__wheel-option"
                 onClick={() => scrollTo(fourRef)}
               >
                 CUSTOMER <br /> SERVICE
@@ -125,7 +125,7 @@ const Telemarketing = () => {
               onClick={() => scrollTo(fiveRef)}
             >
               <h3
-                className="heading3 heading3--wheel-option"
+                className="heading3 heading3__wheel-option"
                 onClick={() => scrollTo(fiveRef)}
               >
                 DIRECT <br /> SELLING
