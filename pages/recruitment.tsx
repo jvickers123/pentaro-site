@@ -2,10 +2,6 @@ import Head from 'next/head';
 import Image from 'next/image';
 import React, { useEffect } from 'react';
 
-// IMAGES
-import handshake from '../src/assets/business-deal.jpg';
-import handshake2 from '../src/assets/handshake2.jpg';
-
 const Recruitment = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -57,7 +53,7 @@ const Recruitment = () => {
         <div className="left-content-container">
           <div className="image-container image-container--left">
             <Image
-              src={handshake}
+              src="/assets/business-deal.jpg"
               alt="Shaking hands in a meeting"
               layout="fill"
               objectFit="cover"
@@ -101,7 +97,12 @@ const Recruitment = () => {
         </div>
 
         <div className="image-container image-container--right">
-          <Image src={handshake2} alt="Business meeting handshake" />
+          <Image
+            src="/assets/handshake2.jpg"
+            alt="Business meeting handshake"
+            layout="fill"
+            objectFit="cover"
+          />
         </div>
       </div>
 

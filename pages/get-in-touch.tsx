@@ -4,9 +4,6 @@ import axios from 'axios';
 // CHAKRA STYLING
 import { useToast } from '@chakra-ui/react';
 
-// IMAGES
-import outside from '../src/assets/outside.jpg';
-
 // ICONS
 import { FiInstagram, FiTwitter, FiFacebook } from 'react-icons/fi';
 
@@ -252,7 +249,7 @@ const Contact = () => {
 
         <div className="image-container image-container--bottom">
           <Image
-            src={outside}
+            src="/assets/outside.jpg"
             alt="people outside an office"
             layout="fill"
             objectFit="cover"

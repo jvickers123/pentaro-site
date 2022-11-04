@@ -3,10 +3,7 @@ import Head from 'next/head';
 import Image from 'next/image';
 
 // IMAGES
-import individual from '../src/assets/telemarketing-individual.jpg';
 import logo from '../src/assets/logo-screenshot.png';
-import smilingTeleSales from '../src/assets/smiling-telesales.jpg';
-import teleResearch from '../src/assets/telemarketing-research.jpg';
 
 const Telemarketing = () => {
   // RENDER AT TOP OF PAGE
@@ -164,7 +161,12 @@ const Telemarketing = () => {
         </div>
 
         <div className="image-container image-container--right">
-          <Image src={individual} alt="Man calling customers" />
+          <Image
+            src="/assets/telemarketing-individual.jpg"
+            alt="Man calling customers"
+            layout="fill"
+            objectFit="cover"
+          />
         </div>
       </section>
 
@@ -260,8 +262,10 @@ const Telemarketing = () => {
 
         <div className="image-container image-container--right">
           <Image
-            src={teleResearch}
+            src="/assets/telemarketing-research.jpg"
             alt="Man calling someone and looking at computer screen"
+            layout="fill"
+            objectFit="cover"
           />
         </div>
       </section>
@@ -297,7 +301,12 @@ const Telemarketing = () => {
         </div>
 
         <div className="image-container image-container--right">
-          <Image src={smilingTeleSales} alt="Telemarketer smiling" />
+          <Image
+            src="/assets/smiling-telesales.jpg"
+            alt="Telemarketer smiling"
+            layout="fill"
+            objectFit="cover"
+          />
         </div>
       </section>
 

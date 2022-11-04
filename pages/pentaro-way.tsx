@@ -2,8 +2,6 @@ import React, { useEffect } from 'react';
 import Head from 'next/head';
 
 import Image from 'next/image';
-// IMAGES
-import meeting from '../src/assets/happy-meeting.jpg';
 
 const PentaroWay = () => {
   useEffect(() => {
@@ -37,14 +35,18 @@ const PentaroWay = () => {
       <section className="section section--middle" id="pentaro-way-box">
         <div className="left-content-container">
           <div className="image-container image-container--left">
-            <Image src={meeting} alt="business meeting" />
+            <Image
+              src="/assets/happy-meeting.jpg"
+              alt="business meeting"
+              layout="fill"
+              objectFit="cover"
+            />
           </div>
         </div>
 
         <div className="card card--middle">
           <div className="dots dots--right"></div>
           <h2 className="accent">THE PENTARO WAY</h2>
-          {/* <hr className='line-break'></hr> */}
           <h3 className="heading3">Changing perceptions.</h3>
           <p className="paragraph">
             As the economy changes, businesses are constantly presented with

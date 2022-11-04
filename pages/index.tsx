@@ -3,10 +3,6 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { Helmet } from 'react-helmet';
 
-// IMAGES
-import handshake from '../src/assets/happy-handshake.jpg';
-import businessWoman from '../src/assets/business-woman.jpg';
-
 const Home = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -66,7 +62,7 @@ const Home = () => {
         <div className="left-content-container">
           <div className="image-container image-container--left">
             <Image
-              src={handshake}
+              src="/assets/handshake2.jpg"
               alt="Two people shaking hands"
               layout="fill"
               objectFit="cover"
@@ -120,7 +116,12 @@ const Home = () => {
         </div>
 
         <div className="image-container image-container--right">
-          <Image src={businessWoman} alt="Business woman on computer" />
+          <Image
+            src="/assets/business-woman.jpg"
+            alt="Business woman on computer"
+            layout="fill"
+            objectFit="cover"
+          />
         </div>
       </section>
     </>
