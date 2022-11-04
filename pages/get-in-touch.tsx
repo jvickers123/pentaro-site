@@ -1,26 +1,27 @@
-import React, { useState, useEffect } from 'react';
-import axios from 'axios';
-
-// CHAKRA STYLING
-import { useToast } from '@chakra-ui/react';
+import React, { useState, useEffect, FormEvent, ChangeEvent } from 'react';
 
 // ICONS
 import { FiInstagram, FiTwitter, FiFacebook } from 'react-icons/fi';
 
-// GOOGLE ANALYTICS
-import { sendGetInTouch } from '../helpers/GA-Helper';
 import Head from 'next/head';
 import Image from 'next/image';
+import { axiosRequest } from '../helpers/axios-request';
+
+export type ContactFormData = {
+  full_name: string;
+  email: string;
+  company_name?: string;
+  phone_number: string;
+  message?: string;
+};
 
 const Contact = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
-  const toast = useToast();
-
   // STATE
-  const [formData, setFormData] = useState({
+  const [formData, setFormData] = useState<ContactFormData>({
     full_name: '',
     email: '',
     company_name: '',
@@ -28,87 +29,14 @@ const Contact = () => {
     message: '',
   });
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
-    try {
-      const date = new Date();
-      const dateString = date.toString();
-      const { full_name, company_name, email, phone_number, message } =
-        formData;
-
-      if (!full_name) throw 'Please provide a name';
-      if (!email) throw 'Please provide a contact email';
-      if (!phone_number) throw 'Please provide a phone number';
-      if (!company_name) throw 'Please provide a company name';
-      if (!message) throw 'Looks like you forgot to fill in the message.';
-
-      await axios.post(
-        'https://5021147o54.execute-api.eu-west-2.amazonaws.com/staging/send-message/send-email',
-        formData
-      );
-
-      const textMessageData = {
-        message: `New Message from 
-            
-          ${full_name}
-            
-          Company: ${company_name}
-    
-            ${message} 
-    
-          on ${dateString}
-    
-          reply to: 
-          ${email} 
-        or 
-          ${phone_number}.`,
-      };
-
-      // SEND TEXT NOTIFICATION
-      await axios.post(
-        'https://5021147o54.execute-api.eu-west-2.amazonaws.com/staging/send-message/send-sms-1',
-        textMessageData
-      );
-      await axios.post(
-        'https://5021147o54.execute-api.eu-west-2.amazonaws.com/staging/send-message/send-sms-2',
-        textMessageData
-      );
-      await axios.post(
-        'https://5021147o54.execute-api.eu-west-2.amazonaws.com/staging/send-message/send-sms-3',
-        textMessageData
-      );
-
-      // GOOGLE ANALYTICS
-      sendGetInTouch();
-
-      toast({
-        title: 'Message Sent.',
-        description:
-          'Thank you for your message. We will be in touch as soon as possible',
-        status: 'success',
-        duration: 9000,
-        isClosable: true,
-      });
-      setFormData({
-        full_name: '',
-        email: '',
-        company_name: '',
-        phone_number: '',
-        message: '',
-      });
-    } catch (error) {
-      console.log(error);
-      toast({
-        title: 'Message failed to sent.',
-        description: `Please try again. ${error}`,
-        status: 'error',
-        duration: 9000,
-        isClosable: true,
-      });
-    }
+    axiosRequest({ formData, setFormData });
   };
 
-  const handleChange = (e) => {
+  const handleChange = (
+    e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     const newObj = { ...formData, [e.target.name]: e.target.value };
     setFormData(newObj);
   };
