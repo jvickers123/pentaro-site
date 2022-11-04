@@ -3,6 +3,7 @@ import { useToast } from '@chakra-ui/react';
 import { enquireNowLocation, sendGetInTouch } from './GA-Helper';
 import type { ContactFormData } from '../pages/get-in-touch';
 import type { EnquireFormData } from '../components/layout/EnquireNow';
+import { getTextMessage } from './getTextMessage';
 
 type axiosRequestProps = {
   formData: ContactFormData;
@@ -21,10 +22,7 @@ export const axiosRequest = async ({
 
   const messageUrl = quickEnquiry ? 'send-enquiry' : 'send-email';
   try {
-    await axios.post(
-      `https://5021147o54.execute-api.eu-west-2.amazonaws.com/staging/send-message/${messageUrl}`,
-      formData
-    );
+    await axios.post(`${process.env.API_URL}/${messageUrl}`, formData);
 
     const date = new Date();
     const dateString = date.toString();
@@ -37,46 +35,13 @@ export const axiosRequest = async ({
     if (!quickEnquiry && !message)
       throw 'Looks like you forgot to fill in the message.';
 
-    const textMessage = quickEnquiry
-      ? `Quick enquiry from ${full_name}:
-    
-      on ${dateString}
-        
-      reply to 
-      ${email} 
-      
-      or ${phone_number}`
-      : `New Message from 
-            
-          ${full_name}
-            
-          Company: ${company_name}
-    
-            ${message} 
-    
-          on ${dateString}
-    
-          reply to: 
-          ${email} 
-        or 
-          ${phone_number}.`;
-
     const textMessageData = {
-      message: textMessage,
+      message: getTextMessage({ formData, dateString, quickEnquiry }),
     };
 
-    await axios.post(
-      'https://5021147o54.execute-api.eu-west-2.amazonaws.com/staging/send-message/send-sms-1',
-      textMessageData
-    );
-    await axios.post(
-      'https://5021147o54.execute-api.eu-west-2.amazonaws.com/staging/send-message/send-sms-2',
-      textMessageData
-    );
-    await axios.post(
-      'https://5021147o54.execute-api.eu-west-2.amazonaws.com/staging/send-message/send-sms-3',
-      textMessageData
-    );
+    await axios.post(`${process.env.API_URL}/send-sms-1`, textMessageData);
+    await axios.post(`${process.env.API_URL}/send-sms-2`, textMessageData);
+    await axios.post(`${process.env.API_URL}/send-sms-3`, textMessageData);
 
     toast({
       title: 'Enquiry Sent.',
