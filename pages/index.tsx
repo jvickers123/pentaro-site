@@ -93,7 +93,8 @@ const Home = () => {
 
           <Link href="/telemarketing">
             <a className="link">
-              View our services <span className="accent">&gt;&gt;</span>
+              View our telemarketing services{' '}
+              <span className="accent">&gt;&gt;</span>
             </a>
           </Link>
         </div>

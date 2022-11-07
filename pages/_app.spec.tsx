@@ -2,10 +2,10 @@ import React from 'react';
 import { render, screen } from '@testing-library/react';
 import App from './_app';
 
-// import { getCookieConsentValue } from 'react-cookie-consent';
-import * as Helpers from '../helpers/GA-Helper';
+// import CookieConsent, { getCookieConsentValue } from 'react-cookie-consent';
+// import * as Helpers from '../helpers/GA-Helper';
 // jest.mock('react-cookie-consent', () => ({
-//   default: ({ onAccept }) => <div onClick={onAccept} />,
+//   default: ({ props }) => <div {...props}></div>,
 //   getCookieConsentValue: jest.fn(),
 // }));
 
