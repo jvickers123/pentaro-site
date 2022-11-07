@@ -35,7 +35,7 @@ const Home = () => {
           <h2 className="heading2 heading2__hero heading2__hero--home">
             Bespoke telemarketing and recruitment solutions
           </h2>
-          <Link href="/getintouch">
+          <Link href="/get-in-touch">
             <a className="link">
               Get in touch <span className="accent">&gt;&gt;</span>
             </a>
@@ -118,7 +118,8 @@ const Home = () => {
 
           <Link href="/recruitment">
             <a className="link">
-              View our services <span className="accent">&gt;&gt;</span>
+              View our recruitment services{' '}
+              <span className="accent">&gt;&gt;</span>
             </a>
           </Link>
         </div>

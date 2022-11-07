@@ -1,6 +1,7 @@
-import { render, screen } from '@testing-library/react';
+import { render, screen, waitFor } from '@testing-library/react';
 import User from '@testing-library/user-event';
-import { ReactElement, cloneElement } from 'react';
+import createMockRouter from '../helpers/createMockRouter';
+import { RouterContext } from 'next/dist/shared/lib/router-context';
 import Home from './index';
 
 // jest.mock(
@@ -9,6 +10,8 @@ import Home from './index';
 //     ({ children, ...rest }: { children: ReactElement }) =>
 //       cloneElement(children, { ...rest })
 // );
+jest.mock('next/router', () => require('next-router-mock'));
+jest.mock('next/dist/client/router', () => require('next-router-mock'));
 
 describe('index/Home', () => {
   it('Should render properly', () => {
@@ -19,18 +22,68 @@ describe('index/Home', () => {
   });
 
   it('link to telemarketing', async () => {
-    render(<Home />);
+    const router = createMockRouter({});
+    render(
+      <RouterContext.Provider value={router}>
+        <Home />
+      </RouterContext.Provider>
+    );
 
     const linkToTelemarketing = screen.getByRole('link', {
       name: 'View our telemarketing services >>',
     });
 
     User.click(linkToTelemarketing);
+    await waitFor(() => {
+      expect(router.push).toBeCalledWith('/telemarketing', '/telemarketing', {
+        locale: undefined,
+        scroll: undefined,
+        shallow: undefined,
+      });
+    });
+  });
 
-    // const telemarketing = await screen.findByRole('heading', {
-    //   name: 'THE POWER OF 5',
-    // });
+  it('link to recruitment', async () => {
+    const router = createMockRouter({});
+    render(
+      <RouterContext.Provider value={router}>
+        <Home />
+      </RouterContext.Provider>
+    );
 
-    screen.debug();
+    const linkToRecruitment = screen.getByRole('link', {
+      name: 'View our recruitment services >>',
+    });
+
+    User.click(linkToRecruitment);
+    await waitFor(() => {
+      expect(router.push).toBeCalledWith('/recruitment', '/recruitment', {
+        locale: undefined,
+        scroll: undefined,
+        shallow: undefined,
+      });
+    });
+  });
+
+  it('link to contact', async () => {
+    const router = createMockRouter({});
+    render(
+      <RouterContext.Provider value={router}>
+        <Home />
+      </RouterContext.Provider>
+    );
+
+    const linkToContact = screen.getByRole('link', {
+      name: 'Get in touch >>',
+    });
+
+    User.click(linkToContact);
+    await waitFor(() => {
+      expect(router.push).toBeCalledWith('/get-in-touch', '/get-in-touch', {
+        locale: undefined,
+        scroll: undefined,
+        shallow: undefined,
+      });
+    });
   });
 });
