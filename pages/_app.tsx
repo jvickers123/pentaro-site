@@ -12,6 +12,7 @@ import Layout from '../components/layout/Layout';
 const App = ({ Component, pageProps }: AppProps) => {
   useEffect(() => {
     const isConsent = getCookieConsentValue();
+    console.log('helloooooo', isConsent);
     if (isConsent === 'true') {
       handleAcceptCookie();
     }

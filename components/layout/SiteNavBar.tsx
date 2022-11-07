@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+
 // UI STYLING
 import {
   Drawer,
@@ -13,8 +14,6 @@ import {
 
 // ICONS
 import { GiHamburgerMenu } from 'react-icons/gi';
-
-import greenLogo from '../../public/assets/logo-screenshot.png';
 
 const SiteNavBar = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
