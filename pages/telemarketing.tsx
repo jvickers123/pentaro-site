@@ -1,9 +1,6 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef, MutableRefObject } from 'react';
 import Head from 'next/head';
 import Image from 'next/image';
-
-// IMAGES
-import logo from '../public/assets/logo-screenshot.png';
 
 const Telemarketing = () => {
   // RENDER AT TOP OF PAGE
@@ -20,7 +17,7 @@ const Telemarketing = () => {
   const fiveRef = useRef(null);
 
   // SCROLL TO COMPONENT
-  const scrollTo = (ref) => {
+  const scrollTo = (ref: MutableRefObject<any>) => {
     ref.current.scrollIntoView({ behavior: 'smooth' });
   };
 
