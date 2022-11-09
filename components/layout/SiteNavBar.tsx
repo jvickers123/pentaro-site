@@ -69,6 +69,7 @@ const SiteNavBar = () => {
                     <a
                       className="link options nav-modal__options"
                       onClick={onClose}
+                      data-testid="hello"
                     >
                       Telemarketing
                     </a>

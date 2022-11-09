@@ -1,17 +1,8 @@
 import { render, screen, waitFor } from '@testing-library/react';
 import User from '@testing-library/user-event';
-import createMockRouter from '../helpers/createMockRouter';
+import createMockRouter from '../mocks/createMockRouter';
 import { RouterContext } from 'next/dist/shared/lib/router-context';
 import Home from './index';
-
-// jest.mock(
-//   'next/link',
-//   () =>
-//     ({ children, ...rest }: { children: ReactElement }) =>
-//       cloneElement(children, { ...rest })
-// );
-jest.mock('next/router', () => require('next-router-mock'));
-jest.mock('next/dist/client/router', () => require('next-router-mock'));
 
 describe('index/Home', () => {
   it('Should render properly', () => {
