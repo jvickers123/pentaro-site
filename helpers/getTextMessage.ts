@@ -14,25 +14,25 @@ export const getTextMessage = ({
     return `Quick enquiry from ${full_name}:
 
   on ${dateString}
-    
-  reply to 
-  ${email} 
-  
+
+  reply to
+  ${email}
+
   or ${phone_number}`;
   }
 
-  return `New Message from 
-        
+  return `New Message from
+
       ${full_name}
-        
+
       Company: ${company_name}
 
-        ${message} 
+        ${message}
 
       on ${dateString}
 
-      reply to: 
-      ${email} 
-    or 
+      reply to:
+      ${email}
+      or
       ${phone_number}.`;
 };
