@@ -22,7 +22,7 @@ export const axiosRequest = async ({
 
   const messageUrl = quickEnquiry ? 'send-enquiry' : 'send-email';
   try {
-    await axios.post(`${process.env.API_URL}/${messageUrl}`, formData);
+    await axios.post(`testing/${process.env.API_URL}/${messageUrl}`, formData);
 
     const date = new Date();
     const dateString = date.toString();
@@ -39,9 +39,18 @@ export const axiosRequest = async ({
       message: getTextMessage({ formData, dateString, quickEnquiry }),
     };
 
-    await axios.post(`${process.env.API_URL}/send-sms-1`, textMessageData);
-    await axios.post(`${process.env.API_URL}/send-sms-2`, textMessageData);
-    await axios.post(`${process.env.API_URL}/send-sms-3`, textMessageData);
+    await axios.post(
+      `testing/${process.env.API_URL}/send-sms-1`,
+      textMessageData
+    );
+    await axios.post(
+      `testing/${process.env.API_URL}/send-sms-2`,
+      textMessageData
+    );
+    await axios.post(
+      `testing/${process.env.API_URL}/send-sms-3`,
+      textMessageData
+    );
 
     toast({
       title: 'Enquiry Sent.',
