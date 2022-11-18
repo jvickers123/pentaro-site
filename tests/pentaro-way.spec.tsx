@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react';
-import PentaroWay from './pentaro-way';
+import PentaroWay from '../pages/pentaro-way';
 
 describe('pentaroWay', () => {
   it('renders successfully', () => {

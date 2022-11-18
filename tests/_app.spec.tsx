@@ -1,6 +1,6 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
-import App from './_app';
+import App from '../pages/_app';
 
 // import CookieConsent, { getCookieConsentValue } from 'react-cookie-consent';
 // import * as Helpers from '../helpers/GA-Helper';

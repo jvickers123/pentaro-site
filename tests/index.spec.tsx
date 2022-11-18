@@ -2,7 +2,7 @@ import { render, screen, waitFor } from '@testing-library/react';
 import User from '@testing-library/user-event';
 import createMockRouter from '../mocks/createMockRouter';
 import { RouterContext } from 'next/dist/shared/lib/router-context';
-import Home from './index';
+import Home from '../pages/index';
 
 describe('index/Home', () => {
   it('Should render properly', () => {

@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react';
-import Recruitment from './recruitment';
+import Recruitment from '../pages/recruitment';
 
 describe('recruitment', () => {
   it('renders successfully', () => {
