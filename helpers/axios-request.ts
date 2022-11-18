@@ -87,7 +87,6 @@ export const axiosRequest = async ({
       sendGetInTouch();
     }
   } catch (error) {
-    console.log(error);
     toast({
       title: 'Enquiry failed to sent.',
       description: `Please try again. ${error}`,

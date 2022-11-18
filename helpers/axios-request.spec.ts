@@ -71,7 +71,6 @@ const failedToast: (description: string) => UseToastOptions = (
 });
 
 const setFormData = jest.fn();
-console.log = jest.fn();
 
 describe('axios-request', () => {
   beforeEach(jest.clearAllMocks);
