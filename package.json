@@ -35,7 +35,7 @@
   },
   "scripts": {
     "dev": "next dev",
-    "build": "next build && next export",
+    "build": "next build",
     "start": "next start",
     "test": "jest --watch",
     "server": "npx nodemon server/index.js"
