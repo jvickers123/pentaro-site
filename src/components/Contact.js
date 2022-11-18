@@ -173,7 +173,7 @@ const Contact = () => {
 
           <h3>Address</h3>
 
-          <p>Pentaro Ltd. <br /> St Andrews House, Floor 2 <br />St Andrews Street<br />LS3 1LF</p>
+          <p className='address'>Pentaro Ltd. <br /> St Andrews House, Floor 2 <br />St Andrews Street<br />LS3 1LF</p>
           
           {/* <h3>Social Media</h3>
 
