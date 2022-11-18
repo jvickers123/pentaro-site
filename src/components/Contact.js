@@ -170,15 +170,21 @@ const Contact = () => {
           <h3>Phone Number</h3>
 
           <p className='phone-num'>01133231850</p>
+
+          <h3>Address</h3>
+
+          <p>Pentaro Ltd. <br /> St Andrews House, Floor 2 <br />St Andrews Street<br />LS3 1LF</p>
           
-          <h3>Social Media</h3>
+          {/* <h3>Social Media</h3>
+
+          
 
           <div className='socials'>
             <a href='www.instagram.co.uk' target='_blank'><FiInstagram /></a>
             <a href='www.facebook.co.uk' target='_blank'><FiFacebook /></a>
             <a href='www.twitter.co.uk' target='_blank'><FiTwitter /></a>
 
-          </div>
+          </div> */}
         </div>
       
 
