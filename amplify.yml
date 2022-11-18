@@ -1,0 +1,17 @@
+version: 1
+env:
+  variables:
+    API_URL=https://5021147o54.execute-api.eu-west-2.amazonaws.com/staging/send-message
+frontend:
+  phases:
+    build:
+      commands:
+        - yarn build
+  artifacts:
+    discard-paths: yes
+    baseDirectory: build
+test:
+  phases:
+    test:
+      commands:
+        - yarn test
