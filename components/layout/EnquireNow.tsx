@@ -2,6 +2,7 @@ import React, { useState, useEffect, FormEvent, ChangeEvent } from 'react';
 import Link from 'next/link';
 
 import { axiosRequest } from '../../helpers/axios-request';
+import { useToast } from '@chakra-ui/react';
 
 export type EnquireFormData = {
   full_name: string;
@@ -18,6 +19,8 @@ const EnquireNow = () => {
     phone_number: '',
   });
 
+  const toast = useToast()
+
   useEffect(() => {
     const url = window.location.href.split('/');
     url.includes('get-in-touch') ? setHideFooter(true) : setHideFooter(false);
@@ -25,7 +28,7 @@ const EnquireNow = () => {
 
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
-    axiosRequest({ formData, setFormData, quickEnquiry: true });
+    axiosRequest({ formData, setFormData, quickEnquiry: true, toast });
   };
 
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {

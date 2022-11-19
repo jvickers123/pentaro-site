@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { useToast } from '@chakra-ui/react';
+import { UseToastOptions } from '@chakra-ui/react';
 import { enquireNowLocation, sendGetInTouch } from './GA-Helper';
 import type { ContactFormData } from '../pages/get-in-touch';
 import type { EnquireFormData } from '../components/layout/EnquireNow';
@@ -11,14 +11,15 @@ type axiosRequestProps = {
     React.SetStateAction<EnquireFormData | ContactFormData>
   >;
   quickEnquiry?: boolean;
+  toast: ({}: UseToastOptions) => {};
 };
 
 export const axiosRequest = async ({
   formData,
   setFormData,
   quickEnquiry = false,
+  toast,
 }: axiosRequestProps) => {
-  const toast = useToast();
   const messageUrl = quickEnquiry ? 'send-enquiry' : 'send-email';
   try {
     const date = new Date();

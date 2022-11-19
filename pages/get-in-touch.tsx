@@ -6,6 +6,7 @@ import { FaLinkedin,  } from 'react-icons/fa';
 import Head from 'next/head';
 import Image from 'next/image';
 import { axiosRequest } from '../helpers/axios-request';
+import { useToast } from '@chakra-ui/react';
 
 export type ContactFormData = {
   full_name: string;
@@ -20,6 +21,9 @@ const Contact = () => {
     window.scrollTo(0, 0);
   }, []);
 
+  const toast = useToast();
+  
+
   // STATE
   const [formData, setFormData] = useState<ContactFormData>({
     full_name: '',
@@ -31,7 +35,8 @@ const Contact = () => {
 
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
-    axiosRequest({ formData, setFormData });
+    axiosRequest({ formData, setFormData, toast });
+    console.log(formData)
   };
 
   const handleChange = (
@@ -137,9 +142,8 @@ const Contact = () => {
             />
           </div>
 
-          <button className="button" onClick={handleSubmit}>
-            Send message
-          </button>
+          <input className="button" type="submit" value="Send message" />
+            
         </form>
       </section>
 
