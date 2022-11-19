@@ -36,17 +36,17 @@ export const axiosRequest = async ({
       message: getTextMessage({ formData, dateString, quickEnquiry }),
     };
 
-    await axios.post(`testing/${process.env.API_URL}/${messageUrl}`, formData);
+    await axios.post(`${process.env.REACT_APP_API_URL}/${messageUrl}`, formData);
     await axios.post(
-      `testing/${process.env.API_URL}/send-sms-1`,
+      `${process.env.REACT_APP_API_URL}/send-sms-1`,
       textMessageData
     );
     await axios.post(
-      `testing/${process.env.API_URL}/send-sms-2`,
+      `${process.env.REACT_APP_API_URL}/send-sms-2`,
       textMessageData
     );
     await axios.post(
-      `testing/${process.env.API_URL}/send-sms-3`,
+      `${process.env.REACT_APP_API_URL}/send-sms-3`,
       textMessageData
     );
 

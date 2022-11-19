@@ -9,7 +9,6 @@ jest.mock('./getTextMessage.ts', () => ({
 }));
 
 const mockSendGetInTouch = jest.fn();
-// const mockEnquireNowLocation = jest.fn();
 
 jest.mock('./GA-Helper.ts', () => ({
   enquireNowLocation: jest.fn(),
@@ -18,7 +17,6 @@ jest.mock('./GA-Helper.ts', () => ({
 
 const mockToast = jest.fn();
 jest.mock('@chakra-ui/react', () => ({ useToast: () => mockToast }));
-// import * as Chakra from '@chakra-ui/react';
 
 jest.mock('axios');
 const mockedAxios = axios as jest.Mocked<typeof axios>;
@@ -78,22 +76,22 @@ describe('axios-request', () => {
     await axiosRequest({ formData: mockFormData, setFormData });
     expect(mockedAxios.post).toHaveBeenNthCalledWith(
       1,
-      'testing/https://5021147o54.execute-api.eu-west-2.amazonaws.com/staging/send-message/send-email',
+      'https://5021147o54.execute-api.eu-west-2.amazonaws.com/staging/send-message/send-email',
       mockFormData
     );
     expect(mockedAxios.post).toHaveBeenNthCalledWith(
       2,
-      'testing/https://5021147o54.execute-api.eu-west-2.amazonaws.com/staging/send-message/send-sms-1',
+      'https://5021147o54.execute-api.eu-west-2.amazonaws.com/staging/send-message/send-sms-1',
       { message: 'text message' }
     );
     expect(mockedAxios.post).toHaveBeenNthCalledWith(
       3,
-      'testing/https://5021147o54.execute-api.eu-west-2.amazonaws.com/staging/send-message/send-sms-2',
+      'https://5021147o54.execute-api.eu-west-2.amazonaws.com/staging/send-message/send-sms-2',
       { message: 'text message' }
     );
     expect(mockedAxios.post).toHaveBeenNthCalledWith(
       4,
-      'testing/https://5021147o54.execute-api.eu-west-2.amazonaws.com/staging/send-message/send-sms-3',
+      'https://5021147o54.execute-api.eu-west-2.amazonaws.com/staging/send-message/send-sms-3',
       { message: 'text message' }
     );
   });

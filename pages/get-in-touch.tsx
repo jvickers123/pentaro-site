@@ -1,7 +1,7 @@
 import React, { useState, useEffect, FormEvent, ChangeEvent } from 'react';
 
 // ICONS
-import { FiInstagram, FiTwitter, FiFacebook } from 'react-icons/fi';
+import { FaLinkedin,  } from 'react-icons/fa';
 
 import Head from 'next/head';
 import Image from 'next/image';
@@ -146,7 +146,7 @@ const Contact = () => {
       <section className="section section--dark">
         <div className="contact-details__container">
           <h2 className="accent heading2">CONTACT INFO</h2>
-          <hr className="line-break--white"></hr>
+          <hr className="line-break line-break--white"></hr>
 
           <p className="paragraph white">Or contact us directly.</p>
           <h3 className="heading3 white">Email</h3>
@@ -157,24 +157,17 @@ const Contact = () => {
 
           <h3 className="heading3 white">Phone Number</h3>
 
-          <p className="paragraph paragraph--faded">01133231850</p>
+          <p className="paragraph paragraph--faded">01133 231 850</p>
 
           <h3 className="heading3 white">Address</h3>
 
-          <p className="paragraph paragraph--faded">01133231850</p>
+          <p className="paragraph paragraph--faded">Pentaro Ltd. <br /> St Andrews House, Floor 2 <br />St Andrews Street<br />LS3 1LF</p>
 
           <h3 className="heading3 white">Social Media</h3>
 
           <div className="socials-container">
-            <a className="link link--faded link__socials" href="#">
-              <FiInstagram />
-            </a>
-            <a className="link link--faded link__socials" href="#">
-              <FiFacebook />
-            </a>
-
-            <a className="link link--faded link__socials" href="#">
-              <FiTwitter />
+            <a className="link link--faded link__socials" target="_blank" href="https://uk.linkedin.com/company/pentaro-limited" aria-label="linked in">
+              <FaLinkedin />
             </a>
           </div>
         </div>

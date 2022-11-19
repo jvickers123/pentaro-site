@@ -2,7 +2,10 @@
   display: flex;
 }
 
-.contact-details__container {
-  width: 50vw;
-  max-width: 60rem;
+@include respond(tablet) {
+
+  .contact-details__container {
+    width: 50vw;
+    max-width: 60rem;
+  }
 }
