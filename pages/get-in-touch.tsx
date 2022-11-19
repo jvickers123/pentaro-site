@@ -55,7 +55,7 @@ const Contact = () => {
 
         <hr className="line-break line-break--dark"></hr>
 
-        <h3 className="heading3">Have a project you need help with?</h3>
+        <h2 className="heading3">Have a project you need help with?</h2>
         <p className="paragraph">
           Send us a message and one of our team will be in touch as soon as
           possible.

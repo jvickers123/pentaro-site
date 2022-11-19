@@ -8,7 +8,6 @@ jest.mock('./getTextMessage.ts', () => ({
   getTextMessage: () => 'text message',
 }));
 
-const mockSendGetInTouch = jest.fn();
 
 jest.mock('./GA-Helper.ts', () => ({
   enquireNowLocation: jest.fn(),
@@ -104,22 +103,22 @@ describe('axios-request', () => {
     });
     expect(mockedAxios.post).toHaveBeenNthCalledWith(
       1,
-      'testing/https://5021147o54.execute-api.eu-west-2.amazonaws.com/staging/send-message/send-enquiry',
+      'https://5021147o54.execute-api.eu-west-2.amazonaws.com/staging/send-message/send-enquiry',
       mockEnquiryData
     );
     expect(mockedAxios.post).toHaveBeenNthCalledWith(
       2,
-      'testing/https://5021147o54.execute-api.eu-west-2.amazonaws.com/staging/send-message/send-sms-1',
+      'https://5021147o54.execute-api.eu-west-2.amazonaws.com/staging/send-message/send-sms-1',
       { message: 'text message' }
     );
     expect(mockedAxios.post).toHaveBeenNthCalledWith(
       3,
-      'testing/https://5021147o54.execute-api.eu-west-2.amazonaws.com/staging/send-message/send-sms-2',
+      'https://5021147o54.execute-api.eu-west-2.amazonaws.com/staging/send-message/send-sms-2',
       { message: 'text message' }
     );
     expect(mockedAxios.post).toHaveBeenNthCalledWith(
       4,
-      'testing/https://5021147o54.execute-api.eu-west-2.amazonaws.com/staging/send-message/send-sms-3',
+      'https://5021147o54.execute-api.eu-west-2.amazonaws.com/staging/send-message/send-sms-3',
       { message: 'text message' }
     );
   });

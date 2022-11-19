@@ -48,14 +48,14 @@ const EnquireNow = () => {
       <div className="enquire-now__desktop">
         <form onSubmit={handleSubmit} className="enquire-now__form">
           <div className="enquire-now__form-field">
-            <label className="enquire-now__label" htmlFor="full_name">
+            <label className="enquire-now__label" htmlFor="full_name_enquire">
               Name
             </label>
             <input
               className="enquire-now__input"
               required
               type="text"
-              id="full_name"
+              id="full_name_enquire"
               name="full_name"
               value={formData.full_name}
               onChange={handleChange}
@@ -63,14 +63,14 @@ const EnquireNow = () => {
           </div>
 
           <div className="enquire-now__form-field">
-            <label className="enquire-now__label" htmlFor="email">
+            <label className="enquire-now__label" htmlFor="email_enquire">
               Email
             </label>
             <input
               className="enquire-now__input"
               required
               type="email"
-              id="email"
+              id="email_enquire"
               name="email"
               value={formData.email}
               onChange={handleChange}
@@ -78,14 +78,14 @@ const EnquireNow = () => {
           </div>
 
           <div className="enquire-now__form-field">
-            <label className="enquire-now__label" htmlFor="phone_number">
+            <label className="enquire-now__label" htmlFor="phone_number_enquire">
               Phone No.
             </label>
             <input
               className="enquire-now__input"
               required
               type="tel"
-              id="phone_number"
+              id="phone_number_enquire"
               name="phone_number"
               value={formData.phone_number}
               onChange={handleChange}
