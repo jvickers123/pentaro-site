@@ -159,6 +159,10 @@ const Contact = () => {
 
           <p className="paragraph paragraph--faded">01133231850</p>
 
+          <h3 className="heading3 white">Address</h3>
+
+          <p className="paragraph paragraph--faded">01133231850</p>
+
           <h3 className="heading3 white">Social Media</h3>
 
           <div className="socials-container">
