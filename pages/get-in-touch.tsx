@@ -36,7 +36,6 @@ const Contact = () => {
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
     axiosRequest({ formData, setFormData, toast });
-    console.log(formData)
   };
 
   const handleChange = (
