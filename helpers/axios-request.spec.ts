@@ -8,7 +8,6 @@ jest.mock('./getTextMessage.ts', () => ({
   getTextMessage: () => 'text message',
 }));
 
-
 jest.mock('./GA-Helper.ts', () => ({
   enquireNowLocation: jest.fn(),
   sendGetInTouch: jest.fn(),
@@ -67,12 +66,16 @@ const failedToast: (description: string) => UseToastOptions = (
   title: 'Enquiry failed to sent.',
 });
 
-const setFormData = jest.fn();
+const mockSetFormData = jest.fn();
 
 describe('axios-request', () => {
   beforeEach(jest.clearAllMocks);
   it('Happy path calls correct axios calls for quickenquiry = false', async () => {
-    await axiosRequest({ formData: mockFormData, setFormData });
+    await axiosRequest({
+      formData: mockFormData,
+      setFormData: mockSetFormData,
+      toast: mockToast,
+    });
     expect(mockedAxios.post).toHaveBeenNthCalledWith(
       1,
       'https://5021147o54.execute-api.eu-west-2.amazonaws.com/staging/send-message/send-email',
@@ -98,8 +101,9 @@ describe('axios-request', () => {
   it('Happy path calls correct axios calls for quickenquiry = true', async () => {
     await axiosRequest({
       formData: mockEnquiryData,
-      setFormData,
+      setFormData: mockSetFormData,
       quickEnquiry: true,
+      toast: mockToast,
     });
     expect(mockedAxios.post).toHaveBeenNthCalledWith(
       1,
@@ -124,25 +128,31 @@ describe('axios-request', () => {
   });
 
   it('happy path - reset form data with enquiry= false', async () => {
-    await axiosRequest({ formData: mockFormData, setFormData });
+    await axiosRequest({
+      formData: mockFormData,
+      setFormData: mockSetFormData,
+      toast: mockToast,
+    });
 
-    expect(setFormData).toHaveBeenCalledWith(mockEmptyFormData);
+    expect(mockSetFormData).toHaveBeenCalledWith(mockEmptyFormData);
   });
 
   it('happy path - reset form data with enquiry= true', async () => {
     await axiosRequest({
       formData: mockEnquiryData,
-      setFormData,
+      setFormData: mockSetFormData,
       quickEnquiry: true,
+      toast: mockToast,
     });
 
-    expect(setFormData).toHaveBeenCalledWith(mockEmptyEnquiryData);
+    expect(mockSetFormData).toHaveBeenCalledWith(mockEmptyEnquiryData);
   });
 
   it('Happy path - calls toast on success', async () => {
     await axiosRequest({
       formData: mockFormData,
-      setFormData,
+      setFormData: mockSetFormData,
+      toast: mockToast,
     });
     expect(mockToast).toHaveBeenCalledWith(successfulToast);
   });
@@ -150,7 +160,8 @@ describe('axios-request', () => {
   it('Happy path - calls sendGetInTouch when quickEnquiry=false', async () => {
     await axiosRequest({
       formData: mockFormData,
-      setFormData,
+      setFormData: mockSetFormData,
+      toast: mockToast,
     });
     expect(enquireNowLocation).not.toBeCalled();
     expect(sendGetInTouch).toHaveBeenCalledTimes(1);
@@ -159,8 +170,9 @@ describe('axios-request', () => {
   it('Happy path - calls Enquire Now Location when quickEnquiry=true', async () => {
     await axiosRequest({
       formData: mockEnquiryData,
-      setFormData,
+      setFormData: mockSetFormData,
       quickEnquiry: true,
+      toast: mockToast,
     });
     expect(sendGetInTouch).not.toBeCalled();
     expect(enquireNowLocation).toHaveBeenCalledTimes(1);
@@ -169,7 +181,8 @@ describe('axios-request', () => {
   it('unHappy path - throws error if full name not provided', async () => {
     await axiosRequest({
       formData: { ...mockFormData, full_name: '' },
-      setFormData,
+      setFormData: mockSetFormData,
+      toast: mockToast,
     });
     expect(mockToast).toHaveBeenCalledWith(
       failedToast('Please provide a name')
@@ -179,7 +192,8 @@ describe('axios-request', () => {
   it('unHappy path - throws error if email not provided', async () => {
     await axiosRequest({
       formData: { ...mockFormData, email: '' },
-      setFormData,
+      setFormData: mockSetFormData,
+      toast: mockToast,
     });
     expect(mockToast).toHaveBeenCalledWith(
       failedToast('Please provide a contact email')
@@ -189,7 +203,8 @@ describe('axios-request', () => {
   it('unHappy path - throws error if phone number not provided', async () => {
     await axiosRequest({
       formData: { ...mockFormData, phone_number: '' },
-      setFormData,
+      setFormData: mockSetFormData,
+      toast: mockToast,
     });
     expect(mockToast).toHaveBeenCalledWith(
       failedToast('Please provide a phone number')
@@ -199,7 +214,8 @@ describe('axios-request', () => {
   it('unHappy path - throws error if quickEnquiry=false and company name not provided', async () => {
     await axiosRequest({
       formData: { ...mockFormData, company_name: '' },
-      setFormData,
+      setFormData: mockSetFormData,
+      toast: mockToast,
     });
     expect(mockToast).toHaveBeenCalledWith(
       failedToast('Please provide a company name')
@@ -209,7 +225,8 @@ describe('axios-request', () => {
   it('unHappy path - throws error if quickEnquiry=false and message not provided', async () => {
     await axiosRequest({
       formData: { ...mockFormData, message: '' },
-      setFormData,
+      setFormData: mockSetFormData,
+      toast: mockToast,
     });
     expect(mockToast).toHaveBeenCalledWith(
       failedToast('Looks like you forgot to fill in the message.')
