@@ -35,17 +35,13 @@
   }
 }
 
-@include respond(tablet) {
+@include respond(desk) {
   .section {
-    max-width: 120rem;
+    // max-width: 120rem;
     margin: 0 auto;
 
     &--left {
       padding-left: 4rem;
-    }
-
-    &--middle {
-      @include flex-center(row);
     }
 
     &--right {
@@ -60,6 +56,14 @@
       margin-right: 0;
       max-width: 100vw;
       width: 100vw;
+    }
+  }
+}
+
+@include respond(desk) {
+  .section {
+    &--middle {
+      @include flex-center(row);
     }
   }
 }

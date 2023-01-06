@@ -132,9 +132,9 @@ const Telemarketing = () => {
         </div>
       </section>
 
-      <section className="section section--right">
-        <div className="card card--right" ref={oneRef}>
-          <div className="dots dots--right"></div>
+      <section className="section section--left">
+        <div className="card card--left" ref={oneRef}>
+          <div className="dots dots--left"></div>
           <h2 className="accent heading2">LEAD GENERATION</h2>
           <hr></hr>
           <h3 className="heading3">
@@ -163,8 +163,10 @@ const Telemarketing = () => {
             Back to top <span className="accent">^</span>
           </button>
         </div>
+      </section>
 
-        <div className="image-container image-container--right">
+      <section className="section section--middle">
+        <div className="image-container image-container--left">
           <Image
             src="/assets/telemarketing-individual.jpg"
             alt="Man calling customers"
@@ -172,11 +174,8 @@ const Telemarketing = () => {
             objectFit="cover"
           />
         </div>
-      </section>
-
-      <section className="section section--left">
-        <div className="card card--left" ref={twoRef}>
-          <div className="dots"></div>
+        <div className="card card--middle" ref={twoRef}>
+          <div className="dots dots--middle"></div>
 
           <h2 className="accent heading2">APPOINTMENT SETTING</h2>
           <hr></hr>
@@ -274,9 +273,17 @@ const Telemarketing = () => {
         </div>
       </section>
 
-      <section className="section section--right">
-        <div className="card card--right" ref={fourRef}>
-          <div className="dots dots--right"></div>
+      <section className="section section--middle">
+        <div className="image-container image-container--left">
+          <Image
+            src="/assets/smiling-telesales.jpg"
+            alt="Telemarketer smiling"
+            layout="fill"
+            objectFit="cover"
+          />
+        </div>
+        <div className="card card--middle" ref={fourRef}>
+          <div className="dots dots--middle"></div>
 
           <h2 className="heading2 accent">CUSTOMER SERVICE</h2>
           <hr></hr>
@@ -302,15 +309,6 @@ const Telemarketing = () => {
           >
             Back to top <span className="accent">^</span>
           </button>
-        </div>
-
-        <div className="image-container image-container--right">
-          <Image
-            src="/assets/smiling-telesales.jpg"
-            alt="Telemarketer smiling"
-            layout="fill"
-            objectFit="cover"
-          />
         </div>
       </section>
 

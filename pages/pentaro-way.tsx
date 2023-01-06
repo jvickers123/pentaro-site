@@ -52,8 +52,8 @@ const PentaroWay = () => {
         </div>
 
         <div className="card card--middle">
-          <div className="dots dots--right"></div>
-          <h2 className="accent">THE PENTARO WAY</h2>
+          <div className="dots dots--middle"></div>
+          <h2 className="accent heading2">THE PENTARO WAY</h2>
           <h3 className="heading3">Changing perceptions.</h3>
           <p className="paragraph">
             As the economy changes, businesses are constantly presented with

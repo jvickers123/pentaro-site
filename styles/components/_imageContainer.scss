@@ -4,7 +4,10 @@
   &--left {
     margin: 1rem 2rem -2rem 2rem;
     height: 21rem;
+    // height: 40vw;
     width: 29.5rem;
+    // width: 90vw;
+    // max-width: 50rem;
   }
   &--right {
     margin-left: 10rem;
@@ -24,16 +27,18 @@
 @include respond(tablet) {
   .image-container {
     &--left {
-      margin-right: -3rem;
+      width: 52rem;
+      height: 32rem;
+      margin-left: calc(100vw - 54rem);
     }
     &--right {
       display: flex;
       justify-content: flex-end;
       margin-top: -5rem;
-      margin-left: 36vw;
-      width: 60vw;
-      max-width: 70rem;
-      height: 35rem;
+      margin-left: calc(100vw - 52rem);
+      // width: 60vw;
+      width: 50rem;
+      height: 30rem;
     }
 
     &--bottom {
@@ -50,7 +55,14 @@
   .image-container {
     &--left {
       height: 45rem;
-      width: 40rem;
+      width: 40vw;
+      margin-left: 0;
+    }
+
+    &--right {
+      height: 45rem;
+      width: 60vw;
+      margin-left: 38vw;
     }
   }
 }

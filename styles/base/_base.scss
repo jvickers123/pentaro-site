@@ -18,3 +18,9 @@ html {
 body {
   box-sizing: border-box;
 }
+
+@include respond(big-desk) {
+  html {
+    font-size: 85%;
+  }
+}

@@ -8,10 +8,11 @@
   width: 3rem;
 }
 
-@include respond(tablet) {
+@include respond(desk) {
   .dots {
     width: 12rem;
 
+    &--middle,
     &--right {
       left: auto;
       right: 0;

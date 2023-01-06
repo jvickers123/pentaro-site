@@ -78,7 +78,7 @@ const Home = () => {
         </div>
 
         <div className="card card--middle">
-          <div className="dots dots--right"></div>
+          <div className="dots dots--middle"></div>
 
           <h2 className="accent heading2">TELEMARKETING</h2>
           <h3 className="heading3">

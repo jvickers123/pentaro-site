@@ -32,14 +32,15 @@
     &__desktop {
       display: flex;
       align-items: center;
-      margin-right: 10rem;
+      margin-left: 10rem;
+      margin-right: 2rem;
       font-size: 1.5rem;
       line-height: 2.4rem;
     }
   }
 
   @include respond(big-desk) {
-    left: calc((100vw - 140rem) / 2);
+    // left: calc((100vw - 140rem) / 2);
 
     &__background {
       background-color: #fff;

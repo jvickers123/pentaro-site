@@ -69,9 +69,9 @@ const Recruitment = () => {
         </div>
 
         <div className="card card--middle">
-          <div className="dots dots--right"></div>
+          <div className="dots dots--middle"></div>
 
-          <h2 className="accent">PARTNERSHIP</h2>
+          <h2 className="accent heading2">PARTNERSHIP</h2>
 
           <hr></hr>
 
@@ -90,7 +90,7 @@ const Recruitment = () => {
         <div className="card card--right">
           <div className="dots dots--right"></div>
 
-          <h2 className="accent">EXPERIENCE</h2>
+          <h2 className="accent heading2">EXPERIENCE</h2>
           <hr></hr>
           <h3 className="heading3">
             Our team’s key experience lies in filling roles for growing
@@ -117,7 +117,7 @@ const Recruitment = () => {
         <div className="card card--left">
           <div className="dots"></div>
 
-          <h2 className="accent">PERSONNEL</h2>
+          <h2 className="accent heading2">PERSONNEL</h2>
           <hr></hr>
           <h3 className="heading3">
             Personnel is the most important asset of any business.

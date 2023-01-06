@@ -16,9 +16,8 @@
   }
 }
 
-@include respond(tablet) {
+@include respond(desk) {
   .card {
-    max-width: 85rem;
     padding: 8rem 0;
     padding-left: 10rem;
     padding-right: 5rem;
@@ -26,9 +25,26 @@
     &--middle {
       width: 60rem;
       margin-left: -3rem;
+      // background-color: transparent;
+    }
+    &--left {
+      max-width: 85rem;
     }
     &--right {
       margin: 0 7% 0 auto;
+    }
+    &--wheel {
+      // background-color: transparent;
+      max-width: 100vw;
+      width: 80vw;
+    }
+  }
+}
+
+@include respond(big-desk) {
+  .card {
+    &--right {
+      width: 105rem;
     }
   }
 }
