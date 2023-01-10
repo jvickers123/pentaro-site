@@ -29,24 +29,14 @@
     &--left {
       width: 52rem;
       height: 32rem;
-      margin-left: calc(100vw - 54rem);
+      // margin-left: calc(100vw - 54rem);
     }
     &--right {
-      display: flex;
-      justify-content: flex-end;
       margin-top: -5rem;
       margin-left: calc(100vw - 52rem);
       // width: 60vw;
       width: 50rem;
       height: 30rem;
-    }
-
-    &--bottom {
-      height: 90rem;
-      width: 50vw;
-      max-width: 60rem;
-      margin: 0;
-      transform: translateX(0);
     }
   }
 }
@@ -59,10 +49,26 @@
       margin-left: 0;
     }
 
+    &--bottom {
+      height: 90rem;
+      width: 50vw;
+      max-width: 60rem;
+      margin: 0;
+      transform: translateX(0);
+    }
+
     &--right {
       height: 45rem;
       width: 60vw;
       margin-left: 38vw;
+    }
+  }
+}
+
+@include respond(enourmous-desk) {
+  .image-container {
+    &--right {
+      margin-left: 0;
     }
   }
 }

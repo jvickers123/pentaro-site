@@ -55,7 +55,7 @@ const Telemarketing = () => {
 
       <section className="section section--center wheel" ref={pentRef}>
         <div className="card card--wheel">
-          <h2 className="accent heading2">THE POWER OF 5</h2>
+          <h2 className="accent heading2">Our Services</h2>
 
           <hr></hr>
 

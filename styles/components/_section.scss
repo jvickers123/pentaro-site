@@ -47,6 +47,9 @@
     &--right {
       padding-bottom: 10rem;
     }
+    &--middle {
+      @include flex-center(row);
+    }
 
     &--dark {
       @include flex-center(row);
@@ -56,14 +59,6 @@
       margin-right: 0;
       max-width: 100vw;
       width: 100vw;
-    }
-  }
-}
-
-@include respond(desk) {
-  .section {
-    &--middle {
-      @include flex-center(row);
     }
   }
 }
