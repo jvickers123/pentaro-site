@@ -21,7 +21,7 @@ export const sendGetInTouch = () => {
 };
 
 export const handleAcceptCookie = () => {
-  if (process.env.REACT_APP_GOOGLE_ANALYTICS_ID) {
-    initGA(process.env.REACT_APP_GOOGLE_ANALYTICS_ID);
+  if (process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID) {
+    initGA(process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID);
   }
 };
