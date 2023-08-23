@@ -160,7 +160,7 @@ const Contact = () => {
 
           <h3 className="heading3 white">Phone Number</h3>
 
-          <p className="paragraph paragraph--faded">01133 231 850</p>
+          <p className="paragraph paragraph--faded">0113 5269 101</p>
 
           <h3 className="heading3 white">Address</h3>
 
